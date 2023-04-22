@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WDD 230 Assignment Portal for Tiana Boyd</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>
-        <h1>Hello World!!</h1>
-    </header>
+<header>
+    <img class="profile_pic" src="images/Profile_Pic_2.jpg" alt="Profile Pic of Me">
+    <h1>Tiana Boyd</h1>
+</header>
+<main>
+    <h2>WDD 230: Assignment Portal</h2>
+    <nav>
+        <ul>
+            <li>Lesson 02: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 03: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 04: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 05: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 06: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 07: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 08: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 09: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 10: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 11: &nbsp; <a href="./"> Title </a></li>
+        </ul>
+    </nav>
+</main>
+<footer>
+    &copy; 2023  |  Tiana Boyd  |  Washington
+    <div class= "updated"> 
+    <p id="date"></p>
+    </div>
+</footer>
+<script>
+    let text = "Last Updated: " + document.lastModified;
+    document.getElementById("date").innerHTML = text;
+</script>
 </body>
 </html>

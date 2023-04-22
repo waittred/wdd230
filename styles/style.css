@@ -1,0 +1,55 @@
+
+header, nav, main, footer {
+    margin: 1.5rem;
+    max-width: 600px;
+    text-align: left;
+}
+header, footer {
+    background-color:teal;
+    border-radius: 5px 5px 5px 5px;
+}
+header {
+    display: flex;
+    
+}
+
+nav {
+    display: block;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.profile_pic {
+    margin: 25px 25px 25px 25px;
+    border-radius: 5%;
+    overflow: clip;
+    max-width: 100%;
+}
+
+h1 {
+    
+    text-align: center;
+    padding: 10%;
+    color: #ffff;
+}
+
+footer {
+    color: #ffff;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.updated {
+    color: yellow;
+    font-size: 12pt;
+}
