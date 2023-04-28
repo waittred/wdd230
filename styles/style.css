@@ -1,55 +1,93 @@
 
 header, nav, main, footer {
-    margin: 1.5rem;
-    max-width: 600px;
-    text-align: left;
+    max-width: 100%;
+  
 }
 header, footer {
     background-color:teal;
-    border-radius: 5px 5px 5px 5px;
+    
 }
 header {
     display: flex;
+	width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
     
 }
-
+h1 {
+    
+    text-align: center;
+    color: #ffff;
+    font-size: 5.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    align-items: left;
+    justify-content: left;
+    text-shadow: 2px 2px black;
+    
+  
+    
+    
+}
 nav {
     display: block;
+    text-align: center;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 22px;
+    font-family: 'Shadows Into Light', 'Judson', serif;
+    font-size: 25px;
+    text-align: center;
     line-height: 1.5;
-    padding: 0;
     margin: 0;
     text-decoration: none;
 }
 .profile_pic {
-    margin: 25px 25px 25px 25px;
-    border-radius: 5%;
-    overflow: clip;
     max-width: 100%;
+    height: auto;
+    margin: 2%;
+    
+    
+    
+    
 }
 
-h1 {
-    
+ul {
+    margin: 1em 0 .5em;
+	text-align: center;
+    list-style-type: disc;
+    list-style-position: inside;
     text-align: center;
-    padding: 10%;
-    color: #ffff;
+    
+    
+    
+}
+
+li::before {
+    display: inline;
+    content: '';
+    margin: 0;
+    
+    
 }
 
 footer {
     color: #ffff;
     text-align: center;
+    padding: 1%;
 }
 
 p {
     margin: 0;
-    padding: 0;
+    
 }
 
 .updated {
     color: yellow;
-    font-size: 12pt;
+    font-size: 16pt;
 }
