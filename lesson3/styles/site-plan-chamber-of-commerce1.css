@@ -1,0 +1,237 @@
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #285959;
+    --secondary-color: #F2B05E;
+    --accent1-color: #F2E5D5;
+    --accent2-color: #A66B38;
+    --accent3-color: #593D2D;
+    
+  
+    /* change the values below to your chosen font(s) 
+    --heading-font: "Merriweather", serif;
+    --paragraph-font: "Lora", serif;*/
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #285959;  /* headlines on a white background */ 
+    --headline-color-on-color: #285959; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color:#285959; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #F2E5D5;
+    --nav-link-color: white;
+    --nav-background-color: #285959;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color:#F2B05E;
+  }
+
+body {
+    max-width: 100%;   
+    text-align: center;
+} 
+  
+
+
+h1, h2, h3, h5, h6 {
+    color: var(--headline-color-on-white);
+    font-family: "Merriweather",serif;
+   
+}
+
+hr {
+    height: 5px;
+    margin: 35px 0;
+    background: var(--accent3-color);
+}
+
+header {
+    color: var(--headline-color-on-color);
+    background-color: white;
+}
+
+header > h1, header > h2 {
+    color: var(--headline-color-on-color);
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 1.5px 1.5px black;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-shadow: 1.5px 1.5px black;
+}
+
+h3 {
+    font-size: 2em;
+    
+}
+
+h4 {
+    font-size: 1.5em;
+    
+}
+
+p {
+    color: var(--paragraph-color-on-white);
+    padding: 1em;
+    font-family: "Lora", serif;
+    font-size: 1em;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #999;
+}
+
+.colors td{
+    width: 15%;
+    height: 3em;
+}
+  
+.primary {
+    background-color: var(--primary-color);
+    
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2{
+    background-color: var(--accent2-color);
+}
+  
+.accent3{
+    background-color: var(--accent3-color);
+}
+
+p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+  }
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    font-size: 2.0em;
+    
+}
+
+nav a {
+    margin:5em;
+    min-width: 120px;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    text-decoration: none;
+}
+
+.nav-b a {
+    margin:4em;
+    min-width: 120px;
+    text-decoration: none;
+}
+
+.nav-b a:link, .nav-b a:visited {
+    color: var(--nav-link-color);
+}
+
+.nav-b a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    text-decoration: none;
+}
+
+ul {
+      margin: 1em 0 .5em;
+      list-style-position: inside;
+      font-family: "Lora", serif;
+      font-size: 1em;   
+}
+  
+li::before {
+      display: inline;
+      content: '';
+      margin: 0;
+}
+
+.footer {
+      background: #285959;
+      color: white;
+      font-family: 'Merriweather', serif;
+      margin-top: 40px;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; 
+      padding: 1%;   
+}
+  
+footer a {   
+      color: white;
+      text-decoration: none; 
+}
+  
+.updated {
+      
+      color: yellow;
+      font-size: 10pt;
+}
+
+img {
+    height: 80%;
+    max-width: 80%;
+}
+  
+  
+@media screen and (min-width: 400px) {
+
+    img {
+        height: 90%;
+        max-width: 90%;
+}
+ 
+.persona1 {
+    
+    max-width: 40%;
+    padding: 5%;
+    
+    
+}
+
+.persona2 {
+    max-width: 40%;
+    padding: 5%;
+    
+}
+  
+
+
+  
+}
+  @media screen and (min-width: 500px) {
+    img {
+        height: 100%;
+        max-width: 100%;
+}
+}
