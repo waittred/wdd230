@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorado Springs Chamber of Commerce</title>
+  
+  <link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/base.css" rel="stylesheet">
+  <link href="styles/medium.css" rel="stylesheet">
+  <link href="styles/large.css" rel="stylesheet">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+    
+<!-- Header Here -->
+    <header>   
+               
+    
+<!-- Navigation Here -->   
+    <nav>
+<button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+<a id="logo_link" href="index.html">
+  <img class="logo" src="images/colorado_springs_logo2.jpg" alt="Colorado Springs Chamber of Commerce">
+</a>
+        <ul id="primaryNav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>  
+            <li><a href="#">Contact</a></li>
+            
+        </ul>
+        <time></time>
+        <aside></aside>
+        <p></p>
+    </nav>
+    </header>
+   
+    <main>
+
+      <div class="grid-container">
+        <div class="event_column"><h4>Event</h4></div>
+        <div class="weather_column"><h4>Weather</h4></div>
+        <div class="join_column"><h4>Join</h4></div>
+        <div class="hero_column"><h4>Hero with site name and call to action</h4></div>
+        <div class="news_release_column"><h4>News Release</h4></div>
+        <div class="spotlight_main">
+          <div class="spotlight_column1"><h4>Spotlight 1</h4></div>
+          <div class="spotlight_column2"><h4>Spotlight 2</h4></div>
+          <div class="spotlight_column3"><h4>Spotlight 3</h4></div>
+        </div>
+        
+      </div>
+    </main>
+    <div class="footer">
+        &copy; 2023  |  Colorado Springs Chamber of Commerce 
+         
+          <div class="social">
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="fb icon"></a>
+
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.png" alt="twitter icon"></a>
+            
+            <a href="https://linkedin.com" target="_blank">
+                <img src="images/linkedin.png" alt="linkedin icon"></a>
+            
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="instagram icon"></a>
+            
+          </div>
+      </div>
+          <div class= "updated"> 
+            <p id="date"></p>
+          </div> 
+      
+      <script>
+        let text = "Last Updated: " + document.lastModified;
+        document.getElementById("date").innerHTML = text;
+      </script>
+
+<script src="scripts/scripts.js"></script>
+    
+</html>

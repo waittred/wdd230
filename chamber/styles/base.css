@@ -1,0 +1,276 @@
+
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #285959;
+    --secondary-color: #F2B05E;
+    --accent1-color: #F2E5D5;
+    --accent2-color: #A66B38;
+    --accent3-color: #593D2D;
+    
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Merriweather", serif;
+    --paragraph-font: "Lora", serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #285959;  /* headlines on a white background */ 
+    --headline-color-on-color: #285959; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color:#285959; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #F2E5D5;
+    --nav-link-color: white;
+    --nav-background-color: #285959;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color:#F2B05E;
+  }
+  
+  
+  /* ---Body and Fonts--- */
+  
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Merriweather', serif;
+    color: var(--headline-color-on-white);
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+}
+
+  
+p {
+    color: var(--paragraph-color-on-white);
+}
+
+  
+/* ---Logo & Images--- */  
+#logo_link {
+      padding-top: 5px;
+      justify-self: left;
+      width: 20%;
+}
+  
+.logo {
+
+      display: flex; 
+      float: left; 
+      width:30%;
+      height: auto;
+      padding-top: 1%;
+      padding-left: 1%;
+      padding-right: 3%;
+}
+
+img {
+    margin: 0 auto;
+}
+
+/* ---Line seperation--- */
+
+hr {
+        height: 3px;
+        margin: 35px 0;
+        background: var(--accent3-color);         
+}
+  
+
+/* ---Header--- */
+header {
+    display: flex;
+    flex-direction: column;
+    color: var(--headline-color-on-color);
+    background-color: white;
+    margin-bottom: 1%;
+}
+
+header > h1, header > h2 {
+    color: var(--headline-color-on-color);
+}
+
+/* ---Current Time--- */
+
+time,
+aside {
+	
+    float: left;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 1.5px 1.5px black;
+    
+}
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+h1, p {margin: 0 2vw;}
+nav button {
+    margin: .2rem 2vw;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+nav {
+    background-color: #285959;
+    padding-bottom: .1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+nav ul li a {
+    display: block;
+    padding: .8rem 2vw;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(0,0,0,.5)
+    
+}
+nav ul li.active a {
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #F2B05E;
+}
+
+nav ul {display: none;}
+nav ul.open {display:block;}
+
+#hamburgerBtn span:nth-child(1) {display:block;}
+#hamburgerBtn span:nth-child(2) {display:none;}
+
+#hamburgerBtn.open span:nth-child(1) {display:none;}
+#hamburgerBtn.open span:nth-child(2) {display:block;}
+
+/* ---Footer--- */
+.footer {
+    background: #285959;
+    color: white;
+    font-family: 'Merriweather', serif;
+    margin-top: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 1%;   
+}
+
+footer a {   
+    color: white;
+    text-decoration: none;
+    text-shadow: 1.5px 1.5px black; 
+}
+
+.updated {
+    
+    color: yellow;
+    font-size: 10pt;
+}
+
+
+
+@media only screen and (max-width: 39rem) {
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    min-height: 500px;
+    margin: 0;
+    row-gap: .5rem;    
+}
+.hero_column {
+    grid-row: 1; 
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.event_column {
+    grid-row: 2;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.weather_column {
+    grid-row: 3;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.news_release_column {
+    grid-row: 4;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.join_column {
+    display: none;
+}
+
+.spotlight_main {
+    grid-row: 5/7;
+    background-color: lightgrey;
+    
+    
+}
+
+.spotlight_column1 {
+    
+    justify-content: center;
+    border: 1px solid black;
+    width: 96%;
+    height: 46.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: .5%;
+}
+.spotlight_column2 {    
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 96%;
+    height: 46.5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: .5%;
+    margin-bottom: 2%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

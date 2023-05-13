@@ -1,0 +1,117 @@
+/*35rem is also 560px when basefront is 16px */ 
+@media only screen and (min-width: 40rem) {
+
+nav button {display:none;}
+    
+nav ul#primaryNav {
+        display: flex;
+        padding-top: 2rem;
+        margin-left: 2vw;
+        justify-content: center;
+        margin-bottom: 4rem;
+        
+}
+    
+nav ul ul li a {
+        border: none;
+        
+        
+}
+
+time,
+aside {
+        
+        text-align: center;
+        margin-bottom: 2rem;
+        color: white;
+        text-shadow: 1.5px 1.5px black;
+        float: none;
+}
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 59% 39%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    min-height: 500px;
+    row-gap: 1rem;
+    margin: 0;
+    column-gap: 10px;
+    
+    
+}
+
+.event_column {
+    grid-column: 1;
+    grid-row: 5;
+    background-color: lightgrey;
+    border: 1px solid black;
+        
+}
+
+.weather_column {
+    grid-column: 2;
+    grid-row: 5;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.join_column {
+    grid-column: 1/3;
+    grid-row: 4;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.hero_column {
+    grid-column: 1/3;
+    grid-row: 1; 
+    background-color: lightgrey;
+    border: 1px solid black; 
+}
+
+.news_release_column {
+    grid-column: 1/3;
+    grid-row: 2;
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.spotlight_main {
+    display: flex;
+    grid-row: 3;
+    grid-column: 1/3;
+    background-color: lightgrey;
+}
+
+.spotlight_column1 {
+    justify-content: center;
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 3px;  
+}
+
+.spotlight_column2 { 
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 50%;
+    margin-left: 3px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;       
+}
+
+ 
+.footer {
+    margin-top: 80px;
+}
+}
+ @media only screen and (max-width: 63rem) {
+.spotlight_column3 {
+    display:none ;
+} 
+       
+ }
+  /*end medium */
