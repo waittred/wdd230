@@ -17,7 +17,7 @@
     --headline-color-on-white: #285959;  /* headlines on a white background */ 
     --headline-color-on-color: #285959; /* headlines on a colored background */ 
     --paragraph-color-on-white: black; /* paragraph text on a white background */ 
-    --paragraph-color-on-color:white; /* paragraph text on a colored background */ 
+    --paragraph-color-on-color:#; /* paragraph text on a colored background */ 
     --paragraph-background-color: #F2E5D5;
     --nav-link-color: white;
     --nav-background-color: #285959;
@@ -40,7 +40,7 @@ body {
   
 h1, h2, h3, h4, h5, h6 {
     font-family:'Merriweather', serif;
-    color: var(--headline-color-on-white);
+    color: var(--headline-color-on-color);
     text-align: center;
 }
 
