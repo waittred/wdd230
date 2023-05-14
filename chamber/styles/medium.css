@@ -103,6 +103,29 @@ aside {
     margin-bottom: 15px;       
 }
 
+.icon {
+    display: flex; 
+    float: left; 
+    width:8%;
+    margin-top: 5px;
+    height: auto;
+    
+}
+#address {
+  float: left;
+}
+
+#contact_info {
+  display: flex;
+  float: right;
+
+}
+.base {
+  margin-top: 10px;
+  color: white;
+  font-size: 10pt;
+}
+
  
 .footer {
     margin-top: 80px;

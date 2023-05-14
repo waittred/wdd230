@@ -26,22 +26,27 @@
     
 <!-- Navigation Here -->   
     <nav>
-<button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-<a id="logo_link" href="index.html">
-  <img class="logo" src="images/colorado_springs_logo2.jpg" alt="Colorado Springs Chamber of Commerce">
-</a>
-        <ul id="primaryNav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>  
-            <li><a href="#">Contact</a></li>
-            
-        </ul>
+      <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+        <a id="logo_link" href="index.html">
+          <img class="logo" src="images/colorado_springs_logo2.jpg" alt="Colorado Springs Chamber of Commerce">
+        </a>
+      <ul id="primaryNav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Join</a></li>  
+          <li><a href="#">Contact</a></li>
+      </ul>
+        <a href="https://linkedin.com" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin icon"></a>
+          
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram.png" alt="instagram icon"></a>
+        
         <time></time>
         <aside></aside>
         <p></p>
-    </nav>
+      </nav>
     </header>
    
     <main>
@@ -61,32 +66,28 @@
       </div>
     </main>
     <div class="footer">
-        &copy; 2023  |  Colorado Springs Chamber of Commerce 
-         
-          <div class="social">
-            <a href="https://facebook.com" target="_blank">
-              <img src="images/facebook.png" alt="fb icon"></a>
-
-            <a href="https://twitter.com" target="_blank">
-              <img src="images/twitter.png" alt="twitter icon"></a>
-            
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin.png" alt="linkedin icon"></a>
-            
-            <a href="https://instagram.com" target="_blank">
-              <img src="images/instagram.png" alt="instagram icon"></a>
-            
-          </div>
-      </div>
-          <div class= "updated"> 
-            <p id="date"></p>
-          </div> 
-      
+        <div class="footer_logo">
+          <a id="bw_icon" href="index.html">
+            <img class="icon" src="images/bw_icon.png" alt="Black and White Mountain Icon"></a>  
+          <p id="address">Colorado Springs Chamber of Commerce <br>
+              5 Pikes Peak Ave <br>
+              Colorado Springs, CO 80909 </p>
+        </div>
+        <div class="footer_contact">
+          <p id="contact_info">info@colospringschmbr.org <br>
+          (719)123-4567 
+          </p>
+          <p><a href="https://www.google.com/maps/place/Colorado+Springs,+CO/@38.8756844,-104.7583595,11z/data=!3m1!4b1!4m6!3m5!1s0x8713412ea1e6d22b:0x418eeb92f5e86b13!8m2!3d38.8338816!4d-104.8213634!16zL20vMDF2c2w">Location Map</a></p>    
+        </div>
+        <div class="base">
+          <p id="date"></p>
+    
       <script>
-        let text = "Last Updated: " + document.lastModified;
+        let text = "&copy; 2023  |  Colorado Springs Chamber of Commerce | Tiana Boyd | WDD230 Project | Last Updated: " + document.lastModified;
         document.getElementById("date").innerHTML = text;
       </script>
-
+        </div>
+    </div>
 <script src="scripts/scripts.js"></script>
     
 </html>
