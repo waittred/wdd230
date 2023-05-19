@@ -224,31 +224,31 @@ footer a {
     margin: 0;
     row-gap: .5rem;    
 }
-.hero_column {
+.hero_ph {
     grid-row: 1; 
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.event_column {
+.event_ph {
     grid-row: 2;
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.weather_column {
+.weather_ph {
     grid-row: 3;
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.news_release_column {
+.news_release_ph {
     grid-row: 4;
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.join_column {
+.join_ph {
     display: none;
 }
 
@@ -259,7 +259,7 @@ footer a {
     
 }
 
-.spotlight_column1 {
+.spotlight_ph1 {
     
     justify-content: center;
     border: 1px solid black;
@@ -270,7 +270,7 @@ footer a {
     margin-top: 2%;
     margin-bottom: .5%;
 }
-.spotlight_column2 {    
+.spotlight_ph2 {    
     background-color: lightgrey;
     border: 1px solid black;
     width: 96%;

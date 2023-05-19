@@ -40,7 +40,7 @@ aside {
     
 }
 
-.event_column {
+.event_ph {
     grid-column: 1;
     grid-row: 5;
     background-color: lightgrey;
@@ -48,28 +48,28 @@ aside {
         
 }
 
-.weather_column {
+.weather_ph {
     grid-column: 2;
     grid-row: 5;
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.join_column {
+.join_ph {
     grid-column: 1/3;
     grid-row: 4;
     background-color: lightgrey;
     border: 1px solid black;
 }
 
-.hero_column {
+.hero_ph {
     grid-column: 1/3;
     grid-row: 1; 
     background-color: lightgrey;
     border: 1px solid black; 
 }
 
-.news_release_column {
+.news_release_ph {
     grid-column: 1/3;
     grid-row: 2;
     background-color: lightgrey;
@@ -83,7 +83,7 @@ aside {
     background-color: lightgrey;
 }
 
-.spotlight_column1 {
+.spotlight_ph1 {
     justify-content: center;
     border: 1px solid black;
     width: 50%;
@@ -93,7 +93,7 @@ aside {
     margin-right: 3px;  
 }
 
-.spotlight_column2 { 
+.spotlight_ph2 { 
     background-color: lightgrey;
     border: 1px solid black;
     width: 50%;
@@ -132,7 +132,7 @@ aside {
 }
 }
  @media only screen and (max-width: 63rem) {
-.spotlight_column3 {
+.spotlight_ph3 {
     display:none ;
 } 
        

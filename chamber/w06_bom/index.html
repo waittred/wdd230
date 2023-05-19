@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoM Top 25</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>📖 Book of Mormon - Top 25</h1>
+    <main>
+        <label for="favchap">Enter Book and Chapter: </label>
+        <input type="text" id="favchap">
+        <button type="submit">Add Chapter</button>
+        <ul id="list"></ul>
+    
+     <!-- Three variables that hold references to the input, button, and list elements using const-->
+      <script>
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        const list = document.querySelector('ul');
+        
+    <!--event listener for Add Chapter button using addEventListener and an anonymous function.-->
+        button.addEventListener('click', () => {
+        const favScripture = input.value;
+        input.value = '';
+       
+    <!--function block for adding a chapter-->
+        const listItem = document.createElement('li');
+        const listBtn = document.createElement('button');
+        const listText = document.createElement('span');
+            
+        listItem.appendChild(listText);
+        listText.textContent = favScripture;
+        listItem.appendChild(listBtn);
+        listBtn.textContent = 'X';
+        list.appendChild(listItem);
+    
+        listBtn.addEventListener('click', () => {
+        list.removeChild(listItem);
+        
+        });
+    
+        input.focus();
+          
+        });
+      </script>
+      </b>
+     
+</body>
+</html>
