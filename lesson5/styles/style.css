@@ -20,7 +20,7 @@ h1 {
   margin-block-start: .5em;
   margin-block-end: .5em;
   margin-inline-start: .3em;
-  font: 'Helvetica', san-serif;
+  font-family: 'Helvetica', sans-serif;
   }
 
 main {
