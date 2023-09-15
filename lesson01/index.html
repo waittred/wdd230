@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Tiana Boyd">
+    <meta
+        name="description"
+        content="Tiana Boyd's home page for WDD 230 Web Frontend Development. In this course assignment portal, 
+        Tiana Boyd's portal page will contain links to weekly assignments and activities. Additionally, this portal page
+        will demonstrate Tiana's knowledge and understanding of HTML and CSS design and development." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiana Boyd - WDD 230 - Web Frontend Development </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Judson&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    
+</head>
+<body>
+<header>
+    <img class="profile_pic" src="images/Pic1.jpg" alt="Profile Pic of Me">
+    <h1>Tiana Boyd</h1>
+</header>
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#siteplan">Site Plan</a>
+    <a href="#chamber">Chamber</a>
+    <a href="byui">BYU-Idaho</a>
+    <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/41?lang=eng&id=p10#p10" target="_blank">Scripture</a>
+</div>
+<main>
+    <h2>WDD 230: Web Frontend Development</h2>
+    <hr style="width:75%;text-align:center">
+<section id="card-a" class="card">
+    <h3>Learning Activities</h3>
+
+        <ul>
+            <li>Lesson 01: &nbsp; <a href="lesson01/holygrail.html">Lesson 1</a></li>
+            <li>Lesson 02: &nbsp; <a href="./"> Title</a></li>
+            <li>Lesson 03: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 04: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 05: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 06: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 07: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 08: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 09: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 10: &nbsp; <a href="./"> Title </a></li>
+            <li>Lesson 11: &nbsp; <a href="./"> Title </a></li>
+        </ul>
+</section> 
+
+<section id="card-b" class="card">
+    <h3>Information</h3>
+    <p>Seattle</p>
+    <i style="font-size:24px; color: gray;" class="fas">&#x1F327; </i>
+    <p>63°F - Rainy </p>
+    <p>Page Visits: 1021</p>
+</section>
+    
+</main>
+<footer>
+    &copy; 2023  |  Tiana Boyd  |  BYU-Idaho
+    <div class= "updated"> 
+    <p id="date"></p>
+    </div>
+</footer>
+<script>
+    let text = "Last Updated: " + document.lastModified;
+    document.getElementById("date").innerHTML = text;
+</script>
+</body>
+</html>
