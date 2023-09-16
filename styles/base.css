@@ -81,18 +81,10 @@ ul {
 	text-align: left;
     list-style-type: disc;
     list-style-position: inside;
-    margin-bottom: 2%;    
+    margin-bottom: 2%; 
+    list-style: none;   
     
 }
-
-li::before {
-    display: inline;
-    content: '';
-    margin: 0;
-    
-    
-}
-
 
 .card {
     display: grid;
