@@ -10,9 +10,6 @@ header, footer {
 header {
     display: flex;
 	width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
     align-items: center;
     justify-content: center;
     
@@ -43,10 +40,7 @@ h1 {
     text-align: center;
     color: #ffff;
     font-size: 5.5rem;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
+    float:right;
     text-shadow: 5px 5px black;
 }
 
@@ -70,9 +64,10 @@ body {
     text-decoration: none;
 }
 .profile_pic {
-    max-width: 100%;
+    max-width: 15%;
     height: auto;
-    margin: 2%;
+    margin: 1%;
+    float:left;
     
 }
 
@@ -112,4 +107,5 @@ p {
 .updated {
     color: #f4d35e;
     font-size: 16pt;
+    padding-bottom: 1%;
 }
