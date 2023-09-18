@@ -4,7 +4,7 @@ header, .topnav, main, footer {
   
 }
 header, footer {
-    background-color:#006c67;
+    background-color:#005c57;
     
 }
 header {
@@ -45,7 +45,7 @@ h1 {
 }
 
 h3 {
-    background: #006c67;
+    background: #005c57;
     color: white;
     text-shadow: 2px 2px black;
     margin-top: 0;
