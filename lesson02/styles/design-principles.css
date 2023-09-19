@@ -1,0 +1,123 @@
+/* phone or baseline views **************************/
+
+header, footer {
+    display: block;
+    background-color: teal;
+    text-align: center;
+    color: #ffff;
+    font-size: 2.5rem;
+    width: auto;
+    text-shadow: 2px 2px black;
+    background-color: #005c57;
+	padding: 1%;
+	max-width: 100%;
+    
+}
+
+h1, h2 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+main {
+	display:grid;
+	margin: 0 auto;
+	grid-template-columns: 1fr;
+	font-size: 16pt;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    line-height: 1.5;
+}
+
+main section {
+	margin: 0.5rem;
+	border: 1px solid #bbb;
+	padding: 0 1rem;
+	background-color: #eee;
+}
+
+main section h3 {
+	text-align: center;
+    color: #ffff;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    width: 100%;
+    display:grid;
+    text-shadow: 2px 2px black;
+    background-color: #005c57;
+}
+
+main section:nth-child(2) {
+	
+	margin: 0.5rem;
+}
+
+.image {
+	box-shadow: 0 0 30px #333;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    width: 100%;
+}
+
+p {
+    margin-left: .5%;
+    font-size: 1.5rem;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+    
+}
+
+.updated {
+    color: white;
+    font-size: 16pt;
+    padding-bottom: 1%;
+}
+
+
+/* Tablet Views ******************************/
+@media only screen and (min-width: 37.5em) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	main section:nth-child(2) {
+		display: block;
+	}
+
+	main section:nth-child(3) {
+		grid-column: span 2;
+	}
+
+	main section picture {
+		display: block;
+	}
+	main section picture img {
+		width: 100%;
+		height: auto;
+		border: 1px solid #bbb;
+	}
+}
+
+
+/* Desktop Views ****************************/
+@media only screen and (min-width: 60em) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+}
+	
+	
+	main section:nth-child(1) {
+	  grid-column: 1/2;
+}
+	main section:nth-child(2) {
+	  grid-column: 2/3;
+		grid-row: 1/2;
+}
+	main section:nth-child(3) {
+		grid-column: span 1;
+}
+}
+
+
+
