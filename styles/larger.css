@@ -25,19 +25,8 @@
         height: 1rem;
         color:black;
         
-        
     }
 
-    .card-a {
-        grid-column: 1/2;
-    
-        
-    }
-
-    .card-b {
-        grid-column: 3/4;
-        
-    }
 
     .card {
         align-content: space-between;
