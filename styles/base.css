@@ -12,7 +12,7 @@ header {
 	width: 100%;
     align-items: center;
     justify-content: center;
-    margin: 1%;
+    
     
 }
 nav {
@@ -95,16 +95,16 @@ ul {
     border-style: solid;
     border-width: medium;
     padding-bottom: 2%;
-    margin-left: 2%;
+    margin-left: .3rem;
     margin-right: 2%;
-    margin-bottom: 1rem;
+    
     color: black;
     
 }
 
 
 footer {
-    margin-top: 2%;
+    margin-top: 1%;
     color: #ffff;
     text-align: center;
     
@@ -128,9 +128,8 @@ p {
     justify-content: center;
     padding-bottom: 50%;
     position: relative;
-    
-     
-     
+    margin: 3%;
+      
 }
 
 .google-map iframe {
@@ -142,7 +141,7 @@ p {
     right: 0;
     width: 98%;
     height: 98%;
-    margin: 1%;
+    
      
      
 }
