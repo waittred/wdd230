@@ -99,6 +99,7 @@ footer p {
 
     .image {
     height: 700px;
-    width:100%;
+    max-width:100%;
+    justify-content: center;
 }
 }
