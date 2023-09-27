@@ -14,21 +14,43 @@ header {
     
     
 }
+
 nav {
     margin: 0 auto;  
 }
 
+#menu {
+    display: block;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1%;
+}
+
+#menu::before {
+    content: " ≡ ";
+}
+
+#menu.show::before {
+    content: "❎ ";
+    
+}
+
 .main-nav{
+    list-style: none;
     background-color: #005c57;
     font-size: 20px;
     list-style: none;
-    padding: 1%;
+    
     text-align: center;      
 }
 
 .main-nav li {
-    justify-content: space-evenly;
-    padding-bottom: .3em;
+    display: none;
+    
 }
 .main-nav li:hover {
     background-color: #d4af37;
@@ -37,6 +59,19 @@ nav {
 .main-nav a {
     color: white;
 }
+
+.show li {
+	display: block;
+	width: 100%;
+}
+.show li a {
+	display: block;
+}
+
+.active::before {
+	content: "🏠 ";
+}
+
 
 h1 {  
     text-align: center;

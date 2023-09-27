@@ -4,14 +4,44 @@
 
     .main-nav{
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
-
+       
     }
     
     main {
         display: grid;
         grid-template-columns: 1fr 300px;
     }
+
+    #menu {
+		display: none;
+		
+	}
+
+    .main-nav {
+        padding: 1%;
+
+    }
+
+	.main-nav li {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+
+	.navigation {
+		flex-direction: row;
+	}
+
+	.navigation li {
+		display: block;
+		flex: 1 1 100%;
+	}
+	
 
     .profile_pic{
         margin: 1em;
