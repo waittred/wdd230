@@ -27,6 +27,7 @@
 	.main-nav li {
 		display: block;
 		flex: 1 1 100%;
+        font-size: larger;
 	}
 
     #menu {
