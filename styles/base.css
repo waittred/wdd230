@@ -21,21 +21,24 @@ nav {
 
 #menu {
     display: block;
-    font-size: 1.5rem;
-    border: 1px solid black;
+    font-size: 2rem;
+    border: 1px solid #005c57;
     justify-content: space-evenly;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    padding: 1%;
+    padding: 0%;
 }
 
+
 #menu::before {
-    content: " ≡ ";
+    content: "☰";
+    background-color: #005c57;
+    
 }
 
 #menu.show::before {
-    content: "❎ ";
+    content: "✘";
     
 }
 
@@ -43,8 +46,7 @@ nav {
     list-style: none;
     background-color: #005c57;
     font-size: 20px;
-    list-style: none;
-    
+    list-style: none;    
     text-align: center;      
 }
 
