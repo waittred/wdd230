@@ -4,10 +4,10 @@
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #284e4a  ;
+  --primary-color: #284e4a;
   --secondary-color: #306c62;
   --accent1-color: #64b2a6;
-  --accent2-color: #D2E9D5;
+  --accent2-color: #d2e9d5;
 
   /* change the values below to your chosen font(s) */
   --heading-font: 'Roberto', sans-serif;
@@ -15,12 +15,12 @@
 
   /* these colors below should be chosen from among your palette colors above */
   --headline-color-on-white: #284e4a;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --headline-color-on-color: black; /* headlines on a colored background */ 
   --paragraph-color-on-white: black; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #64b2a6  ;
+  --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #64b2a6;
   --nav-link-color: white;
-  --nav-background-color: #306c62;
+  --nav-background-color: #284e4a;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #64b2a6;
 }
@@ -70,23 +70,37 @@ p {
 }
 .colors {
   
-   text-align: center;
+  text-align: center;
   min-width: 350px;
   margin: 30px auto;
 }
 .colors th {
   background-color: #999;
+  
+  
+  
 }
 .colors td{
   width: 25%;
   height: 3em;
+  ;
 }
 .primary {
   background-color: var(--primary-color);
 }
+
+.colors .primary {
+  color:white;
+}
+
 .secondary {
   background-color: var(--secondary-color);
 }
+
+.colors .secondary {
+  color:white;
+}
+
 .accent1 {
   background-color: var(--accent1-color);
 }
