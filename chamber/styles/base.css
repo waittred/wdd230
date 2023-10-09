@@ -73,7 +73,8 @@ nav {
         background-color: var(--headline-color-on-white);
         font-size: 20px;
         list-style: none;    
-        text-align: center;      
+        text-align: center;
+        padding-left: 0;      
 }
     
 .main-nav li {
@@ -83,6 +84,7 @@ nav {
 
 .main-nav li:hover {
         background-color: var(--accent1-color);
+        
 }
       
 .main-nav a {
@@ -103,6 +105,9 @@ ul.main-nav.show {
     margin-top: .1%;
     margin-bottom: .2%;
     
+}
+a {
+    justify-content: center;
 }
 
 /*Main Body Content */
@@ -140,7 +145,7 @@ ul.main-nav.show {
     justify-content: center;
     align-items: center;
     border: 1px solid black; 
-    background-image: url("/chamber/images/seattle-skyline-clouds1.jpg");
+    background-image: url(../images/seattle-skyline-clouds1.jpg);
    
 }
 
@@ -156,20 +161,36 @@ ul.main-nav.show {
     cursor: pointer;
     border-radius: 10px;
 }
+.spotlight_main {
+    grid-template-columns: 1fr;
+}
 
-section {
+section{
     display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit(320px, 1fr));
+}
+
+.spotlight_main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .10rem;
+    padding: .45rem;
+    background-color: var(--accent2-color);
     border: 1px solid black;
-    padding: 2%;
-    column-gap: .5%;
     
-    height: auto;
 }
 
 img {
-    width: 100%;
-    height: auto;
+    display: flex;
+    width: 50%;
+    height: 100%;
     margin: 0;
+    vertical-align: middle;
 }
 
 
