@@ -132,13 +132,13 @@ a {
 }
 .current-events {
     
-    background-color: lightgrey;
+    background-color: var(--accent2-color);
     border: 1px solid black;
 }
 
 .weather-card {
   
-    background-color: lightgrey;
+    background-color: var(--accent2-color);
     border: 1px solid black;
 }
 
