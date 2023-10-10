@@ -22,7 +22,7 @@
     <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Cloud City Chamber of Commerce Index Page">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/seattle-skyline-clouds.jpg">
+    <meta property="og:image" href="images/seattle-skyline-clouds1.jpg">
     <meta property="og:url" content="https://waittred.github.io/wdd230/">
 
 </head>
@@ -30,7 +30,12 @@
     
     
     <header>
-        <h1>Cloudy City Chamber of Commerce</h1>
+        <h1>Seattle Chamber of Commerce</h1>
+        <img src="images/chamber-logo.png" alt="Scenic view of mountains and water" class="logo">
+        <img src="images/linkedin.png" alt="Linkedin Icon" class="social-link">
+        <img src="images/instagram.png" alt="Instagram Icon" class="social-insta">
+        <img src="images/twitter.png" alt="Twitter Icon" class="social-twit">
+
     </header>
 
     <nav>
@@ -59,13 +64,17 @@
                 <h3>Class to Build Your Business</h3>
                 <h3>Meetings starting next month! We will meet on the 2nd Wednesday of every month!</h3>
             </section>
-            <section class="weather-card"><h3>Weather</h3> 
-                <br>
-                <p>&#127783;&#65039;</p>
-                <p>63°F - Rainy </p>
+            <section class="weather-card">
+                <h1>Weather</h1>
+                <p>The current temperature in Seattle, Washington is: <span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src=" " alt="">
+                    <figcaption></figcaption>
+                </figure> 
             </section>
+
             <br>
-            <h1>Spotlight</h1>
+            <h1>Chamber Spotlights</h1>
             <hr style="width:50%; text-align:center">
             <section class="spotlight_main">
                 <article id="cards" class="grid">
@@ -116,7 +125,8 @@
             </div>
         </footer>
         
-<script src="../scripts/getdates.js"></script>
+    <script src="../scripts/getdates.js"></script>
+
         
 </body>
 </html>
