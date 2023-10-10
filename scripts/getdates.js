@@ -29,7 +29,7 @@ fetch(url)
     const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
     const description = data.weather[0].description;
 
-    currentTemp.textContent = `Current Temperature: ${temperature} °F`;
+    currentTemp.textContent = `Seattle's current temperature is: ${temperature} °F`;
     weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`;
     captionDesc.textContent = `Weather: ${description}`;
   })
