@@ -1,24 +1,22 @@
-function addChapter() {
-    var chapterInput = document.getElementById("chapter-input");
-    var chapterName = chapterInput.value.trim();
+const input = document.getElementById('favchap');
+const button = document.getElementById('addButton');
+const list = document.getElementById('list');
 
-    if (chapterName !== "") {
-        var chaptersList = document.getElementById("chapters-list");
-        var listItem = document.createElement("li");
-        listItem.textContent = chapterName;
-        chaptersList.appendChild(listItem);
-        chapterInput.value = "";
-    }
-    var removeButton = document.createElement("button");
-                removeButton.textContent = "Remove";
-                removeButton.className = "remove-button"; 
-                removeButton.onclick = function () {
-                    listItem.remove();
-                };
+button.addEventListener('click', () => {
+    if (input.value.trim() !== '') {
+        const li = document.createElement('li');
+        const deleteButton = document.createElement('button');
+        li.textContent = input.value.trim();
+        deleteButton.textContent = '❌';
 
-                listItem.appendChild(removeButton);
-                chaptersList.appendChild(listItem);
-                chapterInput.value = "";
+        deleteButton.classList.add('remove-button');
+        deleteButton.addEventListener('click', () => {
+            li.remove();
+        });
 
-    
-}
+        li.appendChild(deleteButton);
+        list.appendChild(li);
+        input.value = '';
+        input.focus();
+    } 
+});

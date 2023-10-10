@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/base.css">
     <title>Favorite Book of Mormon Chapters</title>
+    <meta
+        name="description"
+        content="Form to be completed by users that list their favorite Book of Mormon Chapters">
+    <meta name="author" content="Tiana Boyd"> 
 </head>
 <body>
-    <h1>List of Favorite Book of Mormon Chapters</h1>
-        <ul class="chapter-list" id="chapters-list">
-            
-        </ul>
-
-        <div>
-            <label for="chapter-input">Add A Favorite Chapter:</label>
-            <input type="text" id="chapter-input">
-            <button onclick="addChapter()">Add Chapter</button>
-        </div>
-   
-        <script src="scripts/bom.js"></script>
+    <h1>📖 Book of Mormon - Top 10</h1>
+<main>
+	<label for="favchap">Enter Book and Chapter: </label>
+            <input type="text" id="favchap" placeholder="Alma 5" value="Alma 5">
+            <button id="addButton">Add Chapter</button>
+            <ul id="list"></ul>
+</main>
+    
+<script src="scripts/bom.js"></script>
 </body>
+
 </html>
