@@ -1,5 +1,5 @@
 const input = document.getElementById('favchap');
-const button = document.getElementById('addButton');
+const button = document.getElementById('submit');
 const list = document.getElementById('list');
 
 button.addEventListener('click', () => {
