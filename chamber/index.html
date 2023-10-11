@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,10 +32,7 @@
     
     <header>
         <h1>Seattle Chamber of Commerce</h1>
-        <img src="images/chamber-logo.png" alt="Scenic view of mountains and water" class="logo">
-        <img src="images/linkedin.png" alt="Linkedin Icon" class="social-link">
-        <img src="images/instagram.png" alt="Instagram Icon" class="social-insta">
-        <img src="images/twitter.png" alt="Twitter Icon" class="social-twit">
+        
 
     </header>
 
@@ -59,13 +57,15 @@
             <div class="hero-image">
                 <div class="call-to-action">Chamber Information</div>
             </div>
-            <section class="current-events"><h1>Current Events</h1>
+                <h2>Current Events</h2>
                 <hr style="width:50%; text-align:center">
+            <section class="current-events">
+                
                 <h3>Class to Build Your Business</h3>
-                <h3>Meetings starting next month! We will meet on the 2nd Wednesday of every month!</h3>
+                <p>Meetings starting next month! We will meet on the 2nd Wednesday of every month!</p>
             </section>
             <section class="weather-card">
-                <h1>Weather</h1>
+                <h2>Weather</h2>
                  <span id="current-temp"></span>
                 <figure>
                     <img id="weather-icon" src=" " alt="">
@@ -74,7 +74,7 @@
             </section>
 
             <br>
-            <h1>Chamber Spotlights</h1>
+            <h2>Chamber Spotlights</h2>
             <hr style="width:50%; text-align:center">
             <section class="spotlight_main">
                 <article id="cards" class="grid">
@@ -113,19 +113,70 @@
             </section>
             
         </div>
-        </main>
-
-
-
-  
-        <footer>
-            <p>&copy; <span id="year"></span> |  Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
-            <div class= "updated"> 
-            <p id="date"></p>
-            </div>
-        </footer>
         
-    <script src="../scripts/getdates.js"></script>
+                <h2>Contact Us</h2>
+                <hr style="width:50%; text-align:center"> 
+        <div id="footer1">   
+            <div class="company-details">
+            
+                <div class="row">
+                    <div id="col1">
+                        <span id="icon1" class="fa fa-map-marker"></span>
+ 
+                        <span>
+                        301 5th Ave, Seattle, WA 98101
+                        
+                        </span>
+            </div>
+ 
+                    <div id="col2">
+                        <span id="icon2" class="fa fa-phone"></span>
+ 
+                        <span>
+                            Telephone: 206.389.0000
+                        </span>
+                    </div>
+ 
+                    <div id="col3">
+                        <span id="icon3" class="fa fa-envelope"></span>
+                        <span>www.cloudcity.org</span>
+                
+                    </div>
+        </div>
+        </div>
+        </div>
+                            
+</main>     
+<footer>
+    <ul class="contact">
+        <li>
+            <a href="#" class="fa fa-twitter">
+
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="fa fa-facebook">
+
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="fa fa-pinterest-p">
+
+            </a>
+        </li>
+    </ul>        
+    <p>&copy; <span id="year"></span> |  Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
+        <div class= "updated"> 
+            <p id="date"></p>
+            
+        </div>
+    
+</footer>           
+
+        
+<script src="scripts/chamber.js"></script>
 
         
 </body>
