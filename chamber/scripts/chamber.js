@@ -36,3 +36,9 @@ fetch(url)
   .catch(error => {
     console.error('Error fetching weather data:', error);
   });
+
+//Dark Mode//
+function myFunction() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+}
