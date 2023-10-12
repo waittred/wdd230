@@ -131,6 +131,10 @@ a:active{
     text-decoration: underline;
 }
 
+.dark-mode a {
+    color: white;
+}
+
 .dark-mode {
     background-color: black;
     --accent2-color: black;
