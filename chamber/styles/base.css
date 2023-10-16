@@ -281,7 +281,7 @@ ul.contact li{
 	font-size: 1em;
 }
 ul.contact li a{
-	color: #FFF;
+	color: black;
 	display: inline-block;
 	background: var(--accent1-color);
 	width: 40px;
