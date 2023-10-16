@@ -38,10 +38,9 @@ header, footer{
 
 header {
     display: flex;
-	width: 100%;
+	width: 96%;
     align-items: center;
     justify-content: center;
-    text-shadow: 4px 4px 10px black;
 }
 
 nav {
@@ -146,10 +145,6 @@ a:active{
     position: absolute;
     top: 10px;
     right: 20px;
-}
-
-#mode button {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /*Main Body Content */
@@ -258,13 +253,22 @@ footer {
     margin-bottom: 2%;
 }
 
-#footer1 #icon1, #icon2, #icon3 {
+/*#footer1 #icon1, #icon2, #icon3 {
 	display: block;
 	margin-bottom: 1em;
 	font-size: 3em;
     padding: 1%;
     
+}*/
+
+
+.material-symbols-outlined {
+   
+	margin-bottom: 1em;
+    padding: 1%;
+
 }
+
 
 ul.contact{
 	margin: 0;
