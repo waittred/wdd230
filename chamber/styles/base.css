@@ -122,7 +122,11 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
+.spotlight_main a:hover {
+    text-decoration: underline;
+}
+
+.company-details a:hover {
     text-decoration: underline;
 }
 
