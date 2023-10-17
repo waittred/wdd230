@@ -41,12 +41,16 @@ header {
 	width: 96%;
     align-items: center;
     justify-content: center;
+    text-shadow: 4px 4px 10px black;
 }
 
 nav {
     margin: 0 auto;  
 }
 
+#mode button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
 #menu {
     display: block;
