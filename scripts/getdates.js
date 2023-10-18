@@ -15,8 +15,9 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('show');
     });  
  
-//  Received help from chat.openai.com to fetch current weather //
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.60&lon=-122.33&units=imperial&appid=542a8196d8643c064f9c22f4313b339f'
+
+///  Received help from chat.openai.com to fetch current weather //
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.60&lon=-122.33&units=imperial&appid=59020284cd6ab79b85c528f26efcafd2'
 const currentTemp = document.getElementById('current-temp');
 const weatherIcon = document.getElementById('weather-icon');
 const captionDesc = document.getElementById('figcaption');

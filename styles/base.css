@@ -1,3 +1,10 @@
+body {
+    font-family: 'Shadows Into Light', 'Judson', serif;
+    font-size: 30px; 
+    margin: 0;
+    text-decoration: none;
+}
+
 header, .topnav, main, footer {
     max-width: 100%;
   
@@ -21,12 +28,12 @@ nav {
 
 #menu {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 1px solid #005c57;
     justify-content: space-evenly;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: .5rem;
+    right: .5rem;
     padding: 0%;
 }
 
@@ -54,12 +61,21 @@ nav {
     display: none;
     
 }
+
+
 .main-nav li:hover {
     background-color: #d4af37;
+    padding: .5%
 }
   
 .main-nav a {
     color: white;
+    text-decoration: none;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
 }
 
 .show li {
@@ -77,65 +93,79 @@ nav {
 
 h1 {  
     text-align: center;
-    color: #ffff;
-    font-size: 4rem;
+    color: #ffff;    
     float:right;
     text-shadow: 5px 5px black;
+    font-size: 4rem;
 }
 
-hr {
-    height: 2px;
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    
 }
 
 h3 {
     background: #005c57;
     color: white;
     text-shadow: 2px 2px black;
+    font-size: 1.7rem;
+    text-align: center;
     margin-top: 0;
-    text-align: center;
+
 }
 
-h2 {
-    text-align: center;
+a {
+    font-size: 1.5rem;
 }
 
-body {
-    font-family: 'Shadows Into Light', 'Judson', serif;
-    font-size: 25px;
-    line-height: 1.5;
-    margin: 0;
-    text-decoration: none;
+p {
+    font-size: 1.5rem;
 }
 
 .profile_pic {
     max-width: 15%;
     height: auto;
-    padding-right: 3%;
+    padding-right: 8%;
     float:left;
     
 }
 
 ul {
+
     margin: 1em 0 .5em;
 	text-align: left;
     list-style-type: disc;
     list-style-position: inside;
     margin-bottom: 2%; 
     list-style: none;  
+    font-size: 1.5rem;
+    
    
 }
 
 .card {
-    display: grid;
+   
     text-align: center;
     border-style: solid;
     border-width: medium;
     padding-bottom: 2%;
     margin-left: .3rem;
-    margin-right: 2%;
-    
+    margin-right: 2%;    
     color: black;
     
+}
+
+
+#card-b {
+    font-size: 1.5
+rem;
+    text-align: center;
+    
+}
+
+span #current-temp {
+    padding: 2%;
 }
 
 
@@ -149,12 +179,13 @@ footer {
 
 p {
     margin: 0;
+    font-size: 1.2rem;
     
 }
 
 .updated {
     color: white;
-    font-size: 16pt;
+    font-size: 10pt;
     padding-bottom: 1%;
 }
 .google-map {
@@ -164,7 +195,7 @@ p {
     justify-content: center;
     padding-bottom: 50%;
     position: relative;
-    margin: 3%;
+    margin: 1%;
       
 }
 
@@ -175,9 +206,9 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 98%;
-    height: 98%;
+    width: 90%;
+    height: 90%;
+    margin:auto;
     
-  
+} 
     
-}
