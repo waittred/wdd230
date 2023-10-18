@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images: srcset</title>
+    <meta
+        name="description"
+        content="Image of the Manti Temple. ">
+    <meta name="author" content="Tiana Boyd"> 
+    <link rel="stylesheet" href="styles/responsive-images.css">
+    
+</head>
+<body>
+    <main>
+        <h1>Laie Hawaii Temple</h1>
+    <div class="hero">
+    <!--picture found at: https://www.churchofjesuschrist.org/media/collection/high-quality-images-for-print-images?lang=eng-->
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width:500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width:1000px)">
+            <img src="images/hero-large.webp" alt="Image of the Laie Hawaii Temple" width="1500" height="750">
+        </picture>
+      
+    </div>
+    </main>
+</body>
+</html>
