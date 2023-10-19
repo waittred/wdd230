@@ -63,7 +63,7 @@ nav {
 
 .main-nav li:hover {
     background-color: #d4af37;
-    padding: .5%
+    padding: 0;
 }
   
 .main-nav a {
@@ -151,11 +151,10 @@ p {
 
 ul {
 
-    margin: 1em 0 .5em;
+    margin: auto;
 	text-align: left;
     list-style-type: disc;
     list-style-position: inside;
-    margin-bottom: 2%; 
     list-style: none;  
     font-size: 1.5rem;
     
