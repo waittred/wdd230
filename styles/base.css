@@ -18,8 +18,6 @@ header {
 	width: 100%;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 nav {
@@ -78,6 +76,26 @@ nav {
     height: auto;
 }
 
+.herolabel {
+	position: absolute;
+	top: 12rem;
+	left: .3rem;
+	background: radial-gradient(#fff, rgb(211, 155, 50));
+	border: 1px solid rgba(0,0,0,.75);
+	padding: .5rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.75;
+	
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 700;
+	font-size: .6rem;
+	
+}
+
 .show li {
 	display: block;
 	width: 100%;
@@ -126,7 +144,7 @@ p {
 .profile_pic {
     max-width: 15%;
     height: auto;
-    padding-right: 8%;
+    padding-right: 9%;
     float:left;
     
 }
