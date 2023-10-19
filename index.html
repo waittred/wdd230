@@ -46,8 +46,7 @@
         <div class="hero">
             <picture>
                 <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
-                <img src="images/hero-large.webp" alt="Picture of Manti Temple" width="1500" height="750">
+                <img src="images/hero-large.webp" alt="Picture of Manti Temple" media="(max-width: 960px)">
             </picture>
             <div class="herolabel">
                 <p>Manti Utah Temple</p>
@@ -77,11 +76,11 @@
 
 <section id="card-b" class="card">
     <h3>Information</h3>
-    <span id="current-temp"></span>
-        <figure>
-            <img id="weather-icon" src=" " alt="">
-            <figcaption id="figcaption"></figcaption>
-        </figure> 
+    <div class="weather-container">
+        <h5 id="current-temperature"></h5>
+        <h5 id="wind-speed"></h5>
+        <h5 id="weather-description"></h5>
+    </div>
 </section>
 <div class="google-map">
     <div class="map-container">

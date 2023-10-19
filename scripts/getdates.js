@@ -17,23 +17,24 @@ hamButton.addEventListener('click', () => {
  
 
 ///  Received help from chat.openai.com to fetch current weather //
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.60&lon=-122.33&units=imperial&appid=59020284cd6ab79b85c528f26efcafd2'
-const currentTemp = document.getElementById('current-temp');
-const weatherIcon = document.getElementById('weather-icon');
-const captionDesc = document.getElementById('figcaption');
+const apiKey = '59020284cd6ab79b85c528f26efcafd2'; 
+        const city = 'Seattle'; 
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    const temperature = data.main.temp;
-    const iconCode = data.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
-    const description = data.weather[0].description;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-    currentTemp.textContent = `Seattle's current temperature is: ${temperature} °F`;
-    weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`;
-    captionDesc.textContent = `Weather: ${description}`;
-  })
-  .catch(error => {
-    console.error('Error fetching weather data:', error);
-  });
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const temperatureCelsius = data.main.temp;
+                const temperatureFahrenheit = (temperatureCelsius * 9/5) + 32; // Convert Celsius to Fahrenheit
+                const windSpeedMph = data.wind.speed;
+                const weatherDescription = data.weather[0].description;
+
+                // Update HTML elements with weather data
+                document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit.toFixed(2)}°F`;
+                document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMph} mph`;
+                document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
