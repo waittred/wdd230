@@ -58,7 +58,12 @@
             
             <div class="join"><h3>Join</h3></div>
             <div class="hero-image">
-                <div class="call-to-action">Chamber Information</div>
+                <picture>
+                    <source srcset="images/small.webp" media="(max-width: 500px)">
+                    <source srcset="images/medium.webp" media="(max-width: 1000px)">
+                    <img id="webp-img" src="images/large.webp" alt="Team Meeting">
+                </picture>
+                <div class="call-to-action" id="call-to-action">Chamber Information</div>            
             </div>
                 <h2>Current Events</h2>
                 <hr style="width:50%; text-align:center">
@@ -69,11 +74,16 @@
             </section>
             <section class="weather-card">
                 <h2>Weather</h2>
-                 <span id="current-temp"></span>
-                <figure>
-                    <img id="weather-icon" src=" " alt="">
-                    <figcaption id="figcaption"></figcaption>
-                </figure> 
+                <div class="weather-container">
+                    <h5 id="current-temperature"></h5>
+                    <h5 id="wind-speed"></h5>
+                    <h5 id="weather-description"></h5>
+                    <figure>
+                        <img id="weather-icon" src=" " alt="">
+                        <figcaption></figcaption>
+                    </figure> 
+                </div>
+                
             </section>
 
             <br>
@@ -177,6 +187,7 @@
 
         
 <script src="scripts/chamber.js"></script>
+<script src="scripts/windchill.js"></script>
 
         
 </body>

@@ -51,3 +51,26 @@ function myFunction() {
      button.textContent = "Dark Mode Off";
    }
  }
+
+ //Lesson06 Text overlays based upon image size. Received help from chat.openai.com//
+ document.addEventListener('DOMContentLoaded', () => {
+  const heroImageElement = document.getElementById('hero-image');
+  const callToActionElement = document.getElementById('call-to-action');
+
+  function updateTextOverlay() {
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 500) {
+          callToActionElement.textContent = 'Small';
+      } else if (windowWidth <= 1000) {
+          callToActionElement.textContent = 'Medium';
+      } else {
+          callToActionElement.textContent = 'Large';
+      }
+  }
+
+  // Initial call to set the text overlay based on the initial window width
+  updateTextOverlay();
+
+  // Update text overlay when window is resized
+  window.addEventListener('resize', updateTextOverlay);
+});

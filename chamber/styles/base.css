@@ -1,324 +1,368 @@
 :root {
-/* change the values below to your colors from your palette */
---primary-color: #284E4A;
---secondary-color: #306c62;
---accent1-color: #64b2a6;
---accent2-color: #d2e9d5;
-
-
-
-/* change the values below to your chosen font(s) */
---heading-font: 'Roberto', sans-serif;
---paragraph-font: 'Archivo', sans-serif;
-
-/* these colors below should be chosen from among your palette colors above */
---headline-color-on-white: #284e4a;  /* headlines on a white background */ 
---headline-color-on-color: black; /* headlines on a colored background */ 
---paragraph-color-on-white: black; /* paragraph text on a white background */ 
---paragraph-color-on-color:black; /* paragraph text on a colored background */ 
---paragraph-background-color: #64b2a6;
---nav-link-color: white;
---nav-background-color: #284e4a;
---nav-hover-link-color: white;
---nav-hover-background-color:#64b2a6;
-}
-
-body{
-
-    text-align: center;
-}
-
-
-header, footer{
-    background-color: #284E4A;
-    color: white;
-    padding: 2%;
+    /* change the values below to your colors from your palette */
+    --primary-color: #284E4A;
+    --secondary-color: #306c62;
+    --accent1-color: #64b2a6;
+    --accent2-color: #d2e9d5;
     
-}
-
-header {
-    display: flex;
-	width: 96%;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 4px 4px 10px black;
-}
-
-nav {
-    margin: 0 auto;  
-}
-
-#mode button {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     
-}
-
-#mode button:hover {
-    cursor: pointer;
-}
-
-#menu {
-    display: block;
-    font-size: 2rem;
-    --headline-color-on-white: #284e4a;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 5rem;
-    right: .1%;
     
-}
-
-#menu::before {
-    content: "☰";
-    --headline-color-on-white: #284e4a;
-      
-}
-
-#menu.show::before {
-    content: "✘";
-}
+    /* change the values below to your chosen font(s) */
+    --heading-font: 'Roberto', sans-serif;
+    --paragraph-font: 'Archivo', sans-serif;
     
-.main-nav{
-        list-style: none;
-        background-color: var(--headline-color-on-white);
-        font-size: 20px;
-        list-style: none;    
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #284e4a;  /* headlines on a white background */ 
+    --headline-color-on-color: black; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color:black; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #64b2a6;
+    --nav-link-color: white;
+    --nav-background-color: #284e4a;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color:#64b2a6;
+    }
+    
+    body{
+    
         text-align: center;
-        padding-left: 0;      
-}
-    
-.main-nav li {
-        display: none;
         
-}
+    }
 
-.main-nav li:hover {
-        background-color: var(--accent1-color);
+    main {
+        max-width: 2000px;
         
-}
-      
-.main-nav a {
+    }
+    
+    
+    header, footer{
+        background-color: #284E4A;
         color: white;
-}
+        padding: 2%;
+        
+    }
     
-.show li {
+    header {
+        display: flex;
+        width: 96%;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 4px 4px 10px black;
+    }
+    
+    nav {
+        
+        margin: auto;  
+    }
+    
+    #mode button {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        
+    }
+    
+    #mode button:hover {
+        cursor: pointer;
+    }
+    
+    #menu {
         display: block;
-        width: 100%;
-}
-
-.show li a {
-        display: block;
+        font-size: 2rem;
+        --headline-color-on-white: #284e4a;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 5rem;
+        right: .1%;
+        
+    }
+    
+    #menu::before {
+        content: "☰";
+        --headline-color-on-white: #284e4a;
+          
+    }
+    
+    #menu.show::before {
+        content: "✘";
+    }
+        
+    .main-nav{
+            list-style: none;
+            background-color: var(--headline-color-on-white);
+            font-size: 20px;
+            list-style: none;    
+            text-align: center;
+            padding-left: 0;  
+            margin: 0;
+                
+    }
+        
+    .main-nav li {
+            display: none;
+            
+    }
+    
+    .main-nav li:hover {
+            background-color: var(--accent1-color);
+            
+    }
+          
+    .main-nav a {
+            color: white;
+    }
+        
+    .show li {
+            display: block;
+            width: 100%;
+    }
+    
+    .show li a {
+            display: block;
+            text-decoration: none;
+    }
+        
+    ul.main-nav.show {
+        margin-top: .1%;
+        margin-bottom: .2%;
+        
+    }
+    
+    a {
+        color:black;
+    }
+    
+    a:link {
+        justify-content: center;
         text-decoration: none;
-}
+        
+    }
     
-ul.main-nav.show {
-    margin-top: .1%;
-    margin-bottom: .2%;
+    a:visited {
+        text-decoration: none;
+    }
     
-}
-
-a {
-    color:black;
-}
-
-a:link {
-    justify-content: center;
-    text-decoration: none;
+    .spotlight_main a:hover {
+        text-decoration: underline;
+    }
     
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-.spotlight_main a:hover {
-    text-decoration: underline;
-}
-
-.company-details a:hover {
-    text-decoration: underline;
-}
-
-a:active{
-    text-decoration: underline;
-}
-
-.dark-mode a {
-    color: white;
-}
-
-.dark-mode {
-    background-color: black;
-    --accent2-color: black;
-    color: white;
+    .company-details a:hover {
+        text-decoration: underline;
+    }
     
-}
-
-#mode {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-/*Main Body Content */
-
-.grid-container {
-    display: grid;
-    grid-template-rows: 448px auto auto auto;
-    min-height: 200px;
-    margin: 0;
-    row-gap: .5rem;    
-}
-.current-events {
+    a:active{
+        text-decoration: underline;
+    }
     
-    background-color: var(--accent2-color);
-    border: 1px solid black;
-}
-
-.weather-card {
-  
-    background-color: var(--accent2-color);
-    border: 1px solid black;
-}
-
-.join {
-    display: none;
-}
-
-.hero-image {
+    .dark-mode a {
+        color: white;
+    }
     
-    display: flex;
-    position: relative;
-    grid-row: 1; 
-    background-position: center center;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black; 
-    background-image: url(../images/seattle-skyline-clouds1.jpg);
-   
-}
-
-.call-to-action {
-    background-color: var(--headline-color-on-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    text-align: center;
-    text-decoration: none;   
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.spotlight_main {
-    grid-template-columns: 1fr;
-}
-
-section{
-    display: block;
-}
-
-.grid {
+    .dark-mode {
+        background-color: black;
+        --accent2-color: black;
+        color: white;
+        
+    }
     
-    grid-template-columns: repeat( auto-fit, min-max(320px, 1fr) );
-}
-
-.spotlight_main section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: .10rem;
-    padding: .45rem;
-    background-color: var(--accent2-color);
-    border: 1px solid black;
+    #mode {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
     
-}
+    /*Main Body Content */
+    
+    .grid-container {
+        display: grid;
+        grid-template-rows:400px auto auto auto;
+        min-height: 150px;
+        margin: 0;
+        row-gap: .5rem;    
+    }
+    .current-events {
+        
+        background-color: var(--accent2-color);
+        border: 1px solid black;
+    }
+    
+    .weather-card {
+      
+        background-color: var(--accent2-color);
+        border: 1px solid black;
+    }
 
-img {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    margin: 0;
-    vertical-align: middle;
-}
-/* Footer */
+    #weather-icon {
+        
+        width: 75px;
+       
+    }
 
-footer {
-    margin-top: .7%;
-    padding: 2%;
-}
-.company-details{
-    overflow: hidden;
-    background: var(--accent2-color);
-    text-align: center;
-    margin-top: 2em;
-    padding-top: 2%;
+    figure {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .join {
+        display: none;
+    }
+    
+    .hero-image {
+        
+        /*display: flex;
+        position: relative;
+        grid-row: 1; 
+        background-position: center center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black; 
+        /*background-image: url(../images/seattle-skyline-clouds1.jpg);*/
+        position: relative;
+        overflow: hidden;
+    }
+/* Remove #hero-image in lesson07*/
+    #hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #webp-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .call-to-action {
+        /*background-color: var(--headline-color-on-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        text-align: center;
+        text-decoration: none;   
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        max-width: 80%; /* Limit the width of the text overlay */
+        border-radius: 10px; 
+    }
+    .spotlight_main {
+        grid-template-columns: 1fr;
+    }
+    
+    section{
+        display: block;
+    }
+    
+    .grid {
+        
+        grid-template-columns: repeat( auto-fit, min-max(320px, 1fr) );
+    }
+    
+    .spotlight_main section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: .10rem;
+        padding: .45rem;
+        background-color: var(--accent2-color);
+        border: 1px solid black;
+        
+    }
+    
+    img {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        vertical-align: middle;
+    }
+    /* Footer */
+    
+    footer {
+        margin-top: .7%;
+        padding: 2%;
+    }
+    .company-details{
+        overflow: hidden;
+        background: var(--accent2-color);
+        text-align: center;
+        margin-top: 2em;
+        padding-top: 2%;
+        
+        
+    }
+    
+    #footer1 #col1,
+    #footer1 #col2,
+    #footer1 #col3 {
+        float: left;
+        width: 31.3%;
+        padding: 0px 1% 0px 1%;
+        margin-bottom: 2%;
+    }
+    
+    /*#footer1 #icon1, #icon2, #icon3 {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 3em;
+        padding: 1%;
+        
+    }*/
     
     
-}
-
-#footer1 #col1,
-#footer1 #col2,
-#footer1 #col3 {
-	float: left;
-	width: 31.3%;
-	padding: 0px 1% 0px 1%;
-    margin-bottom: 2%;
-}
-
-/*#footer1 #icon1, #icon2, #icon3 {
-	display: block;
-	margin-bottom: 1em;
-	font-size: 3em;
-    padding: 1%;
+    .material-symbols-outlined {
+       
+        margin-bottom: 1em;
+        padding: 1%;
     
-}*/
-
-
-.material-symbols-outlined {
-   
-	margin-bottom: 1em;
-    padding: 1%;
-
-}
-
-
-ul.contact{
-	margin: 0;
-	padding: 3px 0em 0em 0em;
-	list-style: none;
-}
-ul.contact li{
-	display: inline-block;
-	padding: 0em 0.10em;
-	font-size: 1em;
-}
-ul.contact li a{
-	color: black;
-	display: inline-block;
-	background: var(--accent1-color);
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
+    }
+    
+    
+    ul.contact{
+        margin: 0;
+        padding: 3px 0em 0em 0em;
+        list-style: none;
+    }
+    ul.contact li{
+        display: inline-block;
+        padding: 0em 0.10em;
+        font-size: 1em;
+    }
+    ul.contact li a{
+        color: black;
+        display: inline-block;
+        background: var(--accent1-color);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
 
     
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
