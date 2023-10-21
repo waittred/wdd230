@@ -10,7 +10,7 @@
     }
         
     main {
-            display: grid;
+            
             grid-template-columns: 1fr 300px;
             margin: auto;
     }
@@ -59,4 +59,5 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+
     
