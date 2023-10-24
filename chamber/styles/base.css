@@ -36,29 +36,23 @@
 
     h1 {
         font-family: 'Roboto', sans-serif;
-        font-size: 5rem;
+        padding-top: 2rem;
+        
     }
 
     h2 {
         font-family: 'Roboto', sans-serif;
-        font-size: 3rem;
+        
        
         
     }
     
     h3{
         font-family: 'Roboto', sans-serif;
-        font-size: 2rem;
+       
     }
     
-    a {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1.5rem;
-    }
-
+    
     header, footer{
         background-color: #284E4A;
         color: white;
@@ -94,7 +88,7 @@
         --headline-color-on-white: #284e4a;
         justify-content: space-evenly;
         position: absolute;
-        top: 5rem;
+        top: 7.5rem;
         right: .1%;
         
     }
@@ -353,14 +347,7 @@
     
     }
 
-    .address {
-        font-size: 1.5rem;
-    }
-
-    .phone {
-        font-size: 1.5rem;
-    }
-    
+     
     
     ul.contact{
         margin: 0;
