@@ -1,28 +1,23 @@
-///  Received help from chat.openai.com to fetch current weather //
-document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '59020284cd6ab79b85c528f26efcafd2';
-    const city = 'Seattle';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+///  Received help from chat.openai.com for wind chill //
 
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const temperatureCelsius = data.main.temp;
-            const temperatureFahrenheit = (temperatureCelsius * 9/5) + 32;
-            const windSpeedMph = data.wind.speed;
-            const weatherDescription = data.weather[0].description;
-            const weatherIcon = data.weather[0].icon;
 
-            document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit.toFixed(2)}°F`;
-            document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMph} mph`;
-            document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
+// Function to calculate wind chill
+function calculateWindChill(temperature, windSpeed) {
+    if (temperature <= 50 && windSpeed > 3.0) {
+        var windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+        return Math.round(windChill) + '<span id="temp-unit">&deg;F</span>';
+    } else {
+        return 'N/A';
+    }
+}
 
-            const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
-            const weatherIconElement = document.getElementById('weather-icon');
-            weatherIconElement.setAttribute('src', iconUrl);
-            weatherIconElement.setAttribute('alt', 'Weather Icon');
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-        });
-});
+// Get temperature and wind speed from the document
+let temperature = parseFloat(document.getElementById('current-temperature').textContent);
+let windSpeed = parseFloat(document.getElementById('wind-speed').textContent);
+
+// Calculate wind chill
+let windChillValue = calculateWindChill(temperature, windSpeed);
+
+// Update the DOM with wind chill value
+document.getElementById('wind-chill-value').innerHTML = windChillValue;
+

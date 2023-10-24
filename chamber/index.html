@@ -8,24 +8,24 @@
         name="description"
         content="Seattle Chamber of Commerce website's goal is to promote the business interests of the members of the organization and promote the area, attracting additional business, tourism, and people.">
     <meta name="author" content="Tiana Boyd"> 
-    <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Judson&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!--favicon from flaticon-->
-    <link rel="icon" href="images/favicon.ico">
     <meta property="og:title" content="Seattle Chamber of Commerce Index Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://waittred.github.io/wdd230/chamber/images/seattle-skyline-clouds1.jpg">
     <meta property="og:url" content="https://waittred.github.io/wdd230/chamber">
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <!--Social Media Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
+    <!--Heading and Body Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!--Favicon from flaticon-->
+    <link rel="icon" href="images/favicon.ico">
+    
 
 </head>
 <body>
@@ -75,14 +75,13 @@
             <section class="weather-card">
                 <h2>Weather</h2>
                 <div class="weather-container">
-                    <h5 id="current-temperature"></h5>
-                    <h5 id="wind-speed"></h5>
-                    <h5 id="weather-description"></h5>
-                    <figure>
-                        <img id="weather-icon" src=" " alt="">
-                        <figcaption></figcaption>
-                    </figure> 
+                    <h5 id="current-temperature">Currrent Temperature is: 70<span id="temp-unit">&deg;F</span></h5>
+                    <h5 id="wind-speed">Wind Speed is: 5<span id="wind-unit">mph</span></h5>
+                    <h5 id="weather-description">Sky Cover: Partly Cloudy</h5>
+                    
+                    <h5 id="wind-chill">Wind Chill: <span id="wind-chill-value"></span></h5>
                 </div>
+                
                 
             </section>
 

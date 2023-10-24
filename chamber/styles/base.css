@@ -24,6 +24,7 @@
     }
     
     body{
+        font-family: 'Archivo', sans-serif;
         text-align: center;
         
     }
@@ -34,16 +35,19 @@
     }
 
     h1 {
+        font-family: 'Roboto', sans-serif;
         font-size: 5rem;
     }
 
     h2 {
+        font-family: 'Roboto', sans-serif;
         font-size: 3rem;
        
         
     }
     
     h3{
+        font-family: 'Roboto', sans-serif;
         font-size: 2rem;
     }
     
