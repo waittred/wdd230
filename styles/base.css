@@ -3,6 +3,13 @@ body {
     font-size: 30px; 
     margin: 0;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .card{
+     color: white;
+     background-color: #333;
+     border-color: rgba(255, 255, 255, 0.75);
 }
 
 header, .topnav, main, footer {
@@ -20,25 +27,56 @@ header {
     justify-content: center;
 }
 
+
 nav {
     margin: 0 auto;  
 }
 
-#menu {
-    display: block;
-    font-size: 1.5rem;
-    border: 1px solid #005c57;
-    justify-content: space-evenly;
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
-    padding: 0%;
+#mode button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 14px;
 }
 
+#mode button:hover {
+    cursor: pointer;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode {
+    background-color: black;
+    --accent2-color: black;
+    color: white;
+    
+}
+
+#mode {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    color:#005c57;
+    border: none;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 7.5rem;
+    right: 1%;
+    padding: 0%;
+    margin: 2%;
+    
+   
+}
 
 #menu::before {
     content: "☰";
     background-color: #005c57;
+    color: black;
     
 }
 
@@ -87,6 +125,12 @@ nav {
 	opacity: 0.75;
 	
 }
+.dark-mode .herolabel {
+    color: #fff; 
+    background: radial-gradient(#333, #111); 
+    border-color: rgba(255, 255, 255, 0.75); 
+    box-shadow: 0 0 3rem #000; 
+}
 
 .herolabel p {
 	margin: 0;
@@ -115,6 +159,7 @@ h1 {
     float:right;
     text-shadow: 5px 5px black;
     font-size: 4rem;
+    padding: 2%;
 }
 
 h2 {
@@ -171,9 +216,10 @@ ul {
     border-style: solid;
     border-width: medium;
     padding-bottom: 2%;
-    margin-left: .3rem;
+    margin-left: 1.2rem;
     margin-right: 2%;    
     color: black;
+    background-color: white;
     
 }
 
@@ -202,7 +248,8 @@ figure {
 }
 
 footer {
-    margin-top: 1%;
+    margin: 1%;
+    padding: 1%;
     color: #ffff;
     text-align: center;
     
@@ -243,4 +290,31 @@ p {
     margin:auto;
     
 } 
+
+@media screen and (max-width: 320px)  {
     
+
+.herolabel {
+    top: 16rem;
+    left: .2rem;
+}
+
+.profile_pic {
+    padding: 0;
+    max-width: 25%;
+    padding-left: 8%;
+}
+
+h1 {
+    
+    padding-top: 2%;
+    padding-right: 5%;
+} 
+h3 {
+    padding: 2%;
+}
+
+#menu {
+    top: 34%;
+}
+}

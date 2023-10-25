@@ -8,6 +8,14 @@
         justify-content: space-evenly;
        
 }
+
+#mode button {
+        font-size: 20px;
+}
+
+#menu {
+        display: none;
+}
     
 main {
         display: grid;
@@ -15,7 +23,7 @@ main {
 }
 
 #menu {
-		display: none;
+	display: none;
 		
 }
 
@@ -25,8 +33,8 @@ main {
 }
 
 .main-nav li {
-		display: block;
-		flex: 1 1 100%;
+	display: block;
+	flex: 1 1 100%;
         font-size: larger;
 }
 
@@ -44,7 +52,7 @@ main {
 }
 	
 
-    .profile_pic{
+.profile_pic{
         margin: 1em;
 }
 
@@ -53,6 +61,7 @@ main {
 .hero {
         position: relative;
         grid-column: 1/3;
+        
 
 }
     
@@ -102,7 +111,7 @@ p {
 
 #weather-icon {
         width:100px;
-        
+
 }
 
 .card {

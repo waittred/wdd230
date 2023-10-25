@@ -14,10 +14,10 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://waittred.github.io/wdd230/images/bellingham.webp">
     <meta property="og:url" content="https://waittred.github.io/wdd230/">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Judson&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">    
     <link rel="icon" href="images/favicon.ico">
@@ -27,8 +27,11 @@
 </head>
 <body>
 <header>
-    <img class="profile_pic" src="images/profile.webp" alt="Profile Pic of Me">
+    <img class="profile_pic" src="images/profile.webp" alt="Profile Pic of Tiana Boyd">
     <h1>Tiana Boyd</h1>
+    <div id="mode">
+        <button onclick="myFunction()">Toggle Dark Mode</button>
+    </div>
 </header>
 <nav>
     <button id="menu"></button>
@@ -46,7 +49,7 @@
         <div class="hero">
             <picture>
                 <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <img src="images/hero-large.webp" alt="Picture of Manti Temple" media="(max-width: 960px)">
+                <img src="images/hero-large.webp" alt="Picture of Manti Temple">
             </picture>
             <div class="herolabel">
                 <p>Manti Utah Temple</p>
