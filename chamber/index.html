@@ -17,12 +17,6 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <!--Social Media Font-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Google Icons-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
-    <!--Heading and Body Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <!--Favicon from flaticon-->
     <link rel="icon" href="images/favicon.ico">
     
@@ -75,11 +69,11 @@
             <section class="weather-card">
                 <h2>Weather</h2>
                 <div class="weather-container">
-                    <h5 id="current-temperature">Currrent Temperature is: 70<span id="temp-unit">&deg;F</span></h5>
-                    <h5 id="wind-speed">Wind Speed is: 5<span id="wind-unit">mph</span></h5>
-                    <h5 id="weather-description">Sky Cover: Partly Cloudy</h5>
+                    <p id="current-temperature">Currrent Temperature is: 70<span id="temp-unit">&deg;F</span></p>
+                    <p id="wind-speed">Wind Speed is: 5<span id="wind-unit">mph</span></p>
+                    <p id="weather-description">Sky Cover: Partly Cloudy</p>
                     
-                    <h5 id="wind-chill">Wind Chill: <span id="wind-chill-value"></span></h5>
+                    <p id="wind-chill">Wind Chill: <span id="wind-chill-value"></span></p>
                 </div>
                 
                 
@@ -125,28 +119,27 @@
             </section>
             
         </div>
-        <!--https://fonts.google.com/icons?selected=Material+Symbols+Outlined:mail:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=envelop-->
-        <!--got help from https://www.geeksforgeeks.org/html-course-building-footer/ to add contact info-->
+        <!--Found icons/svg's from https://www.iconfinder.com-->
                 <h2>Contact Us</h2>
                 <hr style="width:50%; text-align:center"> 
         <div id="footer1">   
             <div class="company-details">
-            
+           
             <div class="row">
                     <div id="col1">
-                        <span class="material-symbols-outlined">markunread_mailbox</span>
+                        <img class="material-symbols-outlined" src="images/mailbox_icon.svg" alt="Mailbox icon">
                         <br>
                         <span class="address">301 5th Ave, Seattle, WA 98101</span>
             </div>
  
                     <div id="col2">
-                        <span class="material-symbols-outlined">call</span>
+                        <img class="material-symbols-outlined" src="images/phone_icon.svg" alt="Telephone icon">
                         <br>
                         <span class="phone">Telephone: 206.389.0000</span>
                     </div>
  
                     <div id="col3">
-                        <span class="material-symbols-outlined">mail</span>
+                        <img class="material-symbols-outlined" src="images/email_icon.svg" alt="Email icon">
                         <br>
                         <a href="#">www.cloudcity.org</a>
                 
@@ -159,21 +152,16 @@
 <footer>
     <ul class="contact">
         <li>
-            <a href="#" class="fa fa-twitter">
-
-            </a>
+            <img class="material-symbols-outlined" src="images/twitter icon_icon.svg" alt="Twitter icon">
         </li>
 
         <li>
-            <a href="#" class="fa fa-facebook">
+            <img class="material-symbols-outlined" src="images/facebook_icon.svg" alt="Facebook icon">
 
-            </a>
         </li>
 
         <li>
-            <a href="#" class="fa fa-pinterest-p">
-
-            </a>
+            <img class="material-symbols-outlined" src="images/pinterest_icon.svg" alt="Pinterest icon">
         </li>
     </ul>        
     <p>&copy; <span id="year"></span> |  Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
