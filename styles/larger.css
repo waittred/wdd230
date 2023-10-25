@@ -100,6 +100,11 @@ p {
         font-size: 2rem;
 }
 
+#weather-icon {
+        width:100px;
+        
+}
+
 .card {
         align-content: space-between;
 }

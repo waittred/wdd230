@@ -14,18 +14,17 @@ const hamButton = document.querySelector('#menu');
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = '59020284cd6ab79b85c528f26efcafd2';
     const city = 'Seattle';
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const temperatureCelsius = data.main.temp;
-            const temperatureFahrenheit = (temperatureCelsius * 9/5) + 32;
-            const windSpeedMph = data.wind.speed;
+            const temperatureFahrenheit = data.main.temp.toFixed(1);
+            const windSpeedMph = data.wind.speed.toFixed(1);
             const weatherDescription = data.weather[0].description;
             const weatherIcon = data.weather[0].icon;
 
-            document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit.toFixed(2)}°F`;
+            document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
             document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMph} mph`;
             document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
 
