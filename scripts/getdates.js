@@ -36,22 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const city = 'Seattle';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
+    // Simulate page visits (replace this with your actual page visits logic)
+    const pageVisits = 100; // Replace this with your actual page visits count
+
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const temperatureFahrenheit = data.main.temp.toFixed(1);
-            const windSpeedMph = data.wind.speed.toFixed(1);
             const weatherDescription = data.weather[0].description;
             const weatherIcon = data.weather[0].icon;
 
             document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
-            document.getElementById('wind-speed').textContent = `Wind Speed: ${windSpeedMph} mph`;
             document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
 
             const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
             const weatherIconElement = document.getElementById('weather-icon');
             weatherIconElement.setAttribute('src', iconUrl);
             weatherIconElement.setAttribute('alt', 'Weather Icon');
+
+    // Page visits data //
+            document.getElementById('page-visits').textContent = `Page Visits: ${pageVisits}`;
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
