@@ -8,9 +8,15 @@
         justify-content: space-evenly;
        
 }
+#mode {
+        top: 2%;
+        right: 2%;
+}
 
 #mode button {
-        font-size: 20px;
+        font-size: 25px;
+        padding: 2%;
+     
 }
 
 #menu {
