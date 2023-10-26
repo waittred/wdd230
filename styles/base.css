@@ -13,7 +13,7 @@ h1 {
     float:right;
     text-shadow: 5px 5px black;
     font-size: 4rem;
-    padding: 2%;
+    
 }
 
 h2 {
@@ -68,9 +68,9 @@ header {
 }
 
 .profile_pic {
-    max-width: 15%;
+    max-width: 200px;
     height: auto;
-    padding-right: 9%;
+    padding-right: 5%;
     float:left;
     
 }
@@ -259,7 +259,6 @@ figure {
 }
 
 footer {
-    margin: 1%;
     padding: 1%;
     color: #ffff;
     text-align: center;
@@ -283,24 +282,29 @@ p {
     grid-column: 1/3;
     text-align: center;
     justify-content: center;
-    padding-bottom: 50%;
     position: relative;
     margin: 1%;
-      
 }
 
-.google-map iframe {
-     
+.google-map .map-container {
+    width: 60%; 
+    margin: auto; 
+}
+
+.google-map .map-iframe-wrapper {
+    position: relative;
+    padding-bottom: 50%; 
+    height: 0;
+}
+
+.google-map .map-iframe-wrapper iframe {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    width: 90%;
-    height: 90%;
-    margin:auto;
-    
-} 
+}
+
 
 @media screen and (max-width: 320px)  {
     

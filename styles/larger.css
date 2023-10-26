@@ -14,7 +14,6 @@ main {
         grid-template-columns: 1fr 1fr;
 }
 
-
 .main-nav {
         padding: 1%;
 
@@ -39,12 +38,6 @@ main {
 		flex: 1 1 100%;
 }
 	
-
-.profile_pic{
-        margin: 1em;
-}
-
-
 
 /* Hero Image and Overlay Effect */
 
