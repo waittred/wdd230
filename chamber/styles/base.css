@@ -233,7 +233,7 @@
     
     .hero-image {
         
-        /*display: flex;
+        display: flex;
         position: relative;
         grid-row: 1; 
         background-position: center center;
@@ -241,23 +241,23 @@
         justify-content: center;
         align-items: center;
         border: 1px solid black; 
-        /*background-image: url(../images/seattle-skyline-clouds1.jpg);*/
+        background-image: url(../images/seattle-skyline-clouds1.jpg);
         position: relative;
         overflow: hidden;
     }
-/* Remove #hero-image in lesson07*/
+/* Remove #hero-image in lesson07
     #hero-image {
         width: 100%;
         height: auto;
         display: block;
-    }
+    }*/
     #webp-img {
         width: 100%;
         height: auto;
         display: block;
     }
     .call-to-action {
-        /*background-color: var(--headline-color-on-color);
+        background-color: var(--headline-color-on-color);
         color: white;
         padding: 10px 20px;
         border: none;
@@ -265,18 +265,18 @@
         text-decoration: none;   
         font-size: 16px;
         cursor: pointer;
-        border-radius: 10px;*/
-        position: absolute;
+        border-radius: 10px;
+        /*position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background 
         color: white;
         padding: 20px;
         text-align: center;
         font-size: 24px;
-        max-width: 80%; /* Limit the width of the text overlay */
-        border-radius: 10px; 
+        max-width: 80%; /* Limit the width of the text overlay 
+        border-radius: 10px; */
     }
     .spotlight_main {
         grid-template-columns: 1fr;
