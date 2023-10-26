@@ -170,7 +170,7 @@ nav {
 
 .herolabel {
 	position: absolute;
-	top: 12rem;
+	top: 18rem;
 	left: .3rem;
 	background: radial-gradient(#fff, rgb(211, 155, 50));
 	border: 1px solid rgba(0,0,0,.75);
@@ -330,7 +330,7 @@ h3 {
 }
 
 #menu {
-    top: 34%;
+    top: 32%;
 }
 
 /* ------------------Discover Page------------------ */
