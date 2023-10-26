@@ -30,14 +30,11 @@ function myFunction() {
      }
    }
     
-///  Received help from chat.openai.com to fetch current weather //
+//  Received help from chat.openai.com to fetch current weather //
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = '59020284cd6ab79b85c528f26efcafd2';
     const city = 'Seattle';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-
-    // Simulate page visits (replace this with your actual page visits logic)
-    const pageVisits = 100; // Replace this with your actual page visits count
 
     fetch(apiUrl)
         .then(response => response.json())
@@ -53,11 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const weatherIconElement = document.getElementById('weather-icon');
             weatherIconElement.setAttribute('src', iconUrl);
             weatherIconElement.setAttribute('alt', 'Weather Icon');
-
-    // Page visits data //
-            document.getElementById('page-visits').textContent = `Page Visits: ${pageVisits}`;
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
+
+    // Get visits element from the DOM
+    const visitsDisplay = document.getElementById('page-visits');
+
+    // Retrieve the stored value for 'pageVisits' in localStorage or assign 0 if it doesn't exist
+    let pageVisits = Number(localStorage.getItem('pageVisits')) || 0;
+
+    // Increment the number of visits by one
+    pageVisits++;
+
+    // Update and store the new visit total in localStorage
+    visitsDisplay.textContent = `Page Visits: ${pageVisits}`;
+    localStorage.setItem('pageVisits', pageVisits);
 });
+

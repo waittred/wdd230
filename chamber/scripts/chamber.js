@@ -74,3 +74,32 @@ function myFunction() {
   // Update text overlay when window is resized
   window.addEventListener('resize', updateTextOverlay);
 });
+
+//Last visit date message//
+const lastVisit = localStorage.getItem('lastVisit');
+
+        // Get the current date in milliseconds
+        const currentDate = Date.now();
+
+        // Set the current date as the last visit date for future visits
+        localStorage.setItem('lastVisit', currentDate);
+
+        // Calculate the time difference in milliseconds
+        const timeDifference = currentDate - lastVisit;
+
+        // Calculate the number of days between visits
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        // Get the message element
+        const messageElement = document.getElementById('message');
+
+        // Display the appropriate message based on the time difference
+        if (!lastVisit) {
+            messageElement.textContent = "Welcome! Let us know if you have any questions.";
+        } else if (daysDifference < 1) {
+            messageElement.textContent = "Back so soon! Awesome!";
+        } else if (daysDifference === 1) {
+            messageElement.textContent = `You last visited ${daysDifference} day ago.`;
+        } else {
+            messageElement.textContent = `You last visited ${daysDifference} days ago.`;
+        }
