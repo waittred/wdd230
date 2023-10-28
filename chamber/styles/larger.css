@@ -139,6 +139,7 @@
 
 /* right column with pictures */
 .image-container {
+    outline: auto;
     display: grid;
     grid-column: 2/3;
     
@@ -151,7 +152,7 @@ figure img{
 
 /* Style for h2 elements inside the sidebar and picture column */
 #left-sidebar h2, #local-pics h2 {
-    color: var(--headline-color-on-white);
+   
 }
 figure {
 	margin: 0;

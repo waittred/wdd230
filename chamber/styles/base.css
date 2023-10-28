@@ -4,7 +4,7 @@
     --secondary-color: #306c62;
     --accent1-color: #64b2a6;
     --accent2-color: #d2e9d5;
-    
+    --dark-mode-headline: #0a220a;
     
     
     /* change the values below to your chosen font(s) */
@@ -21,6 +21,11 @@
     --nav-background-color: #284e4a;
     --nav-hover-link-color: white;
     --nav-hover-background-color:#64b2a6;
+    --left-sidebar-text:  #284E4A;
+    --left-sidebar-background: #284E4A;
+    --white-text: white;
+    
+
     }
     
     body{
@@ -52,8 +57,8 @@
     
     
     header, footer{
-        background-color: #284E4A;
-        color: white;
+        background-color: var(--headline-color-on-white);
+        color: var(--nav-link-color);
         padding: 2%;
         
     }
@@ -81,17 +86,17 @@
     }
 
        
-    .dark-mode a {
-        color: white;
-    }
+   
     
     .dark-mode {
         background-color: black;
-        --accent2-color: black;
+        --accent2-color: #black;
         color: white;
-        --headline-color-on-white: white ;
-
-        
+        --left-sidebar-text: white;
+        --nav-link-color: white;
+        --left-sidebar-background: black;
+        --left-sidebar-foreground: white;
+        --headline-color-on-white: #0a220a;
     }
     
     #mode {
@@ -114,7 +119,7 @@
     #menu::before {
         content: "☰";
         --headline-color-on-white: #284e4a;
-        color: black;
+        color: var(--paragraph-color-on-white);
           
     }
     
@@ -147,7 +152,7 @@
     }
           
     .main-nav a {
-            color: white;
+            color: var(--nav-link-color);
     }
         
     .show li {
@@ -167,7 +172,7 @@
     }
     
     a {
-        color:black;
+        color:var(--left-sidebar-text);
     }
     
     a:link {
@@ -261,7 +266,7 @@
     }
     .call-to-action {
         background-color: var(--headline-color-on-color);
-        color: white;
+        color: var(--white-text);
         padding: 10px 20px;
         border: none;
         text-align: center;
@@ -408,13 +413,14 @@
 
 /* Style for h2 elements inside the sidebar and picture column */
 #left-sidebar h2, #local-pics h2 {
-    color: var(--headline-color-on-white);
+    color: var(--left-sidebar-text);
 }
 
+
 .interest {
-    background-color: var(--headline-color-on-white);
-    color: white;
-    border: 1px solid black;
+    background-color: var(--accent2-color);
+    color: var(--left-sidebar-text);
+    border: 1px solid; 
     margin: 0;
     margin-top: .1em;
     margin-bottom: .1em;
