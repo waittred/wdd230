@@ -222,9 +222,10 @@
        
     }
 
-    figure {
+    .weather-container figure {
         display: flex;
         justify-content: center;
+        background-color: var(--accent2-color);
     }
     
     .join {
@@ -419,7 +420,7 @@
 
 }
 
-figure {
+.image-container figure {
 	border-radius: 15px;
     margin: 0;
 	padding: 0;
@@ -427,13 +428,13 @@ figure {
 	overflow: hidden;
 }
 
-figure img{
+.image-container figure img{
     width: 100%;
     height: auto;
     
  }
 
-figure:hover+span {
+.image-container figure:hover+span {
 	bottom: -36px;
 	opacity: 1;
 }
