@@ -367,26 +367,121 @@
     footer p {
         margin: 0;
     }
-   
 
+/*-----------------------Discover Page-----------------------*/
+
+#left-sidebar {
+    background-color: var(--accent2-color);
+    margin-top: .1em;
     
+
+}
+
+.message {
+    outline: auto;
+    margin: .25em;
+}   
+
+.demo {
+    outline: auto;
+    margin: .25em;
+}
+
+.stats {
+    outline: auto;
+    margin: .25em;
+}
+
+.events {
+    outline: auto;
+    margin: .25em;
+}
+
+.calendar {
+    outline: auto;
+    margin: .25em;
+}
+ 
+
+/* Style for h2 elements inside the sidebar and picture column */
+#left-sidebar h2, #local-pics h2 {
+    color: var(--headline-color-on-white);
+}
+
+.interest {
+    background-color: var(--headline-color-on-white);
+    color: white;
+    border: 1px solid black;
+    margin: 0;
+    margin-top: .1em;
+    margin-bottom: .1em;
     
+
+}
+
+figure {
+	border-radius: 15px;
+    margin: 0;
+	padding: 0;
+	background: white;
+	overflow: hidden;
+}
+
+figure img{
+    width: 100%;
+    height: auto;
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
-    
-    
-    
-    
-    
-    
+ }
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+.image-container figure {
+	position: relative;
+}
+.image-container figure::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,.2);
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.image-container figure:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}

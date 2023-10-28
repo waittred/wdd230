@@ -52,54 +52,69 @@ function myFunction() {
    }
  }
 
- //Lesson06 Text overlays based upon image size. Received help from chat.openai.com//
- document.addEventListener('DOMContentLoaded', () => {
-  const heroImageElement = document.getElementById('hero-image');
-  const callToActionElement = document.getElementById('call-to-action');
+//---------------------------------------------------------------
 
-  function updateTextOverlay() {
-      const windowWidth = window.innerWidth;
-      if (windowWidth <= 500) {
-          callToActionElement.textContent = 'Small';
-      } else if (windowWidth <= 1000) {
-          callToActionElement.textContent = 'Medium';
-      } else {
-          callToActionElement.textContent = 'Large';
-      }
-  }
+//Lesson06 Text overlays based upon image size. Received help from chat.openai.com//
+//document.addEventListener('DOMContentLoaded', () => {
+// const heroImageElement = document.getElementById('hero-image');
+// const callToActionElement = document.getElementById('call-to-action');
+
+// function updateTextOverlay() {
+//     const windowWidth = window.innerWidth;
+//      if (windowWidth <= 500) {
+//         callToActionElement.textContent = 'Small';
+//      } else if (windowWidth <= 1000) {
+//          callToActionElement.textContent = 'Medium';
+//      } else {
+//          callToActionElement.textContent = 'Large';
+//      }
+//  }
 
   // Initial call to set the text overlay based on the initial window width
-  updateTextOverlay();
+//  updateTextOverlay();
 
   // Update text overlay when window is resized
-  window.addEventListener('resize', updateTextOverlay);
+//  window.addEventListener('resize', updateTextOverlay);
+//});
+
+//-------------------------------------------------------
+
+//Last visit date message //
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the current date
+  var currentDate = new Date();
+
+  // Check if the user has visited the site before
+  if(localStorage.lastVisit) {
+      // Convert the stored date from string to Date object
+      var lastVisitDate = new Date(localStorage.lastVisit);
+      // Calculate the time difference in milliseconds
+      var timeDifference = currentDate - lastVisitDate;
+      // Calculate the number of days between visits
+      var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+      // Display appropriate message based on the time difference
+      if (daysDifference === 0) {
+          // Less than a day
+          updateMessage('Back so soon! Awesome!');
+      } else {
+          // More than a day
+          var message = (daysDifference === 1) ? 'day' : 'days';
+          updateMessage('You last visited ' + daysDifference + ' ' + message + ' ago.');
+      }
+  } else {
+      // First visit
+      updateMessage('Welcome! Let us know if you have any questions.');
+  }
+
+  // Store the current visit date in localStorage
+  localStorage.lastVisit = currentDate;
+
+  function updateMessage(message) {
+      // Update the message content
+      var messageElement = document.querySelector('.message-content');
+      if (messageElement) {
+          messageElement.textContent = message;
+      }
+  }
 });
-
-//Last visit date message//
-const lastVisit = localStorage.getItem('lastVisit');
-
-        // Get the current date in milliseconds
-        const currentDate = Date.now();
-
-        // Set the current date as the last visit date for future visits
-        localStorage.setItem('lastVisit', currentDate);
-
-        // Calculate the time difference in milliseconds
-        const timeDifference = currentDate - lastVisit;
-
-        // Calculate the number of days between visits
-        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-
-        // Get the message element
-        const messageElement = document.getElementById('message');
-
-        // Display the appropriate message based on the time difference
-        if (!lastVisit) {
-            messageElement.textContent = "Welcome! Let us know if you have any questions.";
-        } else if (daysDifference < 1) {
-            messageElement.textContent = "Back so soon! Awesome!";
-        } else if (daysDifference === 1) {
-            messageElement.textContent = `You last visited ${daysDifference} day ago.`;
-        } else {
-            messageElement.textContent = `You last visited ${daysDifference} days ago.`;
-        }

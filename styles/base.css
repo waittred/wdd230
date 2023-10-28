@@ -333,37 +333,4 @@ h3 {
     top: 32%;
 }
 
-/* ------------------Discover Page------------------ */
-
-#main-discover {
-    display: grid;
-    grid-template-columns: 25% 1fr;
-}
-
-#left-sidebar {
-    grid-column: 1/2;
-}
-
-.message {
-
-}
-.demo {
-
-}
-
-.stats {
-
-}
-
-.events {
-
-}
-
-.calendar {
-
-}
-
-#local-pics{
-    grid-column: 2/3;
-}
 }
