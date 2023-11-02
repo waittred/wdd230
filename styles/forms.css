@@ -1,0 +1,461 @@
+/* ---------------- Form Page ------------------ */
+:root {
+    --header-footer-color: #005c57;
+    --form-legend-color: #9c2c13;
+    --form-fieldset-border-color: #445ba9;
+    --form-button-color: rgb(59, 5, 59);    
+    --form-error-color: red;
+}
+
+body {
+        font-family: 'Shadows Into Light', 'Judson', serif;
+        font-size: 30px; 
+        margin: 0;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+}
+    
+    
+h1 {  
+        text-align: center;
+        color: #ffff;    
+        float:right;
+        text-shadow: 5px 5px black;
+        font-size: 4rem;
+        
+}
+    
+h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        
+}
+    
+h3 {
+        background: #005c57;
+        color: white;
+        text-shadow: 2px 2px black;
+        font-size: 1.7rem;
+        text-align: center;
+        margin-top: 0;
+    
+}
+    
+a {
+        font-size: 1.5rem;
+}
+    
+p {
+        font-size: 1.5rem;
+}
+    
+span {
+        font-size: 1.5rem;
+}
+    
+    
+body.dark-mode .card {
+         color: white;
+         background-color: black;
+         border-color: rgba(255, 255, 255, 0.75);
+}
+    
+    
+header, .topnav, main, footer {
+        max-width: 100%;
+      
+}
+
+header, footer {
+        background-color:#005c57;
+        
+}
+
+header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+}
+    
+.profile_pic {
+        max-width: 200px;
+        height: auto;
+        padding-right: 5%;
+        float:left;
+        
+}
+    
+    
+nav {
+        margin: 0 auto;  
+}
+    
+#mode button {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        font-size: 14px;
+}
+    
+
+#mode button:hover {
+        cursor: pointer;
+}
+    
+    
+    
+.dark-mode {
+        background-color: black;
+        color: white;
+        
+}
+
+.dark-mode #card-a li a {
+        color: white;
+        text-decoration: none;
+}
+    
+.dark-mode h2{
+        color: white;
+        text-decoration: none;
+}
+    
+#mode {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+}
+    
+#menu {
+        display: block;
+        font-size: 2rem;
+        color:#005c57;
+        border: none;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 13rem;
+        right: 1%;
+        padding: 0%;
+        margin: 2%;
+        
+}
+    
+#menu::before {
+        content: "☰";
+        background-color: #005c57;
+        color: black;
+        
+}
+    
+#menu.show::before {
+        content: "✘";
+        
+}
+    
+.main-nav{
+        list-style: none;
+        background-color: #005c57;
+        font-size: 20px;
+        list-style: none;    
+        text-align: center;      
+}
+    
+.main-nav li {
+        display: none;
+        
+}
+    
+    
+.main-nav li:hover {
+        background-color: #d4af37;
+        padding: 0;
+}
+      
+.main-nav a {
+        color: white;
+        text-decoration: none;
+}
+    
+.hero img {
+        width: 100%;
+        height: auto;
+}
+    
+.herolabel {
+        position: absolute;
+        top: 18rem;
+        left: .3rem;
+        background: radial-gradient(#fff, rgb(211, 155, 50));
+        border: 1px solid rgba(0,0,0,.75);
+        padding: .5rem;
+        box-shadow: 0 0 3rem #fff;
+        opacity: 0.75;
+        
+}
+.dark-mode .herolabel {
+        color: #fff; 
+        background: radial-gradient(#333, #111); 
+        border-color: rgba(255, 255, 255, 0.75); 
+        box-shadow: 0 0 3rem #000; 
+}
+    
+.herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 700;
+        font-size: .6rem;
+        
+}
+    
+.show li {
+        display: block;
+        width: 100%;
+}
+    .show li a {
+        display: block;
+}
+    
+.active::before {
+        content: "🏠 ";
+}
+    
+ul {
+    
+        margin: auto;
+        text-align: left;
+        list-style-type: disc;
+        list-style-position: inside;
+        list-style: none;  
+        font-size: 1.5rem;
+          
+}
+    
+.card {
+       
+        text-align: center;
+        border-style: solid;
+        border-width: medium;
+        padding-bottom: 2%;
+        margin-left: 1.2rem;
+        margin-right: 2%;    
+        color: black;
+        background-color: white;
+        
+}
+    
+#card-a li a{
+        color: black;
+        text-decoration: none;
+}
+    
+#card-b {
+        font-size: 1.5rem;
+        text-align: center;
+        
+}
+    
+.weather-card {
+          
+        background-color: var(--accent2-color);
+        border: 1px solid black;
+}
+    
+#weather-icon {
+        
+        width: 75px;
+       
+}
+    
+figure {
+        display: flex;
+        justify-content: center;
+}
+    
+footer {
+        padding: 1%;
+        color: #ffff;
+        text-align: center;
+        
+        
+}
+    
+p {
+        margin: 0;
+        font-size: 1.2rem;
+        
+}
+    
+.updated {
+        color: white;
+        font-size: 10pt;
+        padding-bottom: 1%;
+}
+
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form fieldset { /*lines around the three sections */
+    margin: 3rem 0 auto; /*to seperate the sections from each other */
+    border: 1px solid var(#445ba9);
+    border-radius: 10px;
+    padding: .5rem 2%;
+    padding-bottom: 1.5rem;
+    
+}
+
+form legend {
+    color: var(--form-legend-color);
+    margin: 0 1rem; /*to slide the legend over */
+    padding: 0 .5rem; /*padding to push the line away from the words */
+}
+
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: black;
+    font-size: 1rem;
+    
+}
+
+form label.top input, form label.top select{
+
+    --webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .7rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    min-height: 44px;
+    background-color: rgba(0,0,0,0.1);
+
+}
+
+input[type="range"] {
+    width: calc(100% - 30px);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.submitBtn {
+    
+    display: block;
+    background-color: var(--form-button-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 2rem auto;
+    margin-bottom: 2rem;
+    
+}
+
+#password-error-message {
+    margin-top: 5px;
+    display: block;
+    color: var(--form-error-color);
+}
+
+#rating-value {
+    
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+
+form label.top input:required {
+    border-left:red  solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+
+}
+
+.error-message {
+    color: var(--form-error-color);
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+#password-error-message {
+    color: var(--form-error-color);
+}
+
+#email-error-message {
+    color: var(--form-error-color);
+}
+
+.dark-mode form legend{
+    color: white;
+}
+
+.dark-mode form fieldset {
+    border:2px solid var(--header-footer-color);
+
+} 
+
+
+footer {
+    padding: 1%;
+    color: #ffff;
+    text-align: center;
+    
+    
+}
+
+p {
+    margin: 0;
+    font-size: 1.2rem;
+    
+}
+
+.updated {
+    color: white;
+    font-size: 10pt;
+    padding-bottom: 1%;
+}
+
+/* ------------- Record Page ----------------- */
+#record-container {
+    display: block;
+
+}
+
+#record-container h1 {
+    
+    color: black;
+    font-size: 4rem;
+    justify-content: center;
+    text-shadow: none;
+    text-align: center;
+    float: none;
+    
+}
+#record-container p {
+  
+    color: black;
+    font-size: 2rem;
+    justify-content: center;
+    text-shadow: none;
+    text-align: center;
+    padding-bottom: 1rem;
+    
+}
