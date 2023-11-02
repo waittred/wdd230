@@ -69,3 +69,52 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('pageVisits', pageVisits);
 });
 
+
+//----------------------------------------------------------------//
+
+//Lesson08 creating new user and password help from https://www.codepel.com/forms/email-and-password-validation-in-javascript/ and chat.openai.com
+
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
+const emailInput = document.getElementById("email");
+const passwordErrorMessage = document.getElementById("password-error-message");
+const emailErrorMessage = document.getElementById("email-error-message");
+
+confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+emailInput.addEventListener("input", validateEmail);
+
+function checkPasswordMatch() {
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (password !== confirmPassword) {
+        passwordErrorMessage.textContent = "Passwords do not match. Please try again.";
+    } else {
+        passwordErrorMessage.textContent = "";
+    }
+}
+
+function validateEmail() {
+    const email = emailInput.value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@byui\.edu$/;
+
+    if (!email.match(emailPattern)) {
+        emailErrorMessage.textContent = "Invalid email address. Please use a BYUI email address.";
+    } else {
+        emailErrorMessage.textContent = "";
+    }
+}
+
+
+//Page rating
+const pageRatingInput = document.getElementById("page-rating");
+const ratingValueSpan = document.getElementById("rating-value");
+
+// Function to display the rating value
+function displayRatingValue() {
+  const ratingValue = pageRatingInput.value;
+  ratingValueSpan.textContent = `Rating: ${ratingValue}`;
+}
+
+// Event listener for input change
+pageRatingInput.addEventListener("input", displayRatingValue);
