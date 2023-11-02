@@ -306,7 +306,7 @@ figure {
 
 form fieldset { /*lines around the three sections */
     margin: 3rem 0 auto; /*to seperate the sections from each other */
-    border: 1px solid var(#445ba9);
+    border: 1px solid var(--form-fieldset-border-color);
     border-radius: 10px;
     padding: .5rem 2%;
     padding-bottom: 1.5rem;
