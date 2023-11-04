@@ -31,7 +31,7 @@
     --form-top-background: #80808038;
     --dark-mode-headline: #0a220a;
     --accent2-color1: #d4e8d6;
-    
+    --img-background: white;
 
     }
     
@@ -109,7 +109,7 @@
         --form-label: white;
         --form-input: white;
         --form-top-background: black;
-        
+        --img-background: black;
     }
     
     #mode {
@@ -455,7 +455,7 @@
 	border-radius: 15px;
     margin: 0;
 	padding: 0;
-	background: var(--nav-hover-link-color);
+	background: var(--img-background);
 	overflow: hidden;
 }
 
