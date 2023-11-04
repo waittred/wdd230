@@ -549,7 +549,6 @@ form label.top input, form label.top select{
     max-width: 91%;
     min-height: 44px;
     background-color: var(--form-top-background);
-
 }
 
 form input.submitBtn {
@@ -560,8 +559,6 @@ form input.submitBtn {
     border-radius: 1rem;
     padding: .75rem 1.5rem;
     margin: 2rem auto;
-    
-
 }
 
 form label.top input:required {
@@ -573,9 +570,8 @@ form label.top input:required:valid {
 
 }
 
-/* Add this CSS to style the form group and position the textarea below the label */
 .form-group {
-    margin-bottom: 1rem; /* Adjust the margin as needed */
+    margin-bottom: 1rem; 
 }
 
 .form-group label.top {
@@ -585,8 +581,8 @@ form label.top input:required:valid {
 
 .form-group textarea {
     width: 95%; /* Make the textarea fill the width of its container */
-    padding: 0.5rem; /* Add padding for better appearance */
-    font-size: 1rem; /* Set the font size as needed */
+    padding: 0.5rem; 
+    font-size: 1rem; 
     background-color: rgba(0,0,0,0.1);
     color: var(--form-input);
 }
