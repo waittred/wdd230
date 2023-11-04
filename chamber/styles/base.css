@@ -97,7 +97,7 @@
     
     .dark-mode {
         background-color: black;
-        --accent2-color: #black;
+        --accent2-color1: #black;
         color: white;
         --left-sidebar-text: white;
         --nav-link-color: white;
@@ -109,6 +109,7 @@
         --form-label: white;
         --form-input: white;
         --form-top-background: black;
+        
     }
     
     #mode {
@@ -454,7 +455,7 @@
 	border-radius: 15px;
     margin: 0;
 	padding: 0;
-	background: white;
+	background: var(--nav-hover-link-color);
 	overflow: hidden;
 }
 
