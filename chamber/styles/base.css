@@ -498,7 +498,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: auto; 
+    height: auto;
+   
 
 }
 #join2  {
@@ -585,6 +586,17 @@ form label.top input:required:valid {
     font-size: 1rem; 
     background-color: rgba(0,0,0,0.1);
     color: var(--form-input);
+}
+
+form input.submitBtn-join {
+    display: block;
+    border: none;
+    background-color:var(--headline-color-on-white);
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem auto;
+    cursor: pointer;
 }
 
 
