@@ -105,7 +105,10 @@ p {
         font-size: 1rem;
 }
 
-
+/* --------------------- Form Page -------------------- */
+form label.top input, form label.top select{
+        max-width: 20rem;
+    }
    
 }
     

@@ -3,8 +3,8 @@
     --primary-color: #284E4A;
     --secondary-color: #306c62;
     --accent1-color: #64b2a6;
-    --accent2-color: #d2e9d5;
-    --dark-mode-headline: #0a220a;
+    --accent2-color: #d4e8d6;
+    
     
     
     /* change the values below to your chosen font(s) */
@@ -24,6 +24,13 @@
     --left-sidebar-text:  #284E4A;
     --left-sidebar-background: #284E4A;
     --white-text: white;
+    --form-fieldset:#445ba9;
+    --form-fieldset-border: 2px solid #445ba9;
+    --form-label: #9c2c13;
+    --form-input: black;
+    --form-top-background: #80808038;
+    --dark-mode-headline: #0a220a;
+    --accent2-color1: #d4e8d6;
     
 
     }
@@ -97,6 +104,11 @@
         --left-sidebar-background: black;
         --left-sidebar-foreground: white;
         --headline-color-on-white: #0a220a;
+        --form-fieldset: white;
+        --form-fieldset-border: 2px solid white;
+        --form-label: white;
+        --form-input: white;
+        --form-top-background: black;
     }
     
     #mode {
@@ -154,6 +166,10 @@
     .main-nav a {
             color: var(--nav-link-color);
     }
+
+.active::before {
+    content: "➤ ";
+}
         
     .show li {
             display: block;
@@ -163,6 +179,7 @@
     .show li a {
             display: block;
             text-decoration: none;
+            padding: 1rem;
     }
         
     ul.main-nav.show {
@@ -209,13 +226,13 @@
     }
     .current-events {
         
-        background-color: var(--accent2-color);
+        background-color: var(--accent2-color1);
         border: 1px solid black;
     }
     
     .weather-card {
       
-        background-color: var(--accent2-color);
+        background-color: var(--accent2-color1);
         border: 1px solid black;
     }
 
@@ -232,7 +249,7 @@
     .weather-container figure {
         display: flex;
         justify-content: center;
-        background-color: var(--accent2-color);
+        background-color: var(--accent2-color1);
     }
     
     .join {
@@ -306,7 +323,7 @@
         text-align: center;
         margin: .10rem;
         padding: .45rem;
-        background-color: var(--accent2-color);
+        background-color: var(--accent2-color1);
         border: 1px solid black;
         
     }
@@ -328,7 +345,7 @@
     }
     .company-details{
         overflow: hidden;
-        background: var(--accent2-color);
+        background: var(--accent2-color1);
         text-align: center;
         margin-top: 2em;
         padding-top: 2%;
@@ -379,35 +396,39 @@
 /*-----------------------Discover Page-----------------------*/
 
 #left-sidebar {
-    background-color: var(--accent2-color);
     margin-top: .1em;
-    
 
 }
 
 .message {
     outline: auto;
     margin: .25em;
-}   
+    background-color: var(--accent2-color1);
+} 
+
 
 .demo {
     outline: auto;
     margin: .25em;
+    background-color: var(--accent2-color1);
 }
 
 .stats {
     outline: auto;
     margin: .25em;
+    background-color: var(--accent2-color1);
 }
 
 .events {
     outline: auto;
     margin: .25em;
+    background-color: var(--accent2-color1);
 }
 
 .calendar {
     outline: auto;
     margin: .25em;
+    background-color: var(--accent2-color1);
 }
  
 
@@ -416,16 +437,17 @@
     color: var(--left-sidebar-text);
 }
 
+.image-wrapper {
+    margin-bottom: 20px; /* Add margin between images */
+}
 
 .interest {
-    background-color: var(--accent2-color);
+    background-color: var(--accent2-color1);
     color: var(--left-sidebar-text);
-    border: 1px solid; 
-    margin: 0;
-    margin-top: .1em;
+    outline: auto; 
+    margin-top: .25rem;
     margin-bottom: .1em;
     
-
 }
 
 .image-container figure {
@@ -468,6 +490,108 @@
 	-webkit-animation: circle .75s;
 	animation: circle .75s;
 }
+
+
+/*------------------ Form Page -------------------*/
+
+.hero-image-join img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; 
+
+}
+#join2  {
+    text-align: center;
+    margin: 1rem;
+}
+  
+.form-container {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    
+    
+}
+form fieldset { /*lines around the three sections */
+    margin: 2rem 1rem; /*to seperate the sections from each other */
+    border: 1px solid var(--form-fieldset);
+    border-radius: 10px;
+    padding: .5rem 2%;
+    padding-bottom: 1.5rem;
+    max-width: 1000px;
+}
+
+form legend {
+    color: var(--form-fieldset);
+    margin: 0 1rem; /*to slide the legend over */
+    padding: 0 .5rem; /*padding to push the line away from the words */
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: var(--form-label);
+    font-size: .8rem;
+    
+}
+
+form label.top input, form label.top select{
+
+    --webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .7rem;
+    color: var(--form-input);
+    width: 100%;
+    max-width: 91%;
+    min-height: 44px;
+    background-color: var(--form-top-background);
+
+}
+
+form input.submitBtn {
+    display: block;
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 2rem auto;
+    
+
+}
+
+form label.top input:required {
+    border-left:red  solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+
+}
+
+/* Add this CSS to style the form group and position the textarea below the label */
+.form-group {
+    margin-bottom: 1rem; /* Adjust the margin as needed */
+}
+
+.form-group label.top {
+    display: block;
+    margin-bottom: 0.5rem; /* Add some space between label and textarea */
+}
+
+.form-group textarea {
+    width: 95%; /* Make the textarea fill the width of its container */
+    padding: 0.5rem; /* Add padding for better appearance */
+    font-size: 1rem; /* Set the font size as needed */
+    background-color: rgba(0,0,0,0.1);
+    color: var(--form-input);
+}
+
+
 @-webkit-keyframes circle {
 	0% {
 		opacity: 1;

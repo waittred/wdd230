@@ -28,20 +28,20 @@
     <header>
         <h1>Seattle Chamber of Commerce</h1>
         <div id="mode">
-            <button onclick="myFunction()">Toggle Dark Mode</button>
+            <button type="button" onclick="myFunction()">Toggle Dark Mode</button>
         </div>
 
     </header>
 
     <nav>
     
-        <button id="menu"></button>
+        <button id="menu" type="button"></button>
             <ul class="main-nav">
         
-                <li><a class="active" href="https://waittred.github.io/wdd230/chamber/index.html"><strong>Home</strong></a></li>
-                <li><a href="https://waittred.github.io/wdd230/chamber/discover.html">Discover</a></li>
+                <li><a href="https://waittred.github.io/wdd230/chamber/index.html"><strong>Home</strong></a></li>
+                <li><a class="active" href="https://waittred.github.io/wdd230/chamber/discover.html">Discover</a></li>
                 <li><a href="#">Directory</a></li>
-                <li><a href="#">Join</a></li>
+                <li><a href="https://waittred.github.io/wdd230/chamber/join.html">Join</a></li>
             
             </ul>
     
@@ -74,7 +74,7 @@
                 <h2 class="interest">Photos of Interest</h2>
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/public-market.webp" alt="Pike Place Market in Seattle WA" loading="lazy">
+                            <img data-src="images/public-market.webp" alt="Pike Place Market in Seattle WA" loading="lazy">
                             <figcaption>Pike Place Market</figcaption>
                         </figure>
                         
@@ -82,7 +82,7 @@
                                                 
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/museum-of-flight.webp" alt="Museum of Flight in Seattle WA" loading="lazy">
+                            <img data-src="images/museum-of-flight.webp" alt="Museum of Flight in Seattle WA" loading="lazy">
                             <figcaption>Museum of Flight</figcaption>
                         </figure>
                         
@@ -90,7 +90,7 @@
                                 
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/kubota-garden.webp" alt="Kubota Garden in Seattle WA" loading="lazy">
+                            <img data-src="images/kubota-garden.webp" alt="Kubota Garden in Seattle WA" loading="lazy">
                             <figcaption>Kubota Garden</figcaption>
                         </figure>
                         
@@ -98,21 +98,21 @@
                 
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/gum-wall.webp" alt="Gum Wall in Seattle WA" loading="lazy">
+                            <img data-src="images/gum-wall.webp" alt="Gum Wall in Seattle WA" loading="lazy">
                             <figcaption>Gum Wall</figcaption>
                         </figure>
                         
                     </div>
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/freemont-troll.webp" alt="Freemont Troll in Seattle WA" loading="lazy">
+                            <img data-src="images/freemont-troll.webp" alt="Freemont Troll in Seattle WA" loading="lazy">
                             <figcaption>Freemont Troll</figcaption>
                         </figure>
                         
                     </div>
                     <div class="image-wrapper">
                         <figure>
-                            <img src="images/space-needle.webp" alt="Space Needle in Seattle WA" loading="lazy">
+                            <img data-src="images/space-needle.webp" alt="Space Needle in Seattle WA" loading="lazy">
                             <figcaption>Space Needle</figcaption>
                         </figure>
                         
@@ -145,7 +145,10 @@
 </footer>           
 
         
-<script src="scripts/chamber.js"></script>
+
+<script src="scripts/hamButton.js"></script>
+<script src="scripts/lazyLoading.js"></script>
+<script src="scripts/lastvisit.js"></script>
         
 </body>
 </html>

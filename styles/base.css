@@ -203,7 +203,7 @@ nav {
 }
 
 .active::before {
-	content: "🏠 ";
+	content: "➤";
 }
 
 ul {
@@ -304,8 +304,6 @@ p {
     top: 0;
     left: 0;
 }
-
-
 
 
 @media screen and (max-width: 320px)  {

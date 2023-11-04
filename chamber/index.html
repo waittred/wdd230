@@ -28,20 +28,20 @@
     <header>
         <h1>Seattle Chamber of Commerce</h1>
         <div id="mode">
-            <button onclick="myFunction()">Toggle Dark Mode</button>
+            <button type="button" onclick="myFunction()">Toggle Dark Mode</button>
         </div>
 
     </header>
 
     <nav>
     
-        <button id="menu"></button>
+        <button type="button" id="menu"></button>
             <ul class="main-nav">
         
                 <li><a class="active" href="https://waittred.github.io/wdd230/chamber/index.html"><strong>Home</strong></a></li>
                 <li><a href="https://waittred.github.io/wdd230/chamber/discover.html">Discover</a></li>
                 <li><a href="#">Directory</a></li>
-                <li><a href="#">Join</a></li>
+                <li><a href="https://waittred.github.io/wdd230/chamber/join.html">Join</a></li>
             
             </ul>
     
@@ -51,7 +51,7 @@
             
             
             <div class="join"><h3>Join</h3></div>
-            <div class="hero-image">           
+            <div class="hero-image"></div>           
 
               <!--  <picture>
                     <source srcset="images/small.webp" media="(max-width: 500px)">
@@ -59,8 +59,7 @@
                     <img id="webp-img" src="images/large.webp" alt="Team Meeting">
                 </picture> -->
             
-                <div class="call-to-action">Chamber Information</div>            
-            </div>
+            <div class="call-to-action">Chamber Information</div>
                 <h2>Current Events</h2>
                 <hr style="width:50%; text-align:center">
             <section class="current-events">
@@ -177,8 +176,8 @@
     
 </footer>           
 
-        
-<script src="scripts/chamber.js"></script>
+<script src="scripts/darkmode.js"></script> 
+<script src="scripts/weatherVisits.js"></script>      
 <script src="scripts/windchill.js"></script>
 
         

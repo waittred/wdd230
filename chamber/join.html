@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join Seattle Chamber of Commerce Website</title>
+    <meta
+        name="description"
+        content="The purpose of this page is for a prospective member to apply to join the Seattle Chamber of Commerce through a membership application form.">
+    <meta name="author" content="Tiana Boyd"> 
+    <meta property="og:title" content="Seattle Chamber of Commerce Index Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://waittred.github.io/wdd230/chamber/images/seattle-skyline-clouds1.jpg">
+    <meta property="og:url" content="https://waittred.github.io/wdd230/chamber">
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <!--Favicon from flaticon-->
+    <link rel="icon" href="images/favicon.ico">
+    
+
+</head>
+<body>
+    
+    
+    <header>
+        <h1>Seattle Chamber of Commerce</h1>
+        <div id="mode">
+            <button type="button" onclick="myFunction()">Toggle Dark Mode</button>
+        </div>
+
+    </header>
+
+    <nav>
+    
+        <button id="menu" type="button"></button>
+            <ul class="main-nav">
+        
+                <li><a href="https://waittred.github.io/wdd230/chamber/index.html"><strong>Home</strong></a></li>
+                <li><a href="https://waittred.github.io/wdd230/chamber/discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a class="active" href="https://waittred.github.io/wdd230/chamber/join.html">Join</a></li>
+            
+            </ul>
+    
+    </nav>
+    <main>
+            <div class="hero-image-join">
+                <img class="seattle-skyline" src="images/seattle-skyline-clouds1.webp" alt="Seattle Washington Skyline">
+            </div>
+            <div class="container-form">
+                <h2 id="join2">Join the Seattle Chamber of Commerce</h2></div>
+            <div class="form-container">
+                
+                <form method="get" action="thankyou.html">
+                    <fieldset> 
+                        <legend>Personal Information</legend>
+                        <label class="top">Applicant's First Name: <input type="text" name="fname" required></label>
+                        <label class="top">Applicant's Last Name: <input type="text" name="lname" required></label>
+                        <label class="top">Mobile Phone Number: <input type="tel" name="phone" placeholder="1234561899" required></label>
+                        <label class="top">Email Address: <input type="email" name="email" required placeholder="example@example.com"></label>
+                        <label class="top">Applicant's Title or Position: <input type="text" name="title" pattern="[A-Za-z -]{7,}" ></label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Organization Details</legend>
+                        <div class="form-group">
+                        <label class="top">Business/Organization's Name: <input type="text" name="organizationName" required></label>
+                        <label class="top">Business/Organization's Description: <textarea id="businessDescription" name="businessDescription" rows="4" cols="50"></textarea></label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Membership Details</legend>
+                        <label class="top">Membership Level: 
+                            <select name="membershipLevel" required>
+                                <option value="">Please Select</option>
+                            <option value="NP">NP Membership (Nonprofit)</option>
+                            <option value="Bronze">Bronze Membership</option>
+                            <option value="Silver">Silver Membership</option>
+                            <option value="Gold">Gold Membership</option>
+                            </select>
+                        </label>
+                    </fieldset>
+
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                    <input type="submit" value="Submit Application" class="submitBtn">
+                </form>
+                
+            </div>
+                   
+    </main>     
+<footer>
+    <ul class="contact">
+        <li>
+            <img class="material-symbols-outlined" src="images/twitter_icon.svg" alt="Twitter icon">
+        </li>
+
+        <li>
+            <img class="material-symbols-outlined" src="images/facebook_icon.svg" alt="Facebook icon">
+
+        </li>
+
+        <li>
+            <img class="material-symbols-outlined" src="images/pinterest_icon.svg" alt="Pinterest icon">
+        </li>
+    </ul>        
+    <p>&copy; <span id="year"></span> |  Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
+        <div class= "updated"> 
+            <p id="date"></p>
+            
+        </div>
+    
+</footer>           
+
+        
+<script src="scripts/timestamp.js"></script>
+
+
+        
+</body>
+</html>
