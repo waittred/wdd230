@@ -121,7 +121,7 @@ nav {
     position: absolute;
     top: 13rem;
     right: 1%;
-    padding: 0%;
+    padding: 0;
     margin: 2%;
     
    
@@ -144,8 +144,8 @@ nav {
     background-color: #005c57;
     font-size: 20px;
     list-style: none;    
-    text-align: center;      
-}
+    text-align: center;   
+ }
 
 .main-nav li {
     display: none;
@@ -161,6 +161,7 @@ nav {
 .main-nav a {
     color: white;
     text-decoration: none;
+    padding: .5rem;
 }
 
 .hero img {
@@ -305,7 +306,7 @@ p {
     left: 0;
 }
 
-
+/*
 @media screen and (max-width: 320px)  {
     
 
@@ -333,4 +334,4 @@ h3 {
     top: 32%;
 }
 
-}
+}*/
