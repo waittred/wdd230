@@ -101,14 +101,23 @@ nav {
     color: white;
     
 }
-.dark-mode #card-a li a {
+/*.dark-mode #card-a li a {
     color: white;
     text-decoration: none;
-}
+}*/
+
 
 .dark-mode h2{
     color: white;
     text-decoration: none;
+}
+
+.dark-mode #activity-links-container li a {
+    color: white;
+    text-decoration: none;
+}
+.dark-mode #activity-links-container a:hover {
+    text-decoration: underline;
 }
 
 #menu {
