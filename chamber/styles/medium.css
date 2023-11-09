@@ -64,7 +64,10 @@
             font-size: larger;
     }
     
-       
+    #menu {
+            display: none; /* hide hamburger button */
+    }
+    
     .navigation {
             flex-direction: row;
     }
@@ -102,7 +105,7 @@
 
 #main-discover {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 40% auto;
     column-gap: .2em;
     
 }

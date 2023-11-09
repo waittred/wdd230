@@ -1,6 +1,6 @@
 body {
     font-family: 'Shadows Into Light', 'Judson', serif;
-    font-size: 30px; 
+    font-size: 16px; 
     margin: 0;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
@@ -79,17 +79,22 @@ header {
 nav {
     margin: 0 auto;  
 }
+#mode {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    
+}
 
 #mode button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    font-size: 14px;
+    font-size: 20px;
 }
 
 #mode button:hover {
     cursor: pointer;
+    
 }
-
-
 
 .dark-mode {
     background-color: black;
@@ -104,12 +109,6 @@ nav {
 .dark-mode h2{
     color: white;
     text-decoration: none;
-}
-
-#mode {
-    position: absolute;
-    top: 0px;
-    right: 5px;
 }
 
 #menu {
@@ -171,7 +170,7 @@ nav {
 
 .herolabel {
 	position: absolute;
-	top: 18rem;
+	top: 20rem;
 	left: .3rem;
 	background: radial-gradient(#fff, rgb(211, 155, 50));
 	border: 1px solid rgba(0,0,0,.75);
@@ -207,18 +206,22 @@ nav {
 	content: "➤";
 }
 
-ul {
+/*ul {
 
     margin: auto;
 	text-align: left;
     list-style-type: disc;
     list-style-position: inside;
-    list-style: none;  
+    list-style: none;
+    padding: 0;  
     font-size: 1.5rem;
       
 }
+ul li {
+    margin: 10px 0;
+}*/
 
-.card {
+/*.card {
    
     text-align: center;
     border-style: solid;
@@ -229,9 +232,16 @@ ul {
     color: black;
     background-color: white;
     
+}*/
+
+.card {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
 }
 
-#card-a li a{
+/*#card-a li a{
     color: black;
     text-decoration: none;
 }
@@ -240,7 +250,32 @@ ul {
     font-size: 1.5rem;
     text-align: center;
     
+}*/
+
+/* Additional styles for dynamically generated links */
+#activity-links-container h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
+
+#activity-links-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#activity-links-container li {
+    margin-bottom: 0.5rem;
+}
+
+#activity-links-container a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+#activity-links-container a:hover {
+    text-decoration: none;
+}
+
 
 .weather-card {
       
