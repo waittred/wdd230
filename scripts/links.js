@@ -5,26 +5,31 @@ const cards = document.querySelector('#list');
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayLinks(data);
-}
+    // console.log(data.weeks);
+    displayLinks(data.weeks);
+  }
+  
 getLinks();
 
 const displayLinks = (weeks) => {
     weeks.forEach((week) => {
+
         let card = document.createElement('li');
         card.textContent = `${week.week}: `;
-        
-        week.links.forEach((individualLink) => {
-            let linkElement = document.createElement('a');
-            linkElement.setAttribute('href', individualLink.url);
-            linkElement.textContent = `${individualLink.title} |`;
-            card.appendChild(linkElement);
-        });
+        // card.appendChild(card);
+
+        week.links.forEach((links) => {
+            let link = document.createElement('a')
+            link.setAttribute('href', links.url);
+            link.textContent = ` ${links.title} |`;
+
+            console.log(link)
+            card.appendChild(link)
+        })
         
         cards.appendChild(card);
     });
 }
-
 
 
 
