@@ -168,9 +168,11 @@ nav {
 }
   
 .main-nav a {
+    
+    display: block;
     color: white;
     text-decoration: none;
-    padding: .5rem;
+    padding: 10px 20px;
 }
 
 .hero img {

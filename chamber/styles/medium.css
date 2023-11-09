@@ -47,9 +47,13 @@
             
     }
     
-    .main-nav ul
+    
     .main-nav a {
         display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        padding-bottom: .6%;
     }
     
     a {
