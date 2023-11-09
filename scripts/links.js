@@ -7,17 +7,20 @@ async function getLinks() {
     displayLinks(data);
 }
 getLinks();
+
 const displayLinks = (weeks) => {
-        weeks.forEach((week) => {
-	let card = document.createElement('li');
-	card.textContent = `${week.week}: `;
+    weeks.forEach((week) => {
+	
+        let card = document.createElement('li');
+	    card.textContent = `${week.week}: `;
             
-            week.links.forEach((link) => {
-	            let link=document.createElement('a')
-                link.setAttribute('href', links.url);
-                link.textContent = ` ${links.title} |`;
-                console.log(link)
-                card.appendChild(link)
+        week.links.forEach((link) => {
+	        let link=document.createElement('a')
+            link.setAttribute('href', links.url);
+            link.textContent = ` ${links.title} |`;
+        
+            console.log(link)
+            card.appendChild(link)
        })
         
         cards.appendChild(card);
