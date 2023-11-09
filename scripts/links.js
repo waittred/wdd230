@@ -1,16 +1,24 @@
-const baseURL = 'https://waittred.github.io/wdd230/';
+const baseURL = 'https://waittred.github.io/wdd230/'
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
-const linksContainer = document.getElementById('activity-links-container');
+//const linksContainer = document.getElementById('activity-links-container');
 
-async function getLinksData(url) {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayLinks(data.lessons);
-    } catch (error) {
-        console.error('Error fetching links data:', error);
-    }
-}
+async function getLinks() {
+    const response = await fetch(linksURL);
+    const data = await response.json();
+    console.log(data);
+    //displayLinks(data);
+}   
+getLinks();
+
+//async function getLinksData(url) {
+ //   try {
+   //     const response = await fetch(url);
+     //   const data = await response.json();
+       // displayLinks(data.lessons);
+//    } catch (error) {
+  //      console.error('Error fetching links data:', error);
+ //   }
+//}
 
 const displayLinks = (weeks) => {
     weeks.forEach((week) => {
@@ -33,4 +41,4 @@ const displayLinks = (weeks) => {
     });
 };
 
-getLinksData(linksURL);
+//getLinksData(linksURL);
