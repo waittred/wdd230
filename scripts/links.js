@@ -5,40 +5,30 @@ const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    console.log(data);
-    //displayLinks(data);
-}   
-getLinks();
-
-//async function getLinksData(url) {
- //   try {
-   //     const response = await fetch(url);
-     //   const data = await response.json();
-       // displayLinks(data.lessons);
-//    } catch (error) {
-  //      console.error('Error fetching links data:', error);
- //   }
-//}
-
-const displayLinks = (weeks) => {
-    weeks.forEach((week) => {
-        const weekHeading = document.createElement('h4');
-        weekHeading.textContent = `Week ${week.lesson}`;
-        linksContainer.appendChild(weekHeading);
-
-        const linkList = document.createElement('ul');
-
-        week.links.forEach((link) => {
-            const listItem = document.createElement('li');
-            const anchor = document.createElement('a');
-            anchor.href = `${link.url}`;
-            anchor.textContent = link.title;
-            listItem.appendChild(anchor);
-            linkList.appendChild(listItem);
+    displayLinks(data);
+    const displayLinks = (weeks) => {
+        weeks.forEach((week) => {
+            const weekHeading = document.createElement('h4');
+            weekHeading.textContent = `Week ${week.lesson}`;
+            linksContainer.appendChild(weekHeading);
+    
+            const linkList = document.createElement('ul');
+    
+            week.links.forEach((link) => {
+                const listItem = document.createElement('li');
+                const anchor = document.createElement('a');
+                anchor.href = `${link.url}`;
+                anchor.textContent = link.title;
+                listItem.appendChild(anchor);
+                linkList.appendChild(listItem);
+            });
+    
+            linksContainer.appendChild(linkList);
+            console.log(data)
         });
+    };
 
-        linksContainer.appendChild(linkList);
-    });
-};
+}   
 
+getLinks();
 //getLinksData(linksURL);
