@@ -143,7 +143,8 @@ nav {
     background-color: #005c57;
     font-size: 20px;
     list-style: none;    
-    text-align: center;   
+    text-align: center; 
+    margin:0;  
  }
 
 .main-nav li {
@@ -235,7 +236,7 @@ ul li {
 }*/
 
 .card {
-    text-align: center;
+    text-align: left;
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
@@ -268,20 +269,21 @@ ul li {
 }
 
 #activity-links-container a {
-    color: #007bff; /* Link color */
+    color: black; /* Link color */
+    
     text-decoration: none;
 }
 
 #activity-links-container a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-
-.weather-card {
-      
-    background-color: var(--accent2-color);
-    border: 1px solid black;
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 #weather-icon {
     
@@ -298,7 +300,6 @@ footer {
     padding: 1%;
     color: #ffff;
     text-align: center;
-    
     
 }
 

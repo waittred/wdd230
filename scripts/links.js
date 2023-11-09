@@ -2,7 +2,7 @@
 const baseURL = "https://waittred.github.io/wdd230";
 const linksURL = "https://waittred.github.io/wdd230/data/links.json";
 
-// Function to fetch and process the links data
+// Function to fetch and process the links data help from chatgpt
 async function getLinks() {
     try {
         // Fetch the links data from the JSON file
