@@ -1,3 +1,4 @@
+const baseURL = 'https://waittred.github.io/wdd230/';
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
 const linksContainer = document.getElementById('activity-links-container');
 
