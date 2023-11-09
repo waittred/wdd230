@@ -1,6 +1,6 @@
 const baseURL = 'https://waittred.github.io/wdd230/';
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
-const cards = document.querySelector('#list')
+const cards = document.querySelector('#list');
 
 async function getLinks() {
     const response = await fetch(linksURL);
@@ -11,22 +11,20 @@ getLinks();
 
 const displayLinks = (weeks) => {
     weeks.forEach((week) => {
-	
         let card = document.createElement('li');
-	    card.textContent = `${week.week}: `;
-            
-        week.links.forEach((link) => {
-	        let link=document.createElement('a')
-            link.setAttribute('href', links.url);
-            link.textContent = ` ${links.title} |`;
+        card.textContent = `${week.week}: `;
         
-            console.log(link)
-            card.appendChild(link)
-       })
+        week.links.forEach((individualLink) => {
+            let linkElement = document.createElement('a');
+            linkElement.setAttribute('href', individualLink.url);
+            linkElement.textContent = `${individualLink.title} |`;
+            card.appendChild(linkElement);
+        });
         
         cards.appendChild(card);
     });
 }
+
 
 
 
