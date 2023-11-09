@@ -1,24 +1,27 @@
-const baseURL = 'https://waittred.github.io/wdd230/';
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
 const cards = document.querySelector('#list');
 
 async function getLinks() {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    // console.log(data.weeks);
-    displayLinks(data.weeks);
-  }
-  
-getLinks();
+    try {
+        const response = await fetch(linksURL);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        displayLinks(data.lessons);
+    } catch (error) {
+        console.error('Error fetching or parsing data:', error);
+    }
+}
 
-const displayLinks = (weeks) => {
-    const list = document.querySelector('#list'); // Find the ul element with id 'list'
+const displayLinks = (lessons) => {
+    const list = document.querySelector('#list');
 
-    weeks.forEach((week) => {
+    lessons.forEach((lesson) => {
         let card = document.createElement('li');
-        card.textContent = `${week.week}: `;
+        card.textContent = `Lesson ${lesson.lesson}: `;
 
-        week.links.forEach((link) => {
+        lesson.links.forEach((link) => {
             let linkElement = document.createElement('a');
             linkElement.setAttribute('href', link.url);
             linkElement.textContent = ` ${link.title} |`;
@@ -26,38 +29,8 @@ const displayLinks = (weeks) => {
             card.appendChild(linkElement);
         });
 
-        list.appendChild(card); // Append the created list item to the ul element
+        list.appendChild(card);
     });
 };
 
-
-
-
-
-
-//    const displayLinks = (weeks) => {
-//        weeks.forEach((week) => {
-//            const weekHeading = document.createElement('h4');
-//            weekHeading.textContent = `Week ${week.lesson}`;
-//            linksContainer.appendChild(weekHeading);
-  //  
-    //        const linkList = document.createElement('ul');
-    //
-      //      week.links.forEach((link) => {
-        //        const listItem = document.createElement('li');
-          //      const anchor = document.createElement('a');
-            //    anchor.href = `${link.url}`;
-              //  anchor.textContent = link.title;
-//                listItem.appendChild(anchor);
-  //              linkList.appendChild(listItem);
-    //        });
-    
-      //      linksContainer.appendChild(linkList);
-        //    });
-//    };
-        
-//}   
-
-
-//getLinks();
-
+getLinks();
