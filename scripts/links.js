@@ -12,24 +12,25 @@ async function getLinks() {
 getLinks();
 
 const displayLinks = (weeks) => {
-    weeks.forEach((week) => {
+    const list = document.querySelector('#list'); // Find the ul element with id 'list'
 
+    weeks.forEach((week) => {
         let card = document.createElement('li');
         card.textContent = `${week.week}: `;
-        // card.appendChild(card);
 
-        week.links.forEach((links) => {
-            let link = document.createElement('a')
-            link.setAttribute('href', links.url);
-            link.textContent = ` ${links.title} |`;
+        week.links.forEach((link) => {
+            let linkElement = document.createElement('a');
+            linkElement.setAttribute('href', link.url);
+            linkElement.textContent = ` ${link.title} |`;
 
-            console.log(link)
-            card.appendChild(link)
-        })
-        
-        cards.appendChild(card);
+            card.appendChild(linkElement);
+        });
+
+        list.appendChild(card); // Append the created list item to the ul element
     });
-}
+};
+
+
 
 
 
