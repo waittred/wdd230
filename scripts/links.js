@@ -1,4 +1,4 @@
-const baseURL = 'https://waittred.github.io/wdd230/'
+const baseURL = 'https://waittred.github.io/wdd230/';
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
 const cards = document.querySelector('#list')
 
