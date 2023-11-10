@@ -1,5 +1,5 @@
 const linksURL = 'https://waittred.github.io/wdd230/data/links.json';
-const cards = document.querySelector('#list');
+const list = document.querySelector('#list');
 
 async function getLinks() {
     try {
@@ -14,23 +14,21 @@ async function getLinks() {
     }
 }
 
-const displayLinks = (lessons) => {
-    const list = document.querySelector('#list');
-
+function displayLinks(lessons) {
     lessons.forEach((lesson) => {
-        let card = document.createElement('li');
-        card.textContent = `Lesson ${lesson.lesson}: `;
+        let lessonHeading = document.createElement('h4');
+        lessonHeading.textContent = `Lesson ${lesson.lesson}`;
+        list.appendChild(lessonHeading);
 
         lesson.links.forEach((link) => {
-            let linkElement = document.createElement('a');
-            linkElement.setAttribute('href', link.url);
-            linkElement.textContent = ` ${link.title} |`;
-
-            card.appendChild(linkElement);
+            let paragraph = document.createElement('p');
+            let anchor = document.createElement('a');
+            anchor.setAttribute('href', link.url);
+            anchor.textContent = link.title;
+            paragraph.appendChild(anchor);
+            list.appendChild(paragraph);
         });
-
-        list.appendChild(card);
     });
-};
+}
 
 getLinks();

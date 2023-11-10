@@ -264,30 +264,26 @@ ul li {
     
 }*/
 
-/* Additional styles for dynamically generated links */
-#activity-links-container h4 {
-    font-size: 1.8rem;
+/* Learning Activities List fetching data via links.js */
+#list h4 {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-#activity-links-container ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#activity-links-container li {
+#list p {
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-#activity-links-container a {
-    color: black; /* Link color */
-    
+#list a {
     text-decoration: none;
+    color: black;
 }
 
-#activity-links-container a:hover {
+#list a:hover {
     text-decoration: underline;
 }
+
 
 .weather-container {
     display: flex;
