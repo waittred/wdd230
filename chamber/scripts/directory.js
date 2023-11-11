@@ -1,23 +1,14 @@
-const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
-const membersContainer = document.getElementById("members-container");
-
-async function getMembersData(url) {
-    try {
-        const response = await fetch(url);
-        console.log('Response:', response); // Log the entire response for debugging
-        const data = await response.json();
-        console.log('Data:', data); // Log the parsed data for debugging
-        displayMembers(data.members);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
-
 const displayMembers = (members) => {
-    console.log('Displaying members:', members); // Log the members for debugging
+    console.log('Displaying members:', members);
+
+    if (!members || members.length === 0) {
+        console.warn('No members to display.');
+        return;
+    }
+
     members.forEach((member) => {
-        let memberElement = document.createElement('div'); // or 'li' for list view
-        memberElement.classList.add('member-card'); // or 'member-list-item' for list view
+        let memberElement = document.createElement('div');
+        memberElement.classList.add('member-card');
 
         let companyName = document.createElement('h3');
         let address = document.createElement('p');
@@ -35,8 +26,8 @@ const displayMembers = (members) => {
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '200'); // Adjust as needed
-        image.setAttribute('height', '200'); // Adjust as needed
+        image.setAttribute('width', '200');
+        image.setAttribute('height', '200');
         membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
         additionalInfo.textContent = member.additionalInfo;
 
@@ -51,5 +42,3 @@ const displayMembers = (members) => {
         membersContainer.appendChild(memberElement);
     });
 }
-
-getMembersData(membersUrl);
