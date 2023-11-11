@@ -512,6 +512,33 @@ footer p {
 }
 
 
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
 /*------------------ Form Page -------------------*/
 
 .hero-image-join img {
@@ -623,6 +650,7 @@ form input.submitBtn-join {
 .directory-title {
     background-color: var(--accent2-color);
     padding: 1.5rem;
+    margin-top: .5rem;
 }
 
 .view-toggle {
@@ -683,31 +711,3 @@ form input.submitBtn-join {
 }
 
 
-
-
-@-webkit-keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
-}
-@keyframes circle {
-	0% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		width: 200%;
-		height: 200%;
-		opacity: 0;
-	}
-}

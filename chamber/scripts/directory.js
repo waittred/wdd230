@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
 const membersContainer = document.getElementById("members-container");
 
@@ -59,18 +60,26 @@ const displayMembers = (members) => {
 
 getMembersData(membersUrl);
 
+// Function to toggle between grid and list views
 function toggleView(viewType) {
-    membersContainer.classList.toggle('grid', viewType === 'grid');
-    membersContainer.classList.toggle('list', viewType === 'list');
+    // Remove existing classes before toggling
+    membersContainer.classList.remove('grid', 'list');
+
+    // Toggle the selected view
+    membersContainer.classList.add(viewType);
 }
 
 // Set an initial view (e.g., grid)
 toggleView('grid');
 
+// Event listeners for grid and list buttons
 document.getElementById('grid-view').addEventListener('click', () => {
+    console.log('Grid button clicked');
     toggleView('grid');
 });
 
 document.getElementById('list-view').addEventListener('click', () => {
+    console.log('List button clicked');
     toggleView('list');
+});
 });
