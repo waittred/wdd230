@@ -1,0 +1,71 @@
+[
+    {
+        "name": "1st Security Bank",
+        "address": "614 Broadway East, Seattle, WA 98102",
+        "phone": "(800) 683-0973",
+        "website": "https://www.fsbwa.com/",
+        "image": "images/1st_security_bank.webp",
+        "membershipLevel": "Gold",
+        "additionalInfo": "From the beaches of the Olympic coast to the golden hills of Ontario, Oregon, we're helping people like you bank better. Visit any of our 27 branches throughout Washington and Oregon for friendly, professional community banking you can count on. We look forward to seeing you."
+    },
+    {
+        "name": "Chihuly Garden and Glass",
+        "address": "305 Harrison St, Seattle, WA 98109",
+        "phone": "(206) 753-4940",
+        "website": "https://www.chihulygardenandglass.com/",
+        "image": "images/chihuly.webp",
+        "membershipLevel": "Bronze",
+        "additionalInfo": "A long-term Exhibition featuring the work of artist Dale Chihuly."
+    },
+   
+    {
+        "name": "Port Blakely",
+        "address": "1501 Fourth Ave, Suite 2150, Seattle, WA 98101-2524",
+        "phone": "(206) 624-5810",
+        "website": "https://portblakely.com/",
+        "image": "images/port-blakely.webp",
+        "membershipLevel": "Bronze",
+        "additionalInfo": "Port Blakely’s story is one of innovation, determination, & stewardship. It’s about cultivating a healthy world by caring for our forests to produce the sustainable forest products we grow & the communities we support."
+    },
+
+    {
+        "name": "Eli Lilly & Company",
+        "address": "603 Stewart St, Seattle, WA 98101",
+        "phone": "(206) 223-5327",
+        "website": "https://www.lilly.com/",
+        "image": "images/Eli_Lilly_and_Company.webp",
+        "membershipLevel": "Gold",
+        "additionalInfo": "What does Eli Lilly and Company do? For more than 140 years, we have worked tirelessly to develop and deliver trusted medicines and diagnostics that meet real needs. Our growing portfolio of medicines includes treatments in the areas of bone muscle joint, cancer, cardiovascular, diabetes, endocrine, immunology, neurodegeneration, neuroscience, and pain."
+    },
+
+    {
+        "name": "Aerospace Futures Alliance of Washington",
+        "address": "1301 5th Ave, Ste 1500, Seattle, WA  98101",
+        "phone": "(206) 309-2464",
+        "website": "https://www.afa-wa.com/",
+        "image": "images/aerospace_future_alliance_of_Washington.webp",
+        "membershipLevel": "Nonprofit",
+        "additionalInfo": "The Aerospace Futures Alliance works to preserve and promote Washington's lead as the global center of aerospace manufacturing."
+    },
+   
+    {
+        "name": "Recreation Vacation Rentals",
+        "address": "450 Alaskan Way South, Suite 200, PMB#4338, Seattle, WA 98104",
+        "phone": "(206) 880-3815",
+        "website": "https://recreationstays.com/",
+        "image": "images/recreation_vacation_rentals.webp",
+        "membershipLevel": "Bronze",
+        "additionalInfo": "Redefine the vacation rental experience with the best practices & principles of luxury hospitality."
+    },
+
+    {
+        "name": "47 Degrees, LLC",
+        "address": "113 Cherry St., #24989, Seattle, WA 98104",
+        "phone": "(206) 701-6277",
+        "website": "https://www.47deg.com/",
+        "image": "images/47Degrees.webp",
+        "membershipLevel": "Silver",
+        "additionalInfo": "Helping enterprises modernize, scale, and secure their core operational systems using functional programming, declarative DevOps, and formal methods."
+    }
+    
+]

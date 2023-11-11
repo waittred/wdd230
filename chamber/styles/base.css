@@ -619,6 +619,53 @@ form input.submitBtn-join {
     cursor: pointer;
 }
 
+/*------------------------------Directory Page ----------------------------------*/
+.directory-title {
+    background-color: var(--accent2-color);
+    padding: 1.5rem;
+}
+
+main.directory {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button.directory {
+    background-color: #306c62;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-container {
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #d4e8d6;
+    padding: 20px;
+    border: 1px solid #306c62;
+    border-radius: 5px;
+}
+
+
+
 
 @-webkit-keyframes circle {
 	0% {
