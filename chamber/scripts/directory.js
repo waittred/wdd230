@@ -1,4 +1,3 @@
-/*received help from chatgpt*/
 const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
 const membersContainer = document.getElementById("members-container");
 
@@ -60,19 +59,18 @@ const displayMembers = (members) => {
 
 getMembersData(membersUrl);
 
-/*Toggle view between list and grid*/
-
 function toggleView(viewType) {
-    membersContainer.className = 'members-container'; // Reset the class
-    membersContainer.classList.add(viewType);
+    membersContainer.classList.toggle('grid', viewType === 'grid');
+    membersContainer.classList.toggle('list', viewType === 'list');
 }
 
-getMembersData(membersUrl);
+// Set an initial view (e.g., grid)
+toggleView('grid');
 
-document.getElementById('grid-view').addEventListener('click', function () {
+document.getElementById('grid-view').addEventListener('click', () => {
     toggleView('grid');
 });
 
-document.getElementById('list-view').addEventListener('click', function () {
+document.getElementById('list-view').addEventListener('click', () => {
     toggleView('list');
 });
