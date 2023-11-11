@@ -24,7 +24,7 @@ const displayMembers = (members) => {
         let membershipLevel = document.createElement('p');
         let additionalInfo = document.createElement('p');
 
-        companyName.textContent = member.name;
+        //companyName.textContent = member.name;
         address.textContent = `Address: ${member.address}`;
         phone.textContent = `Phone: ${member.phone}`;
         website.textContent = `Website: ${member.website}`;
@@ -35,7 +35,7 @@ const displayMembers = (members) => {
         image.setAttribute('width', '200'); // Adjust as needed
         image.setAttribute('height', '200'); // Adjust as needed
         membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
-        additionalInfo.textContent = member.additionalInfo;
+       // additionalInfo.textContent = member.additionalInfo;
 
         memberElement.appendChild(companyName);
         memberElement.appendChild(address);
