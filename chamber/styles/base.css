@@ -625,18 +625,12 @@ form input.submitBtn-join {
     padding: 1.5rem;
 }
 
-main.directory {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .view-toggle {
     text-align: center;
     margin-bottom: 20px;
 }
 
-button.directory {
+#grid-view, #list-view {
     background-color: #306c62;
     color: white;
     padding: 10px 20px;
