@@ -670,14 +670,14 @@ section {
     
 }
 
-img {
-    width: auto;
-    max-width: 325px; 
-    height: auto; 
-    border: 1px solid #333;
+.member-card img {
     
+        width: auto;
+        max-width: 325px; 
+        height: auto; 
+        border: 1px solid #333;
+        
 }
-
 
 
 
