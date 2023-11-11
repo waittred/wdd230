@@ -1,3 +1,4 @@
+/*received help from chatgpt*/
 const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
 const membersContainer = document.getElementById("members-container");
 
@@ -16,6 +17,8 @@ async function getMembersData(url) {
 }
 
 const displayMembers = (members) => {
+    membersContainer.innerHTML = ''; // Clear the container before adding new members
+    
     members.forEach((member) => {
         let memberElement = document.createElement('div');
         memberElement.classList.add('member-card');
@@ -33,6 +36,8 @@ const displayMembers = (members) => {
         phone.textContent = `Phone: ${member.phone}`;
         website.textContent = `Website: ${member.website}`;
         website.setAttribute('href', member.website);
+        website.setAttribute('target', '_blank'); // Open link in a new tab
+        website.innerHTML = 'Details'; // Set link text to "Details"
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
         image.setAttribute('loading', 'lazy');
@@ -54,3 +59,20 @@ const displayMembers = (members) => {
 }
 
 getMembersData(membersUrl);
+
+/*Toggle view between list and grid*/
+
+function toggleView(viewType) {
+    membersContainer.className = 'members-container'; // Reset the class
+    membersContainer.classList.add(viewType);
+}
+
+getMembersData(membersUrl);
+
+document.getElementById('grid-view').addEventListener('click', function () {
+    toggleView('grid');
+});
+
+document.getElementById('list-view').addEventListener('click', function () {
+    toggleView('list');
+});
