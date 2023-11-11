@@ -5,17 +5,20 @@ async function getMembersData(url) {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log('Received data:', data); // Log the received data
-        displayMembers(data.members);
+        if (!Array.isArray(data)) {
+            console.error('Data is not an array:', data);
+            return;
+        }
+        displayMembers(data);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching or processing data:', error);
     }
 }
 
-function displayMembers(members) {
+const displayMembers = (members) => {
     members.forEach((member) => {
-        let memberElement = document.createElement('div'); // or 'li' for list view
-        memberElement.classList.add('member-card'); // or 'member-list-item' for list view
+        let memberElement = document.createElement('div');
+        memberElement.classList.add('member-card');
 
         let companyName = document.createElement('h3');
         let address = document.createElement('p');
@@ -33,8 +36,8 @@ function displayMembers(members) {
         image.setAttribute('src', member.image);
         image.setAttribute('alt', `Logo of ${member.name}`);
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '200'); // Adjust as needed
-        image.setAttribute('height', '200'); // Adjust as needed
+        image.setAttribute('width', '200');
+        image.setAttribute('height', '200');
         membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
         additionalInfo.textContent = member.additionalInfo;
 
