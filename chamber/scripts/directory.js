@@ -1,3 +1,4 @@
+//Received assistance from chatgpt.com
 document.addEventListener('DOMContentLoaded', () => {
 const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
 const membersContainer = document.getElementById("members-container");

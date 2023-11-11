@@ -90,7 +90,7 @@ nav {
     margin: auto;  
 
 }
-    
+
 #mode button {
     
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -134,7 +134,7 @@ nav {
     --headline-color-on-white: #284e4a;
     justify-content: space-evenly;
     position: absolute;
-    top: 5.5rem;
+    top: 7rem;
     right: .1%;
         
 }
@@ -159,8 +159,6 @@ nav {
     background-color: var(--headline-color-on-white);
     font-size: 20px;
     padding-left: 0;  
-           
-                
 }
         
 .main-nav li {
@@ -183,9 +181,16 @@ nav {
     text-decoration: none;
 }
 
+
 .active::before {
     content: "➤ ";
 }
+
+.active {
+    margin-right: 0; /* Reset margin for the active link */
+}
+
+
         
 .show li {
     
@@ -653,70 +658,78 @@ form input.submitBtn-join {
     margin-top: .5rem;
 }
 
-.view-toggle {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.members-container.list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.members-container.list > * {
-    width: calc(33.33% - 20px); /* Adjust as needed */
-    margin-bottom: 20px; /* Adjust as needed */
-}
-
-.members-container.list img {
-    display: none;
-}
-
 #grid-view, #list-view {
     background-color: #306c62;
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 10px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
 }
 
-#members-container {
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#members-container.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
     margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.member-card img {
+    padding-top: 1rem;
+    
+}
+#members-container.list .member-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: baseline;
+}
+
+#member-container.list .member-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    
+}
+
+#members-container.list img {
+    display: none;
+}
+
+#members-container.list p {
+    display: none;
 }
 
 .member-card {
     background-color: #d4e8d6;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #306c62;
     border-radius: 5px;
+    text-align: center;
 }
 
-.member-card a {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-bottom: 10px; /* Adjust as needed for spacing */
+a {
+    letter-spacing: 1.1pt;
 }
 
-.member-card img {
-    width: 100%;
-    max-width: 100%;
-    
+.member-card a:hover {
+    text-decoration: underline;
 }
+
+.member-card p {
+    font-size: 20px;
+}
+
+
+
+
 
 
