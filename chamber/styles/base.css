@@ -671,6 +671,15 @@ form input.submitBtn-join {
     margin-top: 20px;
 }
 
+.members-container.list > * {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.members-container.list img {
+    display: none;
+}
+
 #grid-view, #list-view {
     background-color: #306c62;
     color: white;
