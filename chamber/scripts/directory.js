@@ -4,7 +4,9 @@ const membersContainer = document.getElementById("members-container");
 async function getMembersData(url) {
     try {
         const response = await fetch(url);
+        console.log('Response:', response); // Log the entire response for debugging
         const data = await response.json();
+        console.log('Data:', data); // Log the parsed data for debugging
         displayMembers(data.members);
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -12,6 +14,7 @@ async function getMembersData(url) {
 }
 
 const displayMembers = (members) => {
+    console.log('Displaying members:', members); // Log the members for debugging
     members.forEach((member) => {
         let memberElement = document.createElement('div'); // or 'li' for list view
         memberElement.classList.add('member-card'); // or 'member-list-item' for list view
@@ -24,7 +27,7 @@ const displayMembers = (members) => {
         let membershipLevel = document.createElement('p');
         let additionalInfo = document.createElement('p');
 
-        //companyName.textContent = member.name;
+        companyName.textContent = member.name;
         address.textContent = `Address: ${member.address}`;
         phone.textContent = `Phone: ${member.phone}`;
         website.textContent = `Website: ${member.website}`;
@@ -35,7 +38,7 @@ const displayMembers = (members) => {
         image.setAttribute('width', '200'); // Adjust as needed
         image.setAttribute('height', '200'); // Adjust as needed
         membershipLevel.textContent = `Membership Level: ${member.membershipLevel}`;
-       // additionalInfo.textContent = member.additionalInfo;
+        additionalInfo.textContent = member.additionalInfo;
 
         memberElement.appendChild(companyName);
         memberElement.appendChild(address);
