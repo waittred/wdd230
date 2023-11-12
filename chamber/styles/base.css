@@ -32,6 +32,7 @@
     --dark-mode-headline: #0a220a;
     --accent2-color1: #d4e8d6;
     --img-background: white;
+    --background-directory: #306c62
 
 }
     
@@ -105,7 +106,7 @@ nav {
 .dark-mode {
         
     background-color: black;
-    --accent2-color1: #black;
+    --accent2-color1: black;
     color: white;
     --left-sidebar-text: white;
     --nav-link-color: white;
@@ -118,6 +119,7 @@ nav {
     --form-input: white;
     --form-top-background: black;
     --img-background: black;
+    --background-directory: black;
 }
     
 #mode {
@@ -653,13 +655,13 @@ form input.submitBtn-join {
 
 /*------------------------------Directory Page ----------------------------------*/
 .directory-title {
-    background-color: var(--accent2-color);
+    background-color: var(--accent2-color1);
     padding: 1.5rem;
     margin-top: .5rem;
 }
 
 #grid-view, #list-view {
-    background-color: #306c62;
+    background-color: var(--background-directory);
     color: white;
     padding: 10px 20px;
     font-size: 20px;
@@ -709,7 +711,7 @@ form input.submitBtn-join {
 }
 
 .member-card {
-    background-color: #d4e8d6;
+    background-color: var(--accent2-color1);
     padding: 30px;
     border: 1px solid #306c62;
     border-radius: 5px;
