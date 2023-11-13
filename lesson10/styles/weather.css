@@ -1,0 +1,41 @@
+
+footer {
+    background-color:#005c57;
+    
+}
+h1 {  
+    text-align: center;
+    color: black;    
+        font-size: 3rem;
+    
+}
+
+p {
+    margin: 0;
+    font-size: 1.5rem;
+    
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#weather-icon {
+    
+    width: 75px;
+   
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    padding: 1%;
+    color: #ffff;
+    text-align: center;
+    
+}

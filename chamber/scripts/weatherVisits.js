@@ -1,20 +1,23 @@
     
-//  Received help from chat.openai.com to fetch current weather //
+// Received help from chat.openai.com to fetch current weather //
 document.addEventListener('DOMContentLoaded', () => {
     const apiKey = '59020284cd6ab79b85c528f26efcafd2';
     const city = 'Seattle';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-  
+
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             const temperatureFahrenheit = data.main.temp.toFixed(1);
-            const weatherDescription = data.weather[0].description;
+
+            // Capitalize the weather description using the capitalizeWords function
+            const capitalizedDesc = capitalizeWords(data.weather[0].description);
+
             const weatherIcon = data.weather[0].icon;
-  
+
             document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
-            document.getElementById('weather-description').textContent = `Weather: ${weatherDescription}`;
-  
+            document.getElementById('weather-description').textContent = `Weather: ${capitalizedDesc}`;
+
             const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
             const weatherIconElement = document.getElementById('weather-icon');
             weatherIconElement.setAttribute('src', iconUrl);
@@ -23,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
+
+    // Function to capitalize each word in a string
+    function capitalizeWords(str) {
+        return str.replace(/\b\w/g, match => match.toUpperCase());
+    }
   
     // Get visits element from the DOM
     const visitsDisplay = document.getElementById('page-visits');

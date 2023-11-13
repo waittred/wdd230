@@ -65,9 +65,16 @@
       {
         "lesson": "10",
         "links": [
-          {"url": "lesson10/lesson10.html", "title": "Lesson 10 Assignment"}
+          {"url": "lesson10/weather.html", "title": "Consuming a Weather API"}
+        ]
+      },
+      {
+      "lesson": "11",
+        "links": [
+          {"url": "lesson10/lesson10.html", "title": ""}
         ]
       }
+      
     ]
   }
   
