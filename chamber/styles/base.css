@@ -276,7 +276,6 @@ a:active{
 #weather-icon {
         
     width: 75px;
-       
 }
 
 .weather-container figure {
@@ -284,7 +283,15 @@ a:active{
     justify-content: center;
     background-color: var(--accent2-color1);
 }
-    
+
+.three-day-forecast {
+    margin-top: 50px; 
+}
+
+#page-visits {
+    margin-top: 80px;
+}
+
 .join {
     display: none;
 }
