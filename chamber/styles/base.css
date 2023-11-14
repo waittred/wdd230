@@ -725,6 +725,10 @@ form input.submitBtn-join {
     text-align: center;
 }
 
+.member-card h3 {
+    text-align: left;
+}
+
 .member-card a {
     display: block;
     letter-spacing: 1.1pt;
