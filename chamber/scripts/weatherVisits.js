@@ -1,7 +1,7 @@
     
 // Received help from chat.openai.com to fetch current weather //
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = '542a8196d8643c064f9c22f4313b339f';
+    const apiKey = '59020284cd6ab79b85c528f26efcafd2';
     const city = 'Seattle';
 
     // Current weather API URL
@@ -15,64 +15,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return str.replace(/\b\w/g, match => match.toUpperCase());
     }
 
-    // Get visits element from the DOM
-    const visitsDisplay = document.getElementById('page-visits');
+    // Function to update element content or set innerHTML if the element is found
+    function updateElementContent(elementId, content) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.innerHTML = content;
+        } else {
+            console.error(`Element with ID '${elementId}' not found.`);
+        }
+    }
 
-    // Retrieve the stored value for 'pageVisits' in localStorage or assign 0 if it doesn't exist
-    let pageVisits = Number(localStorage.getItem('pageVisits')) || 0;
+// Fetch current weather data
+fetch(currentWeatherUrl)
+.then(response => response.json())
+.then(data => {
+    const temperatureFahrenheit = data.main.temp.toFixed(1);
+    const capitalizedDesc = capitalizeWords(data.weather[0].description);
+    const weatherIcon = data.weather[0].icon;
 
-    // Increment the number of visits by one
-    pageVisits++;
+    // Display current weather information
+    document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
+    document.getElementById('weather-description').textContent = `Weather: ${capitalizedDesc}`;
 
-    // Update and store the new visit total in localStorage
-    visitsDisplay.textContent = `Page Visits: ${pageVisits}`;
-    localStorage.setItem('pageVisits', pageVisits);
+    const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
 
-    // Fetch current weather data
-    fetch(currentWeatherUrl)
-        .then(response => response.json())
-        .then(data => {
-            const temperatureFahrenheit = data.main.temp.toFixed(1);
-            const capitalizedDesc = capitalizeWords(data.weather[0].description);
-            const weatherIcon = data.weather[0].icon;
+    // Set the src attribute of the image directly
+    document.getElementById('weather-icon').src = iconUrl;
+    document.getElementById('weather-icon').alt = 'Weather Icon';
+})
+.catch(error => {
+    console.error('Error fetching current weather data:', error);
+});
 
-            // Display current weather information
-            document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
-            document.getElementById('weather-description').textContent = `Weather: ${capitalizedDesc}`;
-
-            const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
-            const weatherIconElement = document.getElementById('weather-icon');
-            weatherIconElement.setAttribute('src', iconUrl);
-            weatherIconElement.setAttribute('alt', 'Weather Icon');
-        })
-        .catch(error => {
-            console.error('Error fetching current weather data:', error);
-        });
 
     // Fetch three-day forecast data
     fetch(forecastUrl)
         .then(response => response.json())
         .then(data => {
             // Extract relevant forecast data for the next three days
-            const forecastDays = data.list.filter((forecast, index) => index % 8 === 0); // Filter the data to get one forecast per day
+            const forecastDays = data.list.slice(0, 3); // Get the first three forecasts
 
             // Display forecast information
             forecastDays.forEach((forecast, index) => {
                 const forecastDate = new Date(forecast.dt * 1000);
-                const forecastDay = forecastDate.toLocaleDateString('en-US', { weekday: 'long' }); // Get the full day name
-                const forecastDateString = forecastDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); // Get the date as "Month Day"
+                const forecastDay = forecastDate.toLocaleDateString('en-US', { weekday: 'long' });
+                const forecastDateString = forecastDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
                 const forecastTemperature = forecast.main.temp.toFixed(1);
                 const capitalizedForecastDesc = capitalizeWords(forecast.weather[0].description);
 
-                // Display forecast for each day with commas using template literals
-                document.getElementById(`forecast-day-${index + 1}`).innerHTML = `<strong>${forecastDay}</strong>: ${forecastDateString}: ${forecastTemperature}°F (${capitalizedForecastDesc})`;
+                // Display forecast for each day
+                updateElementContent(`forecast-day-${index + 1}`, `<strong>${forecastDay}</strong>: ${forecastDateString}: ${forecastTemperature}°F (${capitalizedForecastDesc})`);
             });
         })
         .catch(error => {
             console.error('Error fetching forecast data:', error);
         });
 });
+
 
 
 
