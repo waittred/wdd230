@@ -15,57 +15,56 @@ document.addEventListener('DOMContentLoaded', () => {
         return str.replace(/\b\w/g, match => match.toUpperCase());
     }
 
-    // Function to update element content or set innerHTML if the element is found
-    function updateElementContent(elementId, content) {
-        const element = document.getElementById(elementId);
-        if (element) {
-            element.innerHTML = content;
-        } else {
-            console.error(`Element with ID '${elementId}' not found.`);
-        }
-    }
+    // Fetch current weather data
+    fetch(currentWeatherUrl)
+        .then(response => response.json())
+        .then(data => {
+            const temperatureFahrenheit = data.main.temp.toFixed(1);
+            const capitalizedDesc = capitalizeWords(data.weather[0].description);
+            const weatherIcon = data.weather[0].icon;
 
-// Fetch current weather data
-fetch(currentWeatherUrl)
-.then(response => response.json())
-.then(data => {
-    const temperatureFahrenheit = data.main.temp.toFixed(1);
-    const capitalizedDesc = capitalizeWords(data.weather[0].description);
-    const weatherIcon = data.weather[0].icon;
+            // Display current weather information
+            document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
+            document.getElementById('weather-description').textContent = `Weather: ${capitalizedDesc}`;
 
-    // Display current weather information
-    document.getElementById('current-temperature').textContent = `Current Temperature: ${temperatureFahrenheit}°F`;
-    document.getElementById('weather-description').textContent = `Weather: ${capitalizedDesc}`;
-
-    const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
-
-    // Set the src attribute of the image directly
-    document.getElementById('weather-icon').src = iconUrl;
-    document.getElementById('weather-icon').alt = 'Weather Icon';
-})
-.catch(error => {
-    console.error('Error fetching current weather data:', error);
-});
-
+            const iconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
+            const weatherIconElement = document.getElementById('weather-icon');
+            weatherIconElement.setAttribute('src', iconUrl);
+            weatherIconElement.setAttribute('alt', 'Weather Icon');
+        })
+        .catch(error => {
+            console.error('Error fetching current weather data:', error);
+        });
 
     // Fetch three-day forecast data
     fetch(forecastUrl)
         .then(response => response.json())
         .then(data => {
             // Extract relevant forecast data for the next three days
-            const forecastDays = data.list.slice(0, 3); // Get the first three forecasts
-
-            // Display forecast information
-            forecastDays.forEach((forecast, index) => {
+            const forecastDays = data.list.reduce((acc, forecast) => {
                 const forecastDate = new Date(forecast.dt * 1000);
                 const forecastDay = forecastDate.toLocaleDateString('en-US', { weekday: 'long' });
                 const forecastDateString = forecastDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const temperature = forecast.main.temp.toFixed(1);
+                const description = capitalizeWords(forecast.weather[0].description);
 
-                const forecastTemperature = forecast.main.temp.toFixed(1);
-                const capitalizedForecastDesc = capitalizeWords(forecast.weather[0].description);
+                // Check if the forecast day is not already added to the accumulator
+                if (!acc.some(day => day.forecastDay === forecastDay)) {
+                    acc.push({
+                        forecastDay,
+                        dateString: forecastDateString,
+                        temperature,
+                        description,
+                    });
+                }
 
-                // Display forecast for each day
-                updateElementContent(`forecast-day-${index + 1}`, `<strong>${forecastDay}</strong>: ${forecastDateString}: ${forecastTemperature}°F (${capitalizedForecastDesc})`);
+                return acc;
+            }, []);
+
+            // Display forecast information
+            forecastDays.slice(0, 3).forEach((forecast, index) => {
+                const { forecastDay, dateString, temperature, description } = forecast;
+                document.getElementById(`forecast-day-${index + 1}`).innerHTML = `<strong>${forecastDay}</strong>: ${dateString}: ${temperature}°F (${description})`;
             });
         })
         .catch(error => {
