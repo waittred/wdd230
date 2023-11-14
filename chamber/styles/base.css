@@ -725,7 +725,8 @@ form input.submitBtn-join {
     text-align: center;
 }
 
-a {
+.member-card a {
+    display: block;
     letter-spacing: 1.1pt;
 }
 
