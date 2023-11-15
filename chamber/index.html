@@ -47,6 +47,11 @@
     
     </nav>
     <main>
+        <div id="meeting-banner" class="banner">
+            <p><b>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.!</b></p>
+            <button id="close-banner">❌ Close</button>
+        </div>
+        
         <div class="join"><h3>Join</h3></div>
         <div class="hero-image"></div>           
 
@@ -58,11 +63,9 @@
         
         <div class="call-to-action">Chamber Information</div>
         <div class="grid-container">
-            
-            
-
-                <h2>Current Events</h2>
-                <hr style="width:50%; text-align:center">
+                        
+            <h2>Current Events</h2>
+            <hr style="width:50%; text-align:center">
             <section class="current-events">
                 
                 <h3>Class to Build Your Business</h3>
@@ -78,17 +81,15 @@
                         <img id="weather-icon" src=" " alt="Weather Icon">
                         <figcaption></figcaption>
                     </figure>
-
+            
             <!-- Add a new section for the three-day forecast -->
-            <section class="three-day-forecast">
-                <h3>Three-Day Forecast</h3>
-                <div id="forecast-day-1"></div>
-                <div id="forecast-day-2"></div>
-                <div id="forecast-day-3"></div>
-
-            </section>
-        
-                
+                <section class="three-day-forecast">
+                    <h3>Three-Day Forecast</h3>
+                    <div id="forecast-day-1"></div>
+                    <div id="forecast-day-2"></div>
+                    <div id="forecast-day-3"></div>
+                </section>
+                        
                 <p id="page-visits"></p>
                 </div>
                 
@@ -97,9 +98,14 @@
             <br>
             <h2>Chamber Spotlights</h2>
             <hr style="width:50%; text-align:center">
-            <section class="spotlight_main">
-                <article id="cards" class="grid">
-                    <section>
+                <section class="spotlight_main">
+                <article id="cards" class="grid">    
+                    <!-- Your spotlight content goes here -->    
+                </article>
+                </section>
+
+            <!-- Dynamically generated sections will be inserted here -->
+                    <!--<section>
                         <h2 class=>1st Security Bank</h2>
                         <p>614 Broadway East
                            Seattle, WA 98102</p>
@@ -132,37 +138,38 @@
                 </article>
             </section>
             
-        </div>
+        </div>-->
         <!--Found icons/svg's from https://www.iconfinder.com-->
                 <h2>Contact Us</h2>
                 <hr style="width:50%; text-align:center"> 
         <div id="footer1">   
             <div class="company-details">
            
-            <div class="row">
-                    <div id="col1">
-                        <img class="material-symbols-outlined" src="images/mailbox_icon.svg" alt="Mailbox icon">
-                        <br>
-                        <span class="address">301 5th Ave, Seattle, WA 98101</span>
+                <div class="row">
+                        <div id="col1">
+                            <img class="material-symbols-outlined" src="images/mailbox_icon.svg" alt="Mailbox icon">
+                            <br>
+                            <span class="address">301 5th Ave, Seattle, WA 98101</span>
+                        </div>
+    
+                        <div id="col2">
+                            <img class="material-symbols-outlined" src="images/phone_icon.svg" alt="Telephone icon">
+                            <br>
+                            <span class="phone">Telephone: 206.389.0000</span>
+                        </div>
+    
+                        <div id="col3">
+                            <img class="material-symbols-outlined" src="images/email_icon.svg" alt="Email icon">
+                            <br>
+                            <a href="#">www.cloudcity.org</a>
+                    
+                        </div>
+                </div>
             </div>
- 
-                    <div id="col2">
-                        <img class="material-symbols-outlined" src="images/phone_icon.svg" alt="Telephone icon">
-                        <br>
-                        <span class="phone">Telephone: 206.389.0000</span>
-                    </div>
- 
-                    <div id="col3">
-                        <img class="material-symbols-outlined" src="images/email_icon.svg" alt="Email icon">
-                        <br>
-                        <a href="#">www.cloudcity.org</a>
-                
-                    </div>
         </div>
-        </div>
-        </div>
+    </div>
                             
-</main>     
+    </main>     
 <footer>
     <ul class="contact">
         <li>
@@ -187,9 +194,11 @@
 </footer>           
 
 
+<script src="scripts/banner.js"></script> 
 <script src="scripts/weatherVisits.js"></script> 
 <script src="scripts/darkmode.js"></script> 
 <script src="scripts/hamButton.js"></script>
+<script src="scripts/membershipLevel.js"></script>
 <script src="scripts/lastUpdated.js"></script>     
 
        
