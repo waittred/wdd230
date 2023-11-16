@@ -84,4 +84,3 @@ document.getElementById('list-view').addEventListener('click', () => {
     toggleView('list');
 });
 });
-

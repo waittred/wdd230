@@ -1,40 +1,44 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        // Define the URL for fetching JSON data
-        const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
+// Ensure this script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Fetch data from members.json
+    fetch("https://waittred.github.io/wdd230/chamber/data/members.json")
+        .then(response => response.json())
+        .then(data => displayMembers(data.members))
+        .catch(error => console.error("Error fetching members data:", error));
 
-        // Fetch JSON data from members.json
-        const response = await fetch(membersUrl);
-        const chamberMembers = await response.json();
-        console.log('Fetched data:', chamberMembers);
-        // Filter silver and gold members
-        const silverGoldMembers = chamberMembers.filter(member => member.membershipLevel === 'silver' || member.membershipLevel === 'gold');
-        console.log('Silver/Gold members:', silverGoldMembers);
-        // Function to shuffle an array (Fisher-Yates algorithm)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-        }
+    // Display members with silver or gold status
+    function displayMembers(members) {
+        const silverGoldMembers = members.filter(member =>
+            member.status === "silver" || member.status === "gold"
+        );
 
-        // Shuffle the filtered array
-        shuffleArray(silverGoldMembers);
+        // Randomly select 2 to 3 members
+        const selectedMembers = getRandomMembers(silverGoldMembers, 2, 3);
 
-        // Display two to three randomly selected members
-        const spotlightMain = document.querySelector('.spotlight_main .grid');
-        const displayedMembers = silverGoldMembers.slice(0, 3); // Adjust the number as needed
+        // Display the selected members
+        const membersContainer = document.getElementById("spotlight-cards");
 
-        displayedMembers.forEach(member => {
-            const memberSection = document.createElement('section');
+        selectedMembers.forEach(member => {
+            const memberSection = document.createElement("section");
+            memberSection.classList.add("spotlight");
+
+            // Customize this based on your JSON structure
             memberSection.innerHTML = `
                 <h2>${member.name}</h2>
-                <p>Status: ${member.membershipLevel}</p>
-                <!-- Other fields... -->
+                <p>${member.address}</p>
+                <img src="${member.image}" alt="${member.name} Image">
+                <br>
+                <br>
+                <a href="${member.website}">${member.website}</a>
             `;
-            spotlightMain.appendChild(memberSection);
+
+            membersContainer.appendChild(memberSection);
         });
-    } catch (error) {
-        console.error('Error loading or processing JSON data:', error);
+    }
+
+    // Helper function to get a random subset of members
+    function getRandomMembers(array, min, max) {
+        const shuffled = array.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, Math.floor(Math.random() * (max - min + 1)) + min);
     }
 });
