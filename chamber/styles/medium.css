@@ -75,6 +75,14 @@
             flex-direction: row;
     }
 
+    .weather-card h2 {
+        font-size: 2rem;
+    }
+
+    .weather-card h3 {
+        font-size: 1.8rem;
+    }
+
     #forecast-day-1, #forecast-day-2, #forecast-day-3 {
         font-size: 22px;
     }

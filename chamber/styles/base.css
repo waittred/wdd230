@@ -36,6 +36,7 @@
     --toggle-button: #d3d3d3;
     --banner-background: black;
     --banner-text-color: white;
+    --company-details-a: black;
 
 }
     
@@ -127,7 +128,9 @@ nav {
     --form-input: white;
     --form-top-background: black;
     --img-background: black;
-    --background-directory: black;
+    --company-details-a: white;
+    
+    
 }
     
 #mode {
@@ -423,7 +426,7 @@ footer {
 
 .company-details a{
     font-size: 14px;
-    color: var(--paragraph-color-on-white);
+    color: var(--company-details-a);
 }
 
     
