@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Display forecast information
             forecastDays.slice(0, 3).forEach((forecast, index) => {
                 const { forecastDay, dateString, temperature, description } = forecast;
-                document.getElementById(`forecast-day-${index + 1}`).innerHTML = `<strong>${forecastDay}</strong>: ${dateString}: ${temperature}°F (${description})`;
+                document.getElementById(`forecast-day-${index + 1}`).innerHTML = `${forecastDay}: ${dateString}: ${temperature}°F (${description})`;
             });
         })
         .catch(error => {

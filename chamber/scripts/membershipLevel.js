@@ -45,9 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = member.image;
         img.alt = `Picture of ${member.name}`;
 
-        const website = document.createElement('a');
+        const website = document.createElement("a");
         website.href = member.website;
-        website.textContent = member.website;
+        website.setAttribute('target', '_blank'); // Open link in a new tab
+        website.innerHTML = 'Details'; // Set link text to "Details"
 
         // Append elements to the card
         card.appendChild(name);

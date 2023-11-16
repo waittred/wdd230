@@ -74,6 +74,10 @@
     .navigation {
             flex-direction: row;
     }
+
+    #forecast-day-1, #forecast-day-2, #forecast-day-3 {
+        font-size: 22px;
+    }
     
     .address {
         font-size: 1.5rem;
@@ -103,6 +107,14 @@
 
     .spotlight_main section:nth-child(3) {
         display: none;
+    }
+
+    .spotlight-card h2{
+        font-size: 32px;
+    }
+
+    .company-details a{
+            font-size: 1.6rem;
     }
     /*------------------Discover Page-----------------*/
 
