@@ -595,7 +595,90 @@ footer p {
 	}
 }
 
-/*------------------ Form Page -------------------*/
+/*------------------------------Directory Page ----------------------------------*/
+.directory-title {
+    background-color: var(--accent2-color1);
+    padding: 1.5rem;
+    margin-top: .5rem;
+}
+
+#grid-view, #list-view {
+    background-color: var(--background-directory);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#members-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.member-card img {
+    padding-top: 1rem;
+    
+}
+#members-container.list .member-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: baseline;
+}
+
+#member-container.list .member-card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    
+}
+
+#members-container.list img {
+    display: none;
+}
+
+#members-container.list p {
+    display: none;
+}
+
+.member-card {
+    background-color: var(--accent2-color1);
+    padding: 30px;
+    border: 1px solid #306c62;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.member-card h3 {
+    text-align: center;
+}
+
+.member-card a {
+    display: block;
+    letter-spacing: 1.1pt;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.member-card p {
+    font-size: 20px;
+}
+
+
+/*------------------ Join Page -------------------*/
 
 .hero-image-join img {
     display: flex;
@@ -700,88 +783,6 @@ form input.submitBtn-join {
     padding: .75rem 1.5rem;
     margin: 2rem auto;
     cursor: pointer;
-}
-
-/*------------------------------Directory Page ----------------------------------*/
-.directory-title {
-    background-color: var(--accent2-color1);
-    padding: 1.5rem;
-    margin-top: .5rem;
-}
-
-#grid-view, #list-view {
-    background-color: var(--background-directory);
-    color: white;
-    padding: 10px 20px;
-    font-size: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-.view-toggle {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#members-container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    margin-top: 20px;
-    gap: 20px;
-    justify-content: center;
-}
-
-.member-card img {
-    padding-top: 1rem;
-    
-}
-#members-container.list .member-card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 5px;
-    align-items: baseline;
-}
-
-#member-container.list .member-card {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    
-}
-
-#members-container.list img {
-    display: none;
-}
-
-#members-container.list p {
-    display: none;
-}
-
-.member-card {
-    background-color: var(--accent2-color1);
-    padding: 30px;
-    border: 1px solid #306c62;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.member-card h3 {
-    text-align: center;
-}
-
-.member-card a {
-    display: block;
-    letter-spacing: 1.1pt;
-}
-
-.member-card a:hover {
-    text-decoration: underline;
-}
-
-.member-card p {
-    font-size: 20px;
 }
 
 
