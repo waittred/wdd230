@@ -1,7 +1,7 @@
 // Ensure this script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch data from members.json
-    fetch("https://waittred.github.io/wdd230/chamber/data/members.json")
+    fetch("data/members.json")
         .then(response => response.json())
         .then(data => displayMembers(data.members))
         .catch(error => console.error("Error fetching members data:", error));
