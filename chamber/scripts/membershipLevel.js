@@ -1,44 +1,62 @@
-// Ensure this script runs after the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    // Fetch data from members.json
-    fetch("data/members.json")
-        .then(response => response.json())
-        .then(data => displayMembers(data.members))
-        .catch(error => console.error("Error fetching members data:", error));
+document.addEventListener('DOMContentLoaded', () => {
+    const membersUrl = 'https://waittred.github.io/wdd230/chamber/data/members.json';
+    const spotlightContainer = document.getElementById("spotlight-cards");
 
-    // Display members with silver or gold status
-    function displayMembers(members) {
-        const silverGoldMembers = members.filter(member =>
-            member.status === "silver" || member.status === "gold"
-        );
+    async function getMembersData(url) {
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!Array.isArray(data)) {
+                console.error('Data is not an array:', data);
+                return;
+            }
+            displaySpotlightMembers(data);
+        } catch (error) {
+            console.error('Error fetching or processing data:', error);
+        }
+    }
 
-        // Randomly select 2 to 3 members
-        const selectedMembers = getRandomMembers(silverGoldMembers, 2, 3);
+    function getRandomMembers(data, count) {
+        const shuffledMembers = data.sort(() => 0.5 - Math.random());
+        return shuffledMembers.slice(0, count);
+    }
 
-        // Display the selected members
-        const membersContainer = document.getElementById("spotlight-cards");
+    function displaySpotlightMembers(members) {
+        const spotlightMembers = getRandomMembers(members, 3);
 
-        selectedMembers.forEach(member => {
-            const memberSection = document.createElement("section");
-            memberSection.classList.add("spotlight");
-
-            // Customize this based on your JSON structure
-            memberSection.innerHTML = `
-                <h2>${member.name}</h2>
-                <p>${member.address}</p>
-                <img src="${member.image}" alt="${member.name} Image">
-                <br>
-                <br>
-                <a href="${member.website}">${member.website}</a>
-            `;
-
-            membersContainer.appendChild(memberSection);
+        spotlightMembers.forEach(member => {
+            const card = createSpotlightCard(member);
+            spotlightContainer.appendChild(card);
         });
     }
 
-    // Helper function to get a random subset of members
-    function getRandomMembers(array, min, max) {
-        const shuffled = array.sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, Math.floor(Math.random() * (max - min + 1)) + min);
+    function createSpotlightCard(member) {
+        // Create HTML elements for a spotlight card
+        const card = document.createElement('div');
+        card.classList.add('spotlight-card');
+
+        const name = document.createElement('h2');
+        name.textContent = member.name;
+
+        const address = document.createElement('p');
+        address.textContent = member.address;
+
+        const img = document.createElement('img');
+        img.src = member.image;
+        img.alt = `Picture of ${member.name}`;
+
+        const website = document.createElement('a');
+        website.href = member.website;
+        website.textContent = member.website;
+
+        // Append elements to the card
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(img);
+        card.appendChild(website);
+
+        return card;
     }
+
+    getMembersData(membersUrl);
 });
