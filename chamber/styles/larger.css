@@ -8,4 +8,8 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+
+    #spotlight-cards .spotlight-card img {
+        height: 180px;
+    }
 }
