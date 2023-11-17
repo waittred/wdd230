@@ -157,8 +157,8 @@ nav {
     
 #mode {
     position: absolute;
-    top: 8px;
-    right: 4px;
+    top: .5rem;
+    left: .5rem;
 
 }
     
@@ -169,8 +169,8 @@ nav {
     --headline-color-on-white: #284e4a;
     justify-content: space-evenly;
     position: absolute;
-    top: 7rem;
-    right: .3rem;
+    top: .5rem;
+    right: .5rem;
         
 }
     
@@ -612,9 +612,8 @@ footer p {
 }
 
 .interest {
-    background-color: var(--accent2-color1);
+    
     color: var(--left-sidebar-text);
-    border: 2px solid var(--paragraph-color-on-white); 
     margin-top: .15rem;
     margin-bottom: .1em;
     
@@ -691,8 +690,8 @@ footer p {
 
 /*------------------------------Directory Page ----------------------------------*/
 .directory-title {
-    background-color: var(--accent2-color1);
-    padding: 1.5rem;
+    
+    padding: .3rem;
     margin-top: .5rem;
 }
 

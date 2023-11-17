@@ -132,7 +132,7 @@
 
 #main-discover {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 30% auto;
     column-gap: .2em;
     
 }
