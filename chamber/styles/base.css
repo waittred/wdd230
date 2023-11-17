@@ -21,7 +21,17 @@
     --nav-background-color: #284e4a;
     --nav-hover-link-color: white;
     --nav-hover-background-color:#64b2a6;
-    --left-sidebar-text:  #284E4A;
+    --weather-card-border: black;
+    --spotlight-border: black;
+    --curent-events-border: black;
+    --message-border: black;
+    --demo-border: black;
+    --stats-border: black;
+    --events-border: black;
+    --calendar-border: black;
+    --calendar-month-background:#284E4A;
+    --weekdays-text: #d3d3d3;
+    --photo-interest-text:  black;
     --left-sidebar-background: #284E4A;
     --white-text: white;
     --form-fieldset:#445ba9;
@@ -38,7 +48,35 @@
     --banner-background: black;
     --banner-text-color: white;
     --company-details-a: black;
+}
 
+.dark-mode {
+        
+    background-color: black;
+    --accent2-color1: black;
+    color: white;
+    --photo-interest-text:  white;
+    --nav-link-color: white;
+    --spotlight-border: white;
+    --curent-events-border: white;
+    --weather-card-border: white;
+    --left-sidebar-background: black;
+    --left-sidebar-foreground: white;
+    --message-border: white;
+    --demo-border: white;
+    --stats-border: white;
+    --events-border: white;
+    --calendar-border:white;
+    --weekdays-text: black;
+    --headline-color-on-white: #0a220a;
+    --form-fieldset: white;
+    --form-fieldset-border: 2px solid white;
+    --form-label: white;
+    --form-input: white;
+    --form-top-background: black;
+    --img-background: black;
+    --company-details-a: white;
+    --toggle-button: #d4e8d6;
 }
     
 body {
@@ -115,28 +153,7 @@ nav {
     
     cursor: pointer;
 }
-   
-.dark-mode {
-        
-    background-color: black;
-    --accent2-color1: black;
-    color: white;
-    --left-sidebar-text: white;
-    --nav-link-color: white;
-    --left-sidebar-background: black;
-    --left-sidebar-foreground: white;
-    --headline-color-on-white: #0a220a;
-    --form-fieldset: white;
-    --form-fieldset-border: 2px solid white;
-    --form-label: white;
-    --form-input: white;
-    --form-top-background: black;
-    --img-background: black;
-    --company-details-a: white;
-    --toggle-button: #d4e8d6;
-    
-    
-}
+
     
 #mode {
     position: absolute;
@@ -290,13 +307,13 @@ a:active{
 .current-events {
         
     background-color: var(--accent2-color1);
-    border: 1px solid black;
+    border: 1px solid var(--curent-events-border);
 }
     
 .weather-card {
       
     background-color: var(--accent2-color1);
-    border: 1px solid black;
+    border: 1px solid var(--weather-card-border);
 }
 
 
@@ -393,7 +410,7 @@ a:active{
     align-items: center;
     width: calc(33.33% - 20px);
     margin-bottom: 20px;
-    border: 1px solid var(--paragraph-color-on-white);
+    border: 1px solid var(--spotlight-border);
     padding: 5px; 
 }
 
@@ -484,41 +501,110 @@ footer p {
 }
 
 .message {
-    border: 2px solid var(--paragraph-color-on-white);
+    border: 2px solid var(--message-border);
     margin: .25em;
     background-color: var(--accent2-color1);
 } 
 
 
 .demo {
-    border: 2px solid var(--paragraph-color-on-white);
+    border: 2px solid var(--demo-border);
     padding: 1rem;
     margin: .25em;
     background-color: var(--accent2-color1);
 }
 
 .stats {
-    border: 2px solid var(--paragraph-color-on-white);
+    border: 2px solid var(--stats-border);
     margin: .25em;
     background-color: var(--accent2-color1);
 }
 
 .events {
-    border: 2px solid var(--paragraph-color-on-white);
+    border: 2px solid var(--events-border);
     margin: .25em;
     background-color: var(--accent2-color1);
+}
+
+.calendar-box {
+    border: 2px solid var(--calendar-border);
+    margin: .25em;
+    background-color: var(--accent2-color1);
+    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
 .calendar {
-    border: 2px solid var(--paragraph-color-on-white);
-    margin: .25em;
-    background-color: var(--accent2-color1);
+    background-color: var(--toggle-button);
+    border: 2px solid var(--calendar-border);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  
+.month {
+    background-color: var(--calendar-month-background);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Updated to space-between */
+    align-items: center; /* Center items vertically */
+  }
+  
+#prev-btn,
+#next-btn {
+    background-color: var(--toggle-button);
+    color: var(--paragraph-color-on-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
- 
+  
+#prev-btn:hover,
+#next-btn:hover {
+    background-color: var(--nav-hover-background-color);
+}
+  
+.weekdays {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--weekdays-text);
+    padding: 10px;
+}
+  
+.weekdays div {
+    text-align: center;
+}
+  
+  
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    
+}
+
+.day {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+  
+.day:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--paragraph-color-on-color);
+}
 
 /* Style for h2 elements inside the sidebar and picture column */
-#left-sidebar h2, #local-pics h2 {
-    color: var(--left-sidebar-text);
+#local-pics h2 {
+    color: var(--paragraph-color-on-color);
 }
 
 .image-wrapper {

@@ -139,10 +139,9 @@
 
 /* left sidebar */
 #left-sidebar {
-    grid-column: 1/2;
     display: grid;
     grid-template-rows: min-content min-content min-content min-content min-content;
-    column-gap: .2em;
+    column-gap: 0.2em;
     
 }
 
