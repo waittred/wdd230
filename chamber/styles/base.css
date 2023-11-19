@@ -500,6 +500,16 @@ footer p {
     margin: .25em;
     background-color: var(--accent2-color1);
 }
+.stats img, .demo img {
+    width: 98%;
+    height:auto;
+}
+.stats figcaption, .demo figcaption {
+   padding-bottom: .5rem;
+   margin-left: .5rem;
+   text-align: left;
+   font-size: 10px;
+}
 
 .events {
     border: 2px solid var(--events-border);
