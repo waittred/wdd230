@@ -21,7 +21,10 @@
     --nav-background-color: #284e4a;
     --nav-hover-link-color: white;
     --nav-hover-background-color:#64b2a6;
+    --call-to-action-background: ##d4e8d6;
     --weather-card-border: black;
+    --spotlight-background:#d4e8d6;
+    --spotlight-text-color: black;
     --spotlight-border: black;
     --curent-events-border: black;
     --message-border: black;
@@ -57,6 +60,8 @@
     color: white;
     --photo-interest-text:  white;
     --nav-link-color: white;
+    --spotlight-background: black;
+    --spotlight-text-color: white;
     --spotlight-border: white;
     --curent-events-border: white;
     --weather-card-border: white;
@@ -104,9 +109,7 @@ h2 {
     font-family: var(--heading-font);
            
 }
-.weather-card h2 {
-    font-size: 1.8rem;
-}
+
     
 h3{
     
@@ -116,13 +119,10 @@ p {
     padding: 1.5rem;
 }
 
-    
-    
 header, footer{
     
     background-color: var(--headline-color-on-white);
     color: var(--nav-link-color);
-        
 }
     
 header {
@@ -214,7 +214,6 @@ nav {
     text-decoration: none;
 }
 
-
 .active::before {
     content: "➤ ";
 }
@@ -223,8 +222,6 @@ nav {
     margin-right: 0; /* Reset margin for the active link */
 }
 
-
-        
 .show li {
     
     display: block;
@@ -241,7 +238,6 @@ ul.main-nav.show {
     display: block;  
     margin-top: .1%;
     margin-bottom: .2%;
-        
 }
     
 a {
@@ -253,7 +249,6 @@ a:link {
         
     justify-content: center;
     text-decoration: none;
-        
 }
     
 a:visited {
@@ -278,65 +273,6 @@ a:active{
  
     
 /**************** Main Body Content *****************/
-    
-.banner {
-    display: none;
-    padding: 10px;
-    background-color: white;
-    text-align: center;
-}
-
-#meeting-banner {
-    background-color: var(--banner-background);
-    color: var(--banner-text-color);
-    padding: 10px;
-    text-align: center;
-}
-
-
-#close-banner {
-    background-color: var(--toggle-button);
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-    
-.current-events {
-        
-    background-color: var(--accent2-color1);
-    border: 1px solid var(--curent-events-border);
-}
-    
-.weather-card {
-      
-    background-color: var(--accent2-color1);
-    border: 1px solid var(--weather-card-border);
-}
-
-
-
-#weather-icon {
-        
-    width: 75px;
-}
-
-.weather-container figure {
-    display: flex;
-    justify-content: center;
-    background-color: var(--accent2-color1);
-}
-
-.three-day-forecast {
-    margin-top: 50px; 
-    
-}
-
-
-#page-visits {
-    margin-top: 80px;
-}
-
 .join {
     display: none;
 }
@@ -366,17 +302,64 @@ a:active{
     display: block;
 }*/
     
-.call-to-action {
-    
-    background-color: var(--headline-color-on-color);
-    color: var(--white-text);
-    padding: 10px 20px;
-    border: none;
+.banner {
+    display: none;
+    padding: 10px;
+    background-color: white;
     text-align: center;
-    text-decoration: none;   
-    font-size: 1.5rem;
+}
+
+#meeting-banner {
+    background-color: var(--banner-background);
+    color: var(--banner-text-color);
+    padding: 10px;
+    text-align: center;
+}
+
+#close-banner {
+    background-color: var(--toggle-button);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
-    margin-top: 3px;
+}
+    
+.call-to-action,.current-events, #weather-card, .weather-container {
+        
+    background-color: var(--accent2-color1);
+    border: 1px solid var(--curent-events-border);
+}
+
+    
+.weather-container p, .call-to-action p, .current-events p {
+    margin: 0;
+    padding: .8rem;
+}
+
+.call-to-action a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#weather-icon {
+        
+    width: 75px;
+}
+
+.weather-container figure {
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent2-color1);
+}
+
+.three-day-forecast {
+    font-size: 12px;
+    margin-top: .2rem; 
+    
+}
+
+#page-visits {
+    margin-top: 2rem;
 }
 
 /* Spotlight Section Styles */
@@ -399,7 +382,6 @@ a:active{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin-top: 20px;
-    
 }
 
 #spotlight-cards .spotlight-card {
@@ -408,6 +390,8 @@ a:active{
     align-items: center;
     width: calc(33.33% - 20px);
     margin-bottom: 20px;
+    background-color: var(--spotlight-background);
+    color: var(--spotlight-text-color);
     border: 1px solid var(--spotlight-border);
     padding: 5px; 
 }
@@ -421,7 +405,6 @@ a:active{
 
 .spotlight-card h2{
     font-size: 16px;
-  
 }
 
  
@@ -430,7 +413,7 @@ a:active{
   
 footer {
     padding: 1%;
-    margin-top: .7%;
+    margin-top: .2%;
         
 }
     
@@ -438,6 +421,7 @@ footer {
         
     overflow: hidden;
     background: var(--accent2-color1);
+    border: 1px solid var(--spotlight-border);
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -449,7 +433,6 @@ footer {
     color: var(--company-details-a);
 }
 
-    
 #footer1 #col1,
 #footer1 #col2,
 #footer1 #col3 {

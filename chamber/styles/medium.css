@@ -23,7 +23,6 @@
     h2 {
         
         font-size: 3rem;
-       
         
     }
     
@@ -75,9 +74,7 @@
             flex-direction: row;
     }
 
-    .weather-card h2 {
-        font-size: 2rem;
-    }
+    
 
     .weather-card h3 {
         font-size: 1.8rem;

@@ -70,7 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error fetching forecast data:', error);
         });
+        
+
+
+ // Get visits element from the DOM
+    const visitsDisplay = document.getElementById('page-visits');
+
+ // Retrieve the stored value for 'pageVisits' in localStorage or assign 0 if it doesn't exist
+    let pageVisits = Number(localStorage.getItem('pageVisits')) || 0;
+
+ // Increment the number of visits by one
+    pageVisits++;
+
+ // Update and store the new visit total in localStorage
+    visitsDisplay.textContent = `Page Visits: ${pageVisits}`;
+    localStorage.setItem('pageVisits', pageVisits);
 });
+
+
 
 
 
