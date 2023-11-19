@@ -37,6 +37,10 @@
     --photo-interest-text:  black;
     --left-sidebar-background: #284E4A;
     --white-text: white;
+    --bronze-membership-background: #CD7F32;
+    --membership-text: black;
+    --silver-membership-background: #c0c0c0;
+    --gold-membership-background: #d4af37;
     --form-fieldset:#445ba9;
     --form-fieldset-border: 2px solid #445ba9;
     --form-label: #9c2c13;
@@ -764,26 +768,51 @@ footer p {
 
 /*------------------ Join Page -------------------*/
 
+
+
 .hero-image-join img {
     display: flex;
     justify-content: center;
     width: 100%;
     height: auto;
-   
+}
+
+.membership-nonprofit {
+    background-color: var(--accent2-color1);
+    color: var(--membership-text);
+    border: 1px solid var(--curent-events-border);
+    border-radius: 10px;
+    margin: .25em;
+    
+    
+}
+.membership-bronze {
+    background-color: var(--bronze-membership-background);
+    color: var(--membership-text);
+    border: 1px solid var(--curent-events-border);
+    border-radius: 10px;
+    margin: .25em;
 
 }
-#join2  {
-    text-align: center;
-    margin: 1rem;
+.membership-silver {
+    background-color: var(--silver-membership-background);
+    color: var(--membership-text);
+    border: 1px solid var(--curent-events-border);
+    border-radius: 10px;
+    margin: .25em;
 }
-  
-.form-container {
-    display: flex;
+.membership-gold {
+    background-color: var(--gold-membership-background);
+    color: var(--membership-text);
+    border: 1px solid var(--curent-events-border);
+    border-radius: 10px;
+    margin: .25em;
+}
+
+form {
     text-align: left;
-    justify-content: center;
-    
-    
 }
+
 form fieldset { /*lines around the three sections */
     margin: 2rem 1rem; /*to seperate the sections from each other */
     border: 1px solid var(--form-fieldset);
@@ -794,6 +823,7 @@ form fieldset { /*lines around the three sections */
 }
 
 form legend {
+    font-size: larger;
     color: var(--form-fieldset);
     margin: 0 1rem; /*to slide the legend over */
     padding: 0 .5rem; /*padding to push the line away from the words */
@@ -804,7 +834,6 @@ form label.top, form div {
     padding-top: 1rem;
     color: var(--form-label);
     font-size: .8rem;
-    
 }
 
 form label.top input, form label.top select{

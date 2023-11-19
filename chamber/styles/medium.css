@@ -240,4 +240,40 @@ figure:hover+span {
 		opacity: 0;
 	}
 }
+
+/* ---------Join Page------- */
+#membership-container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    column-gap: .2em;
+}
+.memberships {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    column-gap: 0.2em;
+}
+.membership-nonprofit {
+    grid-row: 1;
+}
+
+.membership-bronze {
+    grid-row: 2;
+}
+.membership-silver {
+    grid-row: 3;
+}
+.membership-gold {
+    grid-row: 4;
+}
+
+.form-container {
+    
+
+}
+.container-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+}
+
 }
