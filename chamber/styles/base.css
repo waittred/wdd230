@@ -37,12 +37,13 @@
     --photo-interest-text:  black;
     --left-sidebar-background: #284E4A;
     --white-text: white;
-    --bronze-membership-background: #CD7F32;
+    --nonprofit-background: #d4e8d6;
+    --bronze-membership-background: #f4d0b3;
     --membership-text: black;
     --silver-membership-background: #c0c0c0;
     --gold-membership-background: #d4af37;
-    --form-fieldset:#445ba9;
-    --form-fieldset-border: 2px solid #445ba9;
+    --form-fieldset: #284E4A;
+    --form-fieldset-border: 2px solid #284E4A;
     --form-label: #9c2c13;
     --form-input: black;
     --form-top-background: #80808038;
@@ -334,7 +335,6 @@ a:active{
     border: 1px solid var(--curent-events-border);
 }
 
-    
 .weather-container p, .call-to-action p, .current-events p {
     margin: 0;
     padding: .8rem;
@@ -359,14 +359,13 @@ a:active{
 .three-day-forecast {
     font-size: 12px;
     margin-top: .2rem; 
-    
 }
 
 #page-visits {
     margin-top: 2rem;
 }
 
-/* Spotlight Section Styles */
+/* ----------Spotlight Section Styles---------- */
 .grid-container {
     
     display: flex;
@@ -412,9 +411,8 @@ a:active{
 }
 
  
-/* Footer */
+/* -----------------Footer---------------- */
 
-  
 footer {
     padding: 1%;
     margin-top: .2%;
@@ -435,6 +433,7 @@ footer {
 .company-details a{
     font-size: 14px;
     color: var(--company-details-a);
+    cursor: pointer;
 }
 
 #footer1 #col1,
@@ -446,6 +445,10 @@ footer {
     margin: 0 1%; 
     vertical-align: top; 
 }
+
+.phone {
+    text-decoration: none;
+}
     
 .material-symbols-outlined {
        
@@ -453,6 +456,7 @@ footer {
     width: 24px;
     margin-bottom: .5em;
     padding: 1%;
+   
 }
     
 img .material-symbols-outlined {
@@ -508,6 +512,7 @@ footer p {
     width: 98%;
     height:auto;
 }
+
 .stats figcaption, .demo figcaption {
    padding-bottom: .5rem;
    margin-left: .5rem;
@@ -537,7 +542,7 @@ footer p {
     overflow: hidden;
     margin-top: 2rem;
     width: 100%;
-  }
+}
 
   
 .month {
@@ -548,7 +553,7 @@ footer p {
     display: flex;
     justify-content: space-between; /* Updated to space-between */
     align-items: center; /* Center items vertically */
-  }
+}
   
 #prev-btn,
 #next-btn {
@@ -576,12 +581,10 @@ footer p {
     text-align: center;
 }
   
-  
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 4px;
-    
 }
 
 .day {
@@ -683,7 +686,7 @@ footer p {
 	}
 }
 
-/*------------------------------Directory Page ----------------------------------*/
+/*----------------Directory Page---------------------*/
 .directory-title {
     
     padding: .3rem;
@@ -768,8 +771,6 @@ footer p {
 
 /*------------------ Join Page -------------------*/
 
-
-
 .hero-image-join img {
     display: flex;
     justify-content: center;
@@ -778,7 +779,7 @@ footer p {
 }
 
 .membership-nonprofit {
-    background-color: var(--accent2-color1);
+    background-color: var(--nonprofit-background);
     color: var(--membership-text);
     border: 1px solid var(--curent-events-border);
     border-radius: 10px;

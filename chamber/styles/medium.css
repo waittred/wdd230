@@ -1,137 +1,125 @@
 @media screen and (min-width: 640px)  {
        
-    .main-nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 0;
-        padding-bottom: .6%;
-           
-    }
+.main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-bottom: .6%;
+}
         
-    main {
-            
-            grid-template-columns: 1fr 300px;
-            margin: auto;
-    }
+main {
+    grid-template-columns: 1fr 300px;
+    margin: auto;
+}
 
-    h1 {
+h1 {
         
-        font-size: 5rem;
-    }
+    font-size: 5rem;
+}
 
-    h2 {
-        
-        font-size: 3rem;
-        
-    }
+h2 {
+    font-size: 3rem;
+}
     
-    h3 {
+h3 {
         
-        font-size: 2rem;
-    }
+    font-size: 2rem;
+}
     
-    p {
-        font-size: 1.5rem;
-    }
+p {
+    font-size: 1.5rem;
+}
 
-    .grid-container {
+.grid-container {
       
-        grid-template-rows:auto auto auto auto;
+    grid-template-rows:auto auto auto auto;
         
-    }
+}
     
-    #menu {
-            display: none;
+#menu {
+    display: none;
             
-    }
+}
     
+.main-nav a {
+    margin: 0;
+    padding-bottom: .6%;
+}
     
-    .main-nav a {
-        
-        
-        margin: 0;
-        padding-bottom: .6%;
-    }
-    
-    a {
-        font-size: 1.5rem;
-        text-decoration: none;
-    }
-    
-    
-    .main-nav li {
-            display: block;
-            flex: 1 1 100%;
-            font-size: larger;
-    }
-    
-    #menu {
-            display: none; /* hide hamburger button */
-    }
-    
-    .navigation {
-            flex-direction: row;
-    }
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
 
+.main-nav li {
+    display: block;
+    flex: 1 1 100%;
+    font-size: larger;
+}
     
-
-    .weather-card h3 {
-        font-size: 1.8rem;
-    }
-
-    #forecast-day-1, #forecast-day-2, #forecast-day-3 {
-        font-size: 22px;
-    }
+#menu {
+    display: none; /* hide hamburger button */
+}
     
-    .address {
-        font-size: 1.5rem;
-    }
+.navigation {
+    flex-direction: row;
+}
 
-    .phone {
-        font-size: 1.5rem;
-    }
-    .navigation li {
-            display: block;
-            flex: 1 1 100%;
-    }
-    .material-symbols-outlined {
-       
-        height: 30px;
-        width: 30px;
-        margin-bottom: 1em;
-        padding: 1%;
+.weather-card h3 {
+    font-size: 1.8rem;
+}
+
+#forecast-day-1, #forecast-day-2, #forecast-day-3 {
+    font-size: 22px;
+}
     
-    }
+.address {
+    font-size: 1.5rem;
+}
 
-    
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
+.phone {
+    font-size: 1.5rem;
+}
 
-    #spotlight-cards .spotlight-card img {
-        height: 150px;
-    }
+.navigation li {
+        display: block;
+        flex: 1 1 100%;
+}
 
-    .spotlight_main section:nth-child(3) {
-        display: none;
-    }
+.material-symbols-outlined {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 1em;
+    padding: 1%;
+}
 
-    .spotlight-card h2{
-        font-size: 32px;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
 
-    .company-details a{
-            font-size: 1.6rem;
-    }
-    /*------------------Discover Page-----------------*/
+#spotlight-cards .spotlight-card img {
+    height: 150px;
+}
+
+.spotlight_main section:nth-child(3) {
+    display: none;
+}
+
+.spotlight-card h2{
+    font-size: 32px;
+}
+
+.company-details a{
+    font-size: 1.6rem;
+}
+/*------------------Discover Page-----------------*/
 
 #main-discover {
     display: grid;
     grid-template-columns: 30% auto;
     column-gap: .2em;
-    
 }
 
 /* left sidebar */
@@ -139,7 +127,6 @@
     display: grid;
     grid-template-rows: min-content min-content min-content min-content min-content;
     column-gap: 0.2em;
-    
 }
 
 .message {
@@ -168,8 +155,6 @@
     display: grid;
     grid-column: 2/3;
     margin: .25em;
-    
-    
 }
 
 figure img{
@@ -211,8 +196,6 @@ figure:hover+span {
 	-webkit-animation: circle .75s;
 	animation: circle .75s;
 }
-
-
 
 @-webkit-keyframes circle {
 	0% {
@@ -266,10 +249,6 @@ figure:hover+span {
     grid-row: 4;
 }
 
-.form-container {
-    
-
-}
 .container-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
