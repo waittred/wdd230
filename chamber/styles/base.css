@@ -50,7 +50,7 @@
     --dark-mode-headline: #0a220a;
     --accent2-color1: #d4e8d6;
     --img-background: white;
-    --background-directory: #306c62;
+    --background-directory: #64b2a6;
     --toggle-button: #d3d3d3;
     --toggle-text-color: black;
     --banner-background: black;
@@ -703,7 +703,7 @@ footer p {
 
 #grid-view, #list-view {
     background-color: var(--background-directory);
-    color: white;
+    color: var(--membership-text);
     padding: 10px 20px;
     font-size: 20px;
     margin: 0 10px;
