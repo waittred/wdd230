@@ -404,7 +404,8 @@ a:active{
     background-color: var(--spotlight-background);
     color: var(--spotlight-text-color);
     border: 1px solid var(--spotlight-border);
-    padding: 5px; 
+    padding: 5px;
+    padding-bottom: 1.5rem; 
 }
 
 #spotlight-cards .spotlight-card img {

@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Append elements to the card
         card.appendChild(name);
-        card.appendChild(address);
         card.appendChild(img);
         card.appendChild(website);
 
