@@ -1,14 +1,15 @@
 //Received help from chat.openai.com
 document.addEventListener("DOMContentLoaded", function () {
-    const monthYearElement = document.getElementById("month-year");
-    const daysContainer = document.getElementById("days-container");
-  
-    let currentYear, currentMonth;
-  
-    function updateCalendar() {
+  const monthYearElement = document.getElementById("month-year");
+  const daysContainer = document.getElementById("days-container");
+
+  let currentYear, currentMonth;
+
+  function updateCalendar() {
       // Set month and year in the header
-      monthYearElement.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(new Date(currentYear, currentMonth));
-  
+      const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(new Date(currentYear, currentMonth));
+      monthYearElement.textContent = formattedDate;
+
       // Clear previous days
       daysContainer.innerHTML = '';
   
@@ -39,31 +40,31 @@ document.addEventListener("DOMContentLoaded", function () {
     function nextMonth() {
       currentMonth++;
       if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
+          currentMonth = 0;
+          currentYear++;
       }
       updateCalendar();
-    }
-  
+  }
+
     function prevMonth() {
-      currentMonth--;
-      if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-      }
-      updateCalendar();
-    }
-  
-    // Add event listeners to the next and previous buttons
+        currentMonth--;
+          if (currentMonth < 0) {
+          currentMonth = 11;
+            currentYear--;
+        }
+        updateCalendar();
+  }
+
+  // Add event listeners to the next and previous buttons
     document.getElementById("next-btn").addEventListener("click", nextMonth);
     document.getElementById("prev-btn").addEventListener("click", prevMonth);
-  
-    // Initialize current month and year
+
+  // Initialize current month and year
     const currentDate = new Date();
     currentYear = currentDate.getFullYear();
     currentMonth = currentDate.getMonth();
-  
-    // Initial update
+
+  // Initial update
     updateCalendar();
-  });
-  
+});
+    
