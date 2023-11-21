@@ -65,6 +65,12 @@ a {
 .navigation {
     flex-direction: row;
 }
+.join {
+    
+    font-size: 25px;
+    
+}
+    
 
 .weather-card h3 {
     font-size: 1.8rem;
