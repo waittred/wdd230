@@ -110,10 +110,6 @@ a {
     height: auto;
 }
 
-.spotlight_main section:nth-child(3) {
-    display: none;
-}
-
 .spotlight-card h2{
     font-size: 32px;
 }
