@@ -106,7 +106,8 @@ a {
 }
 
 #spotlight-cards .spotlight-card img {
-    height: 150px;
+    width: 400;
+    height: auto;
 }
 
 .spotlight_main section:nth-child(3) {
