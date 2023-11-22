@@ -420,6 +420,10 @@ a:active{
     font-size: 16px;
 }
 
+.spotlight-card a {
+    text-decoration: underline;
+}
+
  
 /* -----------------Footer---------------- */
 
