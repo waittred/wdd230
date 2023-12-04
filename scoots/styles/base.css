@@ -1,0 +1,130 @@
+
+
+
+
+/*************** Index Page *****************/
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page container styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* CTA button styling */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Weather section styling */
+#weather {
+    position: relative;
+}
+
+#alert-container {
+    background-color: #ffc107;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+#weather-info {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#weather-icon {
+    max-width: 50px;
+    margin-top: 10px;
+}
+
+/* Alert styling */
+.alert {
+    background-color: #ffc107;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+/* Rentals table styling */
+#rentals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#rentals-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+#rentals-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#rentals-table tbody tr:hover {
+    background-color: #d4edda;
+}
+
+/*************** Rentals Page ***************/
+
+/* Style for the table */
+#rentals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for the table header */
+#rentals-table th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Style for alternating rows */
+#rentals-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#rentals-table tbody tr:hover {
+    background-color: #d4edda; /* Change to your desired hover color */
+}

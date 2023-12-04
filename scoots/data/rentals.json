@@ -1,0 +1,41 @@
+{
+    "rentals": [
+      {
+        "type": "Honda Metropolitan Scooter",
+        "maxPersons": 1,
+        "halfDayPrice": 20,
+        "fullDayPrice": 30
+      },
+      {
+        "type": "Honda Dio Scooter",
+        "maxPersons": 2,
+        "halfDayPrice": 30,
+        "fullDayPrice": 40
+      },
+      {
+        "type": "Honda PCX150 Scooter",
+        "maxPersons": 2,
+        "halfDayPrice": 40,
+        "fullDayPrice": 50
+      },
+      {
+        "type": "Honda Pioneer ATV",
+        "maxPersons": 4,
+        "halfDayPrice": 50,
+        "fullDayPrice": 70
+      },
+      {
+        "type": "Jeep Wrangler - 4 door with A/C",
+        "maxPersons": 5,
+        "halfDayPrice": 70,
+        "fullDayPrice": 100
+      },
+      {
+        "type": "Jeep Wrangler - 2 door",
+        "maxPersons": 4,
+        "halfDayPrice": 60,
+        "fullDayPrice": 85
+      }
+    ]
+  }
+  

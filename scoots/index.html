@@ -21,10 +21,12 @@
     <link rel="stylesheet" href="styles/larger.css">
     <!--Favicon from flaticon-->
     <link rel="icon" href="images/scoots-favicon.ico">
+    <!--Received assistance from chatGPT-->
 </head>
 
 <body>
     <header>
+        <div id="alert-container"></div>
         <h1>Welcome to Scoots Motor Scooter Rentals</h1>
         <div id="mode">
             <button type="button" onclick="myFunction()">Dark Mode</button>
@@ -40,40 +42,81 @@
             </ul>
         </nav>
     </header>
+    
+    <main class="index">
+        <div class="rent-now">
+        
+            <section id="hero">
+                <!-- Images of the island and rental facilities -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- Images added here -->
+                        <div class="swiper-slide"><img src="image1.jpg" alt="Island Image 1"></div>
+                        <div class="swiper-slide"><img src="image2.jpg" alt="Island Image 2"></div>
+                    </div>
+                    <!-- Pagination and navigation buttons added -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p>Escape to the beauty of Cozumel with Scoots</p>
+                <a href="https://waittred.github.io/wdd230/scoots/reservations.html" class="cta-button">Make a Reservation</a>
+            </section>
+        </div>
+            <div class="types-of-rentals">
+                <section id="summary">
+                <!-- Summary information about rental types -->
+                    <h2>Discover the Freedom of Cozumel with Scoots Rentals</h2>
+                    <p>Embark on a thrilling adventure through the breathtaking landscapes of Cozumel with Scoots, your premier motor scooter, ATV, and Jeep rental company. Our fleet offers an array of options to suit every explorer's preference.</p>
 
-    <section id="hero">
-        <!-- Include images of the island and rental facilities -->
-        <p>Escape to the beauty of Cozumel with ~Scoots~</p>
-        <a href="#reservations" class="cta-button">Make a Reservation</a>
-    </section>
+                    <div class="rental-type">
+                        <h3>Explore the Island on Honda Motor Scooters</h3>
+                        <p>Feel the wind in your hair as you navigate the charming streets of Cozumel on our Honda scooters. Whether you opt for the nimble Honda Metropolitan, the zippy Honda Dio, or the powerful Honda PCX150, each ride promises a fun and convenient way to discover the hidden gems of the island.</p>
+                    </div>
 
-    <section id="summary">
-        <!-- Summary information about rental types -->
-    </section>
+                    <div class="rental-type">
+                        <h3>Off-Road Adventures with Side-by-Side ATVs</h3>
+                        <p>For those seeking an off-road thrill, our Honda Pioneer 1000 side-by-side ATVs are the perfect choice. Gather your friends or family, and venture into the rugged terrains of Cozumel, creating memories that will last a lifetime.</p>
+                    </div>
 
-    <section id="weather">
-        <!-- Display current weather information and forecast -->
-    </section>
+                    <div class="rental-type">
+                        <h3>Conquer the Cozumel Countryside in a Jeep</h3>
+                        <p>Experience the ultimate freedom with our Jeep rentals. Whether you prefer the comfort of a 4-door Wrangler with A/C or the open-air exhilaration of a 2-door Wrangler, our Jeeps are your ticket to exploring the scenic coasts and inlets on the southern and eastern shores of the island.</p>
+                    </div>
 
-    <section id="social-media">
-        <!-- Social media links -->
-    </section>
+                    <p>At Scoots, we make renting easy and convenient. From scooters to ATVs and Jeeps, our diverse fleet caters to locals, tourists, and adventure enthusiasts alike. Discover Cozumel on your terms – reserve your ~Scoots~ rental today!</p>
+                </section>
+            </div>
+            <br>
+                    
+        <section id="weather">
+            <p>Current Temperature: <span id="temperature"></span></p>
+            <p>Condition: <span id="condition"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+            <img id="weather-icon" alt="Weather Icon">
+        </section>
 
-    <script src="scripts/darkmode.js"></script> 
-
+       
+    </main>
+    
     <footer>
         <ul class="contact">
             <li>
-                <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
+                <a href="https://www.twitter.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
+                </a>
             </li>
     
             <li>
-                <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
-    
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
+                </a>
             </li>
     
             <li>
-                <img class="material-symbols-outlined" src="images/instagram.png" alt="Pinterest icon" width="20" height="20">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/instagram.png" alt="Instagram icon" width="20" height="20">
+                </a>
             </li>
         </ul>        
         <p>&copy; <span id="year"></span> Scoots Motor Scooter Rentals</p>
@@ -86,6 +129,8 @@
     </footer>
 
     <!--Scripts-->
+    <script src="scripts/darkmode.js"></script> 
+    <script src="scripts/swiper.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/lastUpdated.js"></script>   
 

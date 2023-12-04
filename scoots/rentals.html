@@ -41,13 +41,26 @@
         </nav>
     </header>
     
-
-    <section id="rentals">
-    <!-- Display rental options and prices using data from JSON -->
-        <table>
-        <!-- Data table for rental options and prices -->
+    <main class="rentals">
+        <section id="rentals">
+        <!-- Rental options and prices using data from JSON -->
+        <h2>Rental Options and Prices</h2>
+        <table id="rentals-table">
+            <!-- Table header -->
+            <thead>
+                <tr>
+                    <th>Rental Type</th>
+                    <th>Max Persons</th>
+                    <th>Half Day Price</th>
+                    <th>Full Day Price</th>
+                </tr>
+            </thead>
+            <!-- Table body will be filled dynamically using JavaScript -->
+            <tbody></tbody>
         </table>
     </section>
+            
+    </main>
     <footer>
         <ul class="contact">
             <li>
@@ -74,7 +87,8 @@
 
     <!--Scripts-->
     <script src="scripts/darkmode.js"></script>
-    <script src="scripts/lastUpdated.js"></script>   
+    <script src="scripts/lastUpdated.js"></script> 
+    <script src="scripts/rentals.js"></script> 
 
 </body>
 
