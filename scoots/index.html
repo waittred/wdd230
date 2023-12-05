@@ -11,7 +11,7 @@
     <meta name="author" content="Tiana Boyd"> 
     <meta property="og:title" content="Scoots Motor Scooter Rentals Index Page">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://waittred.github.io/wdd230/scoots/images/cozumel-beach">
+    <meta property="og:image" content="https://waittred.github.io/wdd230/scoots/images/jeep-beach">
     <meta property="og:url" content="https://waittred.github.io/wdd230/scoots">
     
     <!--Stylesheets-->
@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Swiper Library -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!--Favicon from flaticon-->
     <link rel="icon" href="images/scoots-favicon.ico">
     <!--Received assistance from chatGPT-->
@@ -51,18 +55,28 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <!-- Images added here -->
-                        <div class="swiper-slide"><img src="image1.jpg" alt="Island Image 1"></div>
-                        <div class="swiper-slide"><img src="image2.jpg" alt="Island Image 2"></div>
+                        <div class="swiper-slide"><img src="images/beach-scooter.webp" alt="Scooters on Beach in Cozumel"></div>
+                        <div class="swiper-slide"><img src="images/blue-waters-cozumel.webp" alt="Beautiful Image of Beach in Cozumel"></div>
+                        <div class="swiper-slide"><img src="images/jeep-open.webp" alt="Image of Open Jeep"></div>
+                        <div class="swiper-slide"><img src="images/honda-metro.webp" alt="Image of Honda Metro Scooter"></div>
+                        <div class="swiper-slide"><img src="images/cozumel-beach-night.webp" alt="Sunset Image of Beach in Cozumel"></div>
+                        <div class="swiper-slide"><img src="images/honda-pioneer.webp" alt="Image of Honda Pioneer 4-seater"></div>
+                        <div class="swiper-slide"><img src="images/dock-cozumel.webp" alt="Dock on Beach in Cozumel"></div>
+                        <div class="swiper-slide"><img src="images/Honda-Dio.webp" alt="Image of Honda Dio Scooter"></div>
+                        <div class="swiper-slide"><img src="images/honda-PCX125.webp" alt="Image of Honda PCX125"></div>
+                        <div class="swiper-slide"><img src="images/jeep-beach.webp" alt="Image of Jeep Near Beach"></div>
+                        <div class="swiper-slide"><img src="images/jeep-wrangler-5-person.webp" alt="Image of Jeep with Windows Near Beach"></div>
                     </div>
                     <!-- Pagination and navigation buttons added -->
                     <div class="swiper-pagination"></div>
+                    <!--Swiper Navigation-->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
                 <p>Escape to the beauty of Cozumel with Scoots</p>
                 <a href="https://waittred.github.io/wdd230/scoots/reservations.html" class="cta-button">Make a Reservation</a>
             </section>
-        </div>
+            </div>
             <div class="types-of-rentals">
                 <section id="summary">
                 <!-- Summary information about rental types -->
@@ -89,13 +103,15 @@
             </div>
             <br>
                     
-        <section id="weather">
-            <p>Current Temperature: <span id="temperature"></span></p>
-            <p>Condition: <span id="condition"></span></p>
-            <p>Humidity: <span id="humidity"></span></p>
-            <img id="weather-icon" alt="Weather Icon">
-        </section>
-
+            <section id="weather">
+                <div class="weather-column" id="temperature-column">
+                    <p class="label">Current Temperature</p>
+                    <img id="weather-icon" alt="Weather Icon">
+                    <span id="temperature"></span>
+                    <p id="condition"></p>
+                    <p id="humidity"></p>
+                </div>
+            </section>
        
     </main>
     
@@ -128,11 +144,12 @@
         
     </footer>
 
-    <!--Scripts-->
-    <script src="scripts/darkmode.js"></script> 
+    <!--Scripts--> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/swiper.js"></script>
     <script src="scripts/darkmode.js"></script>
-    <script src="scripts/lastUpdated.js"></script>   
+    <script src="scripts/lastUpdated.js"></script> 
+    <script src="scripts/weather.js"></script>  
 
 </body>
 

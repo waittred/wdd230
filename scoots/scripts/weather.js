@@ -1,24 +1,35 @@
-// Function to fetch weather data
-function fetchWeather() {
+document.addEventListener('DOMContentLoaded', () => {
+    const apiKey = 'cc4e2b761940b933bc64076dcc7af565';
+    const city = 'Cozumel';
+
+    // Current weather API URL with imperial units
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
+    // Function to capitalize each word in a string
+    function capitalizeWords(str) {
+        return str.replace(/\b\w/g, match => match.toUpperCase());
+    }
+
     // Fetch current weather data
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+    fetch(currentWeatherUrl)
         .then(response => response.json())
         .then(data => {
-            // Display weather information
-            const temperature = data.main.temp;
-            const condition = data.weather[0].description;
+            const temperatureFahrenheit = data.main.temp.toFixed(1);
             const humidity = data.main.humidity;
-            const iconCode = data.weather[0].icon;
+            const capitalizedDesc = capitalizeWords(data.weather[0].description);
 
-            // Replace these with the actual IDs or classes in your HTML
-            document.getElementById('temperature').textContent = `${temperature}°C`;
-            document.getElementById('condition').textContent = condition;
-            document.getElementById('humidity').textContent = `${humidity}%`;
-            document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}.png`;
-            document.getElementById('weather-icon').alt = condition;
+            // Display current weather information including humidity
+            document.getElementById('temperature').textContent = ` ${temperatureFahrenheit}°F`;
+            document.getElementById('condition').textContent = `Weather: ${capitalizedDesc}`;
+            document.getElementById('humidity').textContent = `Humidity: ${humidity}%`;
+
+            const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+            const weatherIconElement = document.getElementById('weather-icon');
+            weatherIconElement.setAttribute('src', iconUrl);
+            weatherIconElement.setAttribute('alt', 'Weather Icon');
         })
         .catch(error => {
-            console.error('Error fetching weather data:', error);
+            console.error('Error fetching current weather data:', error);
         });
 
     // Fetch weather alerts
@@ -28,7 +39,7 @@ function fetchWeather() {
             if (data.alerts && data.alerts.length > 0) {
                 // Display weather alerts
                 const alertMessage = data.alerts[0].event;
-        
+
                 document.getElementById('alert-container').innerHTML = `<div class="alert">${alertMessage} <span class="close">&times;</span></div>`;
                 document.querySelector('.close').addEventListener('click', function () {
                     document.querySelector('.alert').style.display = 'none';
@@ -38,4 +49,20 @@ function fetchWeather() {
         .catch(error => {
             console.error('Error fetching weather alerts:', error);
         });
-}
+
+    // Display and label a one-day forecast
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            const oneDayForecast = data.list[0];
+            const forecastTemperature = oneDayForecast.main.temp.toFixed(1);
+            const forecastCondition = capitalizeWords(oneDayForecast.weather[0].description);
+
+            document.getElementById('forecast').textContent = `One Day Forecast: ${forecastCondition}, ${forecastTemperature}°F`;
+        })
+        .catch(error => {
+            console.error('Error fetching one-day forecast data:', error);
+        });
+
+    
+});
