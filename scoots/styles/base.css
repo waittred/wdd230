@@ -1,49 +1,150 @@
-
-
-
+:root {
+    --primary-color: #ebe8e1;
+    --secondary-color1: #08597D;
+    --secondary-color2: #3f6929;
+    --secondary-color3: black;
+    --secondary-color4: #abecef; 
+    --secondary-color5: white;
+    /*Typography*/
+    --heading-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    --paragraph-font: 'Times New Roman', Times, serif;
+}
 
 /*************** Index Page *****************/
 
 body, h1, h2, p, ul, li {
     margin: 0;
-    padding: 0;
+    padding: 0;   
 }
 
 /* Page container styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--paragraph-font);
+    text-align: center;
     line-height: 1.6;
 }
 
 /* Header styling */
+.header-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);   
+}
+
 header {
-    background-color: #333;
-    color: white;
+    color: var(--secondary-color3);
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0;  
+}
+
+#logo {
+    max-height: 4rem;
+    height: auto;
+    margin: .5rem .5rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 8px;   
 }
 
 /* Navigation styling */
 nav {
-    background-color: #f8f9fa;
+    background-color: var(--primary-color);
     padding: 10px;
 }
 
 nav a {
-    margin-right: 20px;
     text-decoration: none;
-    color: #333;
+    color: var(--secondary-color3);
     font-weight: bold;
+}
+
+#mode button {
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: var(--secondary-color1);
+    border-radius: 8px;
+}
+    
+#mode button:hover {
+    cursor: pointer;
+}
+  
+#mode {
+    display: flex;
+    justify-content: right;
+    padding-right: .5rem;
+    padding-top: .5rem;
+}
+
+#menu {
+    background-color: var(--primary-color);       
+}
+    
+#menu::before { 
+    content: "☰";
+    background-color: var(--primary-color);
+    color: var(--secondary-color3);        
+}
+    
+#menu.show::before {     
+    content: "✘";     
+}
+       
+.main-nav {  
+    text-align: center;
+    font-size: 1.3rem;
+    padding-left: 0; 
+    display: none;     
+}
+        
+.main-nav li {            
+    display: inline-block;
+              
+}
+    
+.main-nav a:hover {            
+    background-color: var(--secondary-color4);
+}
+          
+.main-nav a {       
+    display: block;
+    padding: 10px 20px;
+    color: var(--secondary-color3);
+    text-decoration: none;
+}
+
+.active {
+    margin-right: 0; /* Reset margin for the active link */
+}
+
+.show li { 
+    display: block;
+    width: 100%;
+}
+    
+.show li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+        
+ul.main-nav.show {
+    display: block;  
+    margin-top: .1%;
+    margin-bottom: .2%;
 }
 
 /* CTA button styling */
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 1rem 2rem;
+    background-color:var(--secondary-color2);
+    color: var(--secondary-color5);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;  
+    margin-top: 2rem;
+    font-size: 1.3rem;
 }
 
 /* Style for Swiper Container */
@@ -83,7 +184,7 @@ nav a {
   font-size: 20px;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
-    color: #333 !important; 
+    color: var(--secondary-color1) !important; 
     background-color: transparent; 
 }
 
@@ -91,8 +192,6 @@ nav a {
 .swiper-pagination {
     position: relative !important;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +201,7 @@ nav a {
     margin: 0 5px;
     width: 8px;
     height: 8px;
-    background-color: #007bff;
+    background-color: var(--secondary-color4);
     opacity: 0.7;
     border-radius: 50%;
     cursor: pointer;
@@ -110,9 +209,13 @@ nav a {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
+    background-color: var(--secondary-color1);
 }
 
-
+/*--------- Summary ---------*/
+.types-of-rentals {
+padding: 1rem;
+}
 /*------- Weather section styling ------- */
 #weather {
     display: flex;
@@ -128,7 +231,6 @@ nav a {
     border-radius: 8px; 
     padding: 10px; 
     margin: 5px;
-    
 }
 
 .label {
@@ -136,7 +238,6 @@ nav a {
     margin-bottom: 5px;
     border-bottom: 1px solid #ccc; 
 }
-
 
 #weather-icon {
     display: block; 
@@ -159,7 +260,6 @@ nav a {
     margin-top: 20px;
 }
 
-
 /* Alert styling */
 
 .close {
@@ -167,7 +267,6 @@ nav a {
     float: right;
     font-weight: bold;
 }
-
 
 /*************** Rentals Page ***************/
 
@@ -192,4 +291,24 @@ nav a {
 
 #rentals-table tbody tr:hover {
     background-color: #d4edda; 
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    padding-bottom: .5em .25em;
+}
+
+ul.contact {
+    padding: 1em;
+    list-style: none;
+    margin: 0;
+}
+
+ul.contact li{        
+    display: inline-block;
+    padding: 0em 0.5em;
+    font-size: 1em;
 }

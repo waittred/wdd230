@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
     const apiKey = 'cc4e2b761940b933bc64076dcc7af565';
     const city = 'Cozumel';
 
@@ -33,22 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     // Fetch weather alerts
-    fetch(`https://api.openweathermap.org/data/3.0/alerts?lat=20.4229&lon=-86.9228&appid=${apiKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=20.4229&lon=-86.9228&exclude=current,minutely,hourly,daily&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            if (data.alerts && data.alerts.length > 0) {
-                // Display weather alerts
-                const alertMessage = data.alerts[0].event;
-
-                document.getElementById('alert-container').innerHTML = `<div class="alert">${alertMessage} <span class="close">&times;</span></div>`;
-                document.querySelector('.close').addEventListener('click', function () {
-                    document.querySelector('.alert').style.display = 'none';
-                });
+            // Handle the data, including alerts if available
+            const alerts = data.alerts;
+            if (alerts && alerts.length > 0) {
+                // Handle alerts
             }
         })
-        .catch(error => {
-            console.error('Error fetching weather alerts:', error);
-        });
+        .catch(error => console.error('Error fetching weather data:', error));
 
     // Display and label a one-day forecast
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`)
@@ -58,11 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const forecastTemperature = oneDayForecast.main.temp.toFixed(1);
             const forecastCondition = capitalizeWords(oneDayForecast.weather[0].description);
 
-            document.getElementById('forecast').textContent = `One Day Forecast: ${forecastCondition}, ${forecastTemperature}°F`;
+            
         })
         .catch(error => {
             console.error('Error fetching one-day forecast data:', error);
         });
-
-    
 });

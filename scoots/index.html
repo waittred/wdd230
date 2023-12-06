@@ -14,14 +14,16 @@
     <meta property="og:image" content="https://waittred.github.io/wdd230/scoots/images/jeep-beach">
     <meta property="og:url" content="https://waittred.github.io/wdd230/scoots">
     
+    <!-- Swiper Library -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <!--Stylesheets-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- Swiper Library -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
 
     <!--Favicon from flaticon-->
     <link rel="icon" href="images/scoots-favicon.ico">
@@ -29,27 +31,34 @@
 </head>
 
 <body>
+    <div id="alert-container"></div>
+    <div id="mode">
+        <button type="button" onclick="myFunction()">Dark Mode</button>
+    </div>
     <header>
-        <div id="alert-container"></div>
-        <h1>Welcome to Scoots Motor Rentals</h1>
-        <div id="mode">
-            <button type="button" onclick="myFunction()">Dark Mode</button>
+        <div class="header-container">
+            <img src="images/scoots-logo1.png" alt="Scoots Logo" id="logo">
+            <h1>Welcome to Scoots Motor Rentals</h1>
+            
         </div>
+
         <nav>
             <button type="button" id="menu"></button>
                 <ul class="main-nav">
-
-                <li><a class="active" href="https://waittred.github.io/wdd230/scoots/index.html">Home</a></li>
-                <li><a href="https://waittred.github.io/wdd230/scoots/rentals.html">Rentals</a></li>
-                <li><a href="https://waittred.github.io/wdd230/scoots/reservations.html">Reservations</a></li>
-                <li><a href="https://waittred.github.io/wdd230/scoots/contact.html">Contact</a></li>
-            </ul>
+                    <li><a class="active" href="https://waittred.github.io/wdd230/scoots/index.html">Home</a></li>
+                    <li><a href="https://waittred.github.io/wdd230/scoots/rentals.html">Rentals</a></li>
+                    <li><a href="https://waittred.github.io/wdd230/scoots/reservations.html">Reservations</a></li>
+                    <li><a href="https://waittred.github.io/wdd230/scoots/contact.html">Contact</a></li>
+                </ul>
         </nav>
+       
+        
     </header>
+    
     
     <main class="index">
         <div class="rent-now">
-        
+            <h2>Escape to the beauty of Cozumel with Scoots</h2>
             <section id="hero">
                 <!-- Images of the island and rental facilities -->
                 <div class="swiper-container">
@@ -73,14 +82,23 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <p>Escape to the beauty of Cozumel with Scoots</p>
-                <a href="https://waittred.github.io/wdd230/scoots/reservations.html" class="cta-button">Make a Reservation</a>
+                <section id="weather">
+                    <div class="weather-column" id="temperature-column">
+                        <p class="label">Current Temperature</p>
+                        <img id="weather-icon" alt="Weather Icon">
+                        <span id="temperature"></span>
+                        <p id="condition"></p>
+                        <p id="humidity"></p>
+                    </div>
+                </section>
+                <a href="https://waittred.github.io/wdd230/scoots/reservations.html" class="cta-button"><strong>Make a Reservation</strong></a>
             </section>
+            
             </div>
             <div class="types-of-rentals">
                 <section id="summary">
                 <!-- Summary information about rental types -->
-                    <h2>Discover the Freedom of Cozumel with Scoots Rentals</h2>
+                    <h3>Discover the Freedom of Cozumel with Scoots Rentals</h3>
                     <p>Embark on a thrilling adventure through the breathtaking landscapes of Cozumel with Scoots, your premier motor scooter, ATV, and Jeep rental company. Our fleet offers an array of options to suit every explorer's preference.</p>
 
                     <div class="rental-type">
@@ -103,15 +121,7 @@
             </div>
             <br>
                     
-            <section id="weather">
-                <div class="weather-column" id="temperature-column">
-                    <p class="label">Current Temperature</p>
-                    <img id="weather-icon" alt="Weather Icon">
-                    <span id="temperature"></span>
-                    <p id="condition"></p>
-                    <p id="humidity"></p>
-                </div>
-            </section>
+
        
     </main>
     
@@ -138,13 +148,13 @@
         <p>&copy; <span id="year"></span> Scoots Motor Scooter Rentals</p>
             <p>Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
             <div class= "updated"> 
-                <p id="date"></p>
-                
+                <p id="date"></p>     
             </div>
         
     </footer>
 
     <!--Scripts--> 
+    <script src="scripts/hamburger.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/swiper.js"></script>
     <script src="scripts/darkmode.js"></script>

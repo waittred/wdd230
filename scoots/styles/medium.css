@@ -1,0 +1,24 @@
+@media screen and (min-width: 640px)  {
+       
+    .main-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        padding-bottom: .6%;
+    }
+
+       
+#menu {
+    display: none; /* hide hamburger button */
+}
+.active::before {
+    content: "➤ ";
+}
+body {
+    background-image: url("../images/summer-beach-shot-from-ground-view.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+}
