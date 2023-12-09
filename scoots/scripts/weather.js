@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
     const apiKey = 'cc4e2b761940b933bc64076dcc7af565';
     const city = 'Cozumel';
 
-    // Current weather API URL with imperial units
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-
-    // Function to capitalize each word in a string
     function capitalizeWords(str) {
         return str.replace(/\b\w/g, match => match.toUpperCase());
     }
 
+    // Function to display an alert
+    function showAlert(message) {
+        const alertBox = document.getElementById('alert-box');
+        const alertMessage = document.getElementById('alert-message-box');
+        alertMessage.textContent = message;
+        alertBox.style.display = 'block';
+    }
+
+    // Function to close the alert
+    function closeCustomAlert() {
+        document.getElementById('alert-box').style.display = 'none';
+    }
+
     // Fetch current weather data
-    fetch(currentWeatherUrl)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
             const temperatureFahrenheit = data.main.temp.toFixed(1);
@@ -37,25 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=20.4229&lon=-86.9228&exclude=current,minutely,hourly,daily&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            // Handle the data, including alerts if available
             const alerts = data.alerts;
             if (alerts && alerts.length > 0) {
-                // Handle alerts
+                // Display high temperature alert for the current day
+                const maxTempAlert = `High temperature alert: ${alerts[0].temp}`;
+                showAlert(maxTempAlert);
             }
         })
-        .catch(error => console.error('Error fetching weather data:', error));
+        .catch(error => {
+            console.error('Error fetching weather alerts:', error);
+        });
 
-    // Display and label a one-day forecast
+    // Display and label tomorrow's forecast
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            const oneDayForecast = data.list[0];
-            const forecastTemperature = oneDayForecast.main.temp.toFixed(1);
-            const forecastCondition = capitalizeWords(oneDayForecast.weather[0].description);
+            const tomorrowForecast = data.list[1];
+            const tomorrowIcon = tomorrowForecast.weather[0].icon;
+            const tomorrowTemperature = tomorrowForecast.main.temp.toFixed(1);
+            const tomorrowCondition = capitalizeWords(tomorrowForecast.weather[0].description);
 
-            
+            // Update tomorrow's weather elements
+            document.getElementById('next-day-icon').setAttribute('src', `https://openweathermap.org/img/w/${tomorrowIcon}.png`);
+            document.getElementById('next-day-condition').textContent = `Condition: ${tomorrowCondition}`;
+            document.getElementById('next-day-temperature').textContent = `Temperature: ${tomorrowTemperature}°F`;
         })
         .catch(error => {
-            console.error('Error fetching one-day forecast data:', error);
+            console.error('Error fetching tomorrow\'s forecast data:', error);
         });
 });

@@ -31,13 +31,20 @@
 </head>
 
 <body>
-    <div id="alert-container"></div>
+    
+    <div id="alert-box" class="custom-alert">
+        <div class="alert-content-box">
+            <button class="close-button" type="button" onclick="closeCustomAlert()">&times;</button>
+            <span id="alert-message-box"></span>
+        </div>
+    </div>
+    
     <div id="mode">
         <button type="button" onclick="myFunction()">Dark Mode</button>
     </div>
     <header>
         <div class="header-container">
-            <img src="images/scoots-logo1.png" alt="Scoots Logo" id="logo">
+            <img src="images/scoots-logo2.webp" alt="Scoots Logo" id="logo">
             <h1>Welcome to Scoots Motor Rentals</h1>
             
         </div>
@@ -59,6 +66,7 @@
     <main class="index">
         <div class="rent-now">
             <h2>Escape to the beauty of Cozumel with Scoots</h2>
+            <br>
             <section id="hero">
                 <!-- Images of the island and rental facilities -->
                 <div class="swiper-container">
@@ -89,6 +97,15 @@
                         <span id="temperature"></span>
                         <p id="condition"></p>
                         <p id="humidity"></p>
+                                
+                    <!-- Display next day's forecast at 3:00 pm -->
+                        <div id="next-day-weather" class="weather-column2">
+                            <p class="next-day-label">Tomorrow's Weather at 3 pm</p>
+                            <img id="next-day-icon" alt="Weather Icon">
+                            <p id="next-day-condition"></p>
+                            <p id="next-day-temperature"></p>
+                        </div>
+                    
                     </div>
                 </section>
                 <a href="https://waittred.github.io/wdd230/scoots/reservations.html" class="cta-button"><strong>Make a Reservation</strong></a>
@@ -117,14 +134,16 @@
                     </div>
 
                     <p>At Scoots, we make renting easy and convenient. From scooters to ATVs and Jeeps, our diverse fleet caters to locals, tourists, and adventure enthusiasts alike. Discover Cozumel on your terms – reserve your ~Scoots~ rental today!</p>
+                    <br>
+                    <a href="https://waittred.github.io/wdd230/scoots/contact.html">Contact Us</a><p style="display: inline;"> for more information!</p>
+
                 </section>
             </div>
-            <br>
-                    
+                               
 
        
     </main>
-    
+    <br>
     <footer>
         <ul class="contact">
             <li>
@@ -154,12 +173,13 @@
     </footer>
 
     <!--Scripts--> 
+    <script src="scripts/weather.js"></script>  
     <script src="scripts/hamburger.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="scripts/swiper.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/lastUpdated.js"></script> 
-    <script src="scripts/weather.js"></script>  
+    
 
 </body>
 

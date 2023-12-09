@@ -6,19 +6,37 @@
         justify-content: space-evenly;
         margin: 0;
         padding-bottom: .6%;
-    }
+        background-color: var(--secondary-color8);
+}
 
        
 #menu {
     display: none; /* hide hamburger button */
 }
 .active::before {
-    content: "➤ ";
+    content: ""; 
+    display: block; 
+    border-bottom: 4px solid var(--secondary-color9); 
+    margin-bottom: -2px;  
+    }
+    
 }
 body {
-    background-image: url("../images/summer-beach-shot-from-ground-view.webp");
+    background-image: url("../images/sunny-beach-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+#alert-box {
+    display: block;
 }
+
+
+/*************** Contact Page*****************/
+
+#contact-info {
+    display: flex;
+    justify-content: space-around;
+}
+

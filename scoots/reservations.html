@@ -24,21 +24,28 @@
 </head>
 
 <body>
+    <div id="alert-container"></div>
+    <div id="mode">
+        <button type="button" onclick="myFunction()">Dark Mode</button>
+    </div>
     <header>
-        <h1>Welcome to Scoots Motor Scooter Rentals</h1>
-        <div id="mode">
-            <button type="button" onclick="myFunction()">Dark Mode</button>
+        <div class="header-container">
+            <img src="images/scoots-logo2.webp" alt="Scoots Logo" id="logo">
+            <h1>Welcome to Scoots Motor Rentals</h1>
+            
         </div>
+
         <nav>
             <button type="button" id="menu"></button>
                 <ul class="main-nav">
-
-                <li><a href="https://waittred.github.io/wdd230/scoots/index.html">Home</a></li>
-                <li><a href="https://waittred.github.io/wdd230/scoots/rentals.html">Rentals</a></li>
-                <li><a class="active" href="https://waittred.github.io/wdd230/scoots/reservations.html">Reservations</a></li>
-                <li><a href="https://waittred.github.io/wdd230/scoots/contact.htm">Contact</a></li>
-            </ul>
+                    <li><a  href="https://waittred.github.io/wdd230/scoots/index.html">Home</a></li>
+                    <li><a href="https://waittred.github.io/wdd230/scoots/rentals.html">Rentals</a></li>
+                    <li><a class="active" href="https://waittred.github.io/wdd230/scoots/reservations.html">Reservations</a></li>
+                    <li><a href="https://waittred.github.io/wdd230/scoots/contact.html">Contact</a></li>
+                </ul>
         </nav>
+       
+        
     </header>
 
 <main class="reservation">
@@ -50,7 +57,7 @@
             <h3> Rental Agreement</h3>
             <!-- Rental agreement information -->
             <ul>
-                <li>A $50 security deposit is required to confirm reservations.</li>
+               <li>A $50 security deposit is required to confirm reservations.</li>
                 <li>A valid drivers license is required in hand at the time of rental.</li>
                 <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
                 <li>Fuel charge is not included.</li>
@@ -61,6 +68,7 @@
                 <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
                 <li>Rentals may be returned to either physical location.</li>
               </ul>
+              
         </div>
 
         <form id="reservation-form">

@@ -1,10 +1,15 @@
 :root {
-    --primary-color: #ebe8e1;
+    --primary-color: #F8F0D8;
     --secondary-color1: #08597D;
     --secondary-color2: #3f6929;
     --secondary-color3: black;
-    --secondary-color4: #abecef; 
+    --secondary-color4: #3333; 
     --secondary-color5: white;
+    --secondary-color6: #d4edda;
+    --secondary-color7: #71cdc2;
+    --secondary-color8: #007B70;
+    --secondary-color9: #FBE1B0;
+    --secondary-color10: #B8DFC4;
     /*Typography*/
     --heading-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     --paragraph-font: 'Times New Roman', Times, serif;
@@ -29,8 +34,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);   
+    justify-content: center; 
 }
 
 header {
@@ -43,13 +47,11 @@ header {
     max-height: 4rem;
     height: auto;
     margin: .5rem .5rem;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 8px;   
 }
 
 /* Navigation styling */
 nav {
-    background-color: var(--primary-color);
     padding: 10px;
 }
 
@@ -60,9 +62,9 @@ nav a {
 }
 
 #mode button {
-    color: white;
+    color: var(--secondary-color3);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: var(--secondary-color1);
+    background-color: var(--secondary-color9);
     border-radius: 8px;
 }
     
@@ -110,7 +112,7 @@ nav a {
 .main-nav a {       
     display: block;
     padding: 10px 20px;
-    color: var(--secondary-color3);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -139,7 +141,7 @@ ul.main-nav.show {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color:var(--secondary-color2);
+    background-color:var(--secondary-color8);
     color: var(--secondary-color5);
     text-decoration: none;
     border-radius: 30px;  
@@ -162,13 +164,15 @@ ul.main-nav.show {
 
 /* Style for Active Slide */
 .swiper-slide-active {
-    color: #fff;
+    color:var(--secondary-color5);
 }
 
 /* Adjust slide appearance if needed */
 .swiper-slide img {
     width: auto; 
-    max-height: 500px;    
+    max-height: 500px; 
+    border-radius: 8px; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
 }
 
 /* Style for Swiper Navigation Buttons */
@@ -227,7 +231,7 @@ padding: 1rem;
 }
 .weather-column {
     text-align: center;
-    border: 2px solid #ccc; 
+    border: 2px solid var(--secondary-color1); 
     border-radius: 8px; 
     padding: 10px; 
     margin: 5px;
@@ -236,7 +240,6 @@ padding: 1rem;
 .label {
     font-weight: bold;
     margin-bottom: 5px;
-    border-bottom: 1px solid #ccc; 
 }
 
 #weather-icon {
@@ -260,14 +263,82 @@ padding: 1rem;
     margin-top: 20px;
 }
 
+/* Next Day Weather */
+
+#next-day-weather {
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 8px; 
+    padding: 10px; 
+}
+
+.next-day-column {
+    text-align: center;
+    padding: 10px; 
+    margin: 5px;
+}
+
+.next-day-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+#next-day-icon {
+    display: block; 
+    margin: 10px auto 0; 
+    max-width: 50px;
+}
+
+#next-day-condition,
+#next-day-temperature {
+    margin-top: 10px;
+}
+
 /* Alert styling */
 
-.close {
-    cursor: pointer;
-    float: right;
+#alert-box {
+    display: none;
+    position: fixed;
+    top: .2rem;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--secondary-color9); 
+    color: var(--secondary-color3); 
+    text-align: center;
+    
+}
+
+#alert-message-box {
+    font-size: 18px;
     font-weight: bold;
 }
 
+.close-button {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--secondary-color8);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/*------ Main Body ------*/
+
+.types-of-rentals {
+    display: inline-block;
+    background-color: var(--primary-color);
+    max-width: 800px;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
 /*************** Rentals Page ***************/
 
 /* Style for the table */
@@ -275,30 +346,79 @@ padding: 1rem;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 2rem;
 }
 
 /* Style for the table header */
 #rentals-table th {
-    background-color: #333;
-    color: white;
+    background-color: var(--secondary-color8);
+    color: var(--secondary-color5);
+    border: 1px solid var(--secondary-color8);
     padding: 10px;
+}
+
+#rentals-table td {
+    border: 1px solid var(--secondary-color1);
 }
 
 /* Style for alternating rows */
 #rentals-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--secondary-color9);
 }
 
 #rentals-table tbody tr:hover {
-    background-color: #d4edda; 
+    background-color: var(--secondary-color6); 
+}
+/*************** Reservation Page*****************/
+
+#rental-agreement ul {
+    max-width: 800px;
+    text-align: left;
+    display: inline-block;
+    list-style-type: disc;
+
+}
+
+#rental-agreement ul li {
+    margin-bottom: 8px;
+}
+
+#reservation-form {
+    display: inline-block;
+    max-width: 800px;
+}
+fieldset {
+    border-color: var(--secondary-color2);
+    line-height: 2.5;
+    background-color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+form label.top, form div{
+    display: block;
+    justify-content: left;
+    padding-top: 1rem;
+    color: var(--secondary-color3);
+    font-size: 1.3rem;
+}
+
+/*************** Contact Page*****************/
+
+#contact-info {
+    display: block;
+    justify-content: space-around;
 }
 
 
-/* Footer */
+
+/*---------- Footer ----------*/
 
 footer {
+    display: inline-block;
+    padding: 1rem;
     background-color: var(--primary-color);
     padding-bottom: .5em .25em;
+    border-radius: 3rem;
 }
 
 ul.contact {
