@@ -57,43 +57,46 @@
                 <h3> Rental Agreement</h3>
                 <!-- Rental agreement information -->
                 <ul>
-                <li>A $50 security deposit is required to confirm reservations.</li>
-                    <li>A valid drivers license is required in hand at the time of rental.</li>
-                    <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
-                    <li>Fuel charge is not included.</li>
-                    <li>Unlimited mileage.</li>
-                    <li>Liability insurance is included.</li>
-                    <li>Damage insurance is available for purchase.</li>
-                    <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
-                    <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
-                    <li>Rentals may be returned to either physical location.</li>
+                <li>☑️ A $50 security deposit is required to confirm reservations.</li>
+                    <li>☑️ A valid drivers license is required in hand at the time of rental.</li>
+                    <li>☑️ No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                    <li>☑️ Fuel charge is not included.</li>
+                    <li>☑️ Unlimited mileage.</li>
+                    <li>☑️ Liability insurance is included.</li>
+                    <li>☑️ Damage insurance is available for purchase.</li>
+                    <li>☑️ Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                    <li>☑️ Payment via Google Pay, Apple Pay, cash, credit card, debit card, or venmo.</li>
+                    <li>☑️ Rentals may be returned to either physical location.</li>
                 </ul>
               
             </div>
 
-            <form id="reservation-form">
-            <!-- Form to collect rental details -->
-            <form method="get" action="thanks.html">
+            <form id="contact-form" method="get" action="thanks.html" onsubmit="redirectAfterSubmit()">
                 <fieldset>
-                    <legend>Rental Details</legend>
-                    <label class="top">Date* <input type="date" name="date"  required=""></label>
-                    <label class="top">Duration* <input type="text" name="duration" required=""></label>
-                    <label class="top">Rental Type <input type="text" name="rentaltype" required=""></label>
-                    <label class="top">Quanity* <input type="text" name="quanity" placeholder="1" required=""></label>
-                    <label class="top">Phone Number* <input type="tel" name="phone" placeholder="1234561899">
-                    </label>
-                    <label class="top">Name* <input type="text" name="name" required=""></label>
+                    <legend>Personal Information</legend>
+                    <label class="top">First Name* <input type="text" name="name" required=""></label>
+                    <label class="top">Last Name* <input type="text" name="name" required=""></label>
                     <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required=""></label>
                     <label class="top">Home State <input type="text" name="state" placeholder=""> </label>
                     <label class="top">Country <input type="text" name="country" placeholder="United States"></label> 
-                    <label class="top">Cruise Line (if applicable) <input type="text" name="cruiseline" placeholder="Carnival"></label>   
-                    <label class="top">Special Accomidations/Comments <input type="text" name="requests" placeholder="Need and Location of drop off requested"> </label>  
+                    <label class="top">Cruise Line (if applicable) <input type="text" name="cruiseline" placeholder="Carnival"></label>  
                 </fieldset>
-
-            
+                
+                <fieldset>
+                    <legend>Rental Details</legend>
+                    
+                    <label class="top">Date* <input type="date" name="date" required=""></label>
+                    <label class="top">Pick-up Location* <input type="text" name="duration" placeholder="Ferry or Terminal" required=""></label>
+                    <label class="top">Rental Type <input type="text" name="rentaltype" placeholder="Honda Dio" required=""></label>
+                    <label class="top">Quanity* <input type="text" name="quanity" placeholder="1" required=""></label>
+                    <label class="top">Phone Number* <input type="tel" name="phone" placeholder="1234561899"></label>
+                    <label id="comments-reservation" for="comment1">Special Accommodations/Comments:</label>
+                    <textarea id="comment1" cols="50" rows="5" name="description" wrap="hard"></textarea>
+                    <input type="submit" value="Confirm Reservation" class="submitBtn-contact">
+                </fieldset>
+                
             </form>
-        
-        </form>
+       
     </section>
     </main> 
     <footer>

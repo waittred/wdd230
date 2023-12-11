@@ -335,12 +335,20 @@ box-shadow: 0 0 10px #777777;
     background-color: var(--secondary-color6); 
 }
 /*************** Reservation Page*****************/
+form legend {
+    font-size: 1.1rem;
+    color: var(--secondary-color3);
+    margin: 0 .2rem; /*to slide the legend over */
+    padding: 0 .5rem; /*padding to push the line away from the words */
+}
 
 #rental-agreement ul {
     max-width: 800px;
     text-align: left;
     display: inline-block;
     list-style-type: disc;
+    padding: 2rem;
+    list-style: none;
 
 }
 
@@ -365,6 +373,23 @@ form label.top, form div{
     padding-top: 1rem;
     color: var(--secondary-color3);
     font-size: 1.3rem;
+}
+
+#comments-reservation {
+    display: block;
+    margin: 0;
+    font-size: 1.3rem;
+    
+}
+.comment1 {
+    display: block;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 20rem;
+    
+    
+   
 }
 
 /*************** Contact Page*****************/
