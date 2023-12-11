@@ -23,9 +23,9 @@
     --secondary-color4: #3333; 
     --secondary-color5: white;
     --secondary-color6: black;
-    --secondary-color7: black;
-    --secondary-color8: #007B70;
-    --secondary-color9: black  ;
+    --secondary-color7: rgb(19, 17, 14);
+    --secondary-color8: rgb(12, 12, 35);
+    --secondary-color9: rgb(19, 17, 17);
     --secondary-color10: black;   
     background-image: none;
     background-color: black;
@@ -113,12 +113,13 @@ nav a {
     text-align: center;
     font-size: 1.3rem;
     padding-left: 0; 
-    display: none;     
+    display: none; 
+       
 }
         
 .main-nav li {            
     display: inline-block;
-              
+            
 }
     
 .main-nav a:hover {            
@@ -260,7 +261,7 @@ padding: 1rem;
     position: fixed;
     top: .2rem;
     left: 0;
-    width: 100%;
+    width: 98.5%;
     padding: .5rem;
     background-color: var(--secondary-color9); 
     color: var(--secondary-color3); 
@@ -275,10 +276,8 @@ padding: 1rem;
 }
 
 .close-button {
-    position: absolute;
     top: 50%;
     left: 20px;
-    transform: translateY(-50%);
     font-size: 20px;
     color: var(--secondary-color3);
     background: red;
