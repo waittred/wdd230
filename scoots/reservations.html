@@ -76,23 +76,37 @@
                     <legend>Personal Information</legend>
                     <label class="top">First Name* <input type="text" name="name" required=""></label>
                     <label class="top">Last Name* <input type="text" name="name" required=""></label>
+                    <label class="top">Phone Number* <input type="tel" name="phone" placeholder="1234561899"></label>
                     <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required=""></label>
                     <label class="top">Home State <input type="text" name="state" placeholder=""> </label>
                     <label class="top">Country <input type="text" name="country" placeholder="United States"></label> 
-                    <label class="top">Cruise Line (if applicable) <input type="text" name="cruiseline" placeholder="Carnival"></label>  
+                  
                 </fieldset>
                 
                 <fieldset>
                     <legend>Rental Details</legend>
                     
-                    <label class="top">Date* <input type="date" name="date" required=""></label>
-                    <label class="top">Pick-up Location* <input type="text" name="duration" placeholder="Ferry or Terminal" required=""></label>
+                    <label class="top">Pick-up Date* <input type="date" name="pickup-date" required=""></label>
+                    <label class="top">Drop-off Date* <input type="date" name="dropoff-date" required=""></label>
+                    <label class="top">Pick-Up Location* <input type="text" name="duration" placeholder="Ferry or Terminal" required=""></label>
                     <label class="top">Rental Type <input type="text" name="rentaltype" placeholder="Honda Dio" required=""></label>
                     <label class="top">Quanity* <input type="text" name="quanity" placeholder="1" required=""></label>
-                    <label class="top">Phone Number* <input type="tel" name="phone" placeholder="1234561899"></label>
+                    
+                    <label class="top">Cruise Line*
+                        <select name="cruiseline">
+                            <option value="">Please Select</option>
+                            <option value="Carnival">Carnival</option>
+                            <option value="Holland">Holland America</option>
+                            <option value="Celebrity">Celebrity Cruises</option>
+                            <option value="Norwegian Cruise Line">Norwegian Cruise Line</option>
+                            <option value="Royal Caribbean">Royal Caribbean</option>
+                            <option value="Disney">Disney Cruise Line</option>
+                            <option value="Costa">Costa Cruises</option>
+                        </select>
                     <label id="comments-reservation" for="comment1">Special Accommodations/Comments:</label>
                     <textarea id="comment1" cols="50" rows="5" name="description" wrap="hard"></textarea>
                     <input type="submit" value="Confirm Reservation" class="submitBtn-contact">
+                    </label>
                 </fieldset>
                 
             </form>
