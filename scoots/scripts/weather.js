@@ -1,22 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiKey = 'cc4e2b761940b933bc64076dcc7af565';
+    const apiKey = '407a5c69fcb6c5479d07f69c4f47b0d1'; 
     const city = 'Cozumel';
 
     function capitalizeWords(str) {
         return str.replace(/\b\w/g, match => match.toUpperCase());
     }
 
-    // Function to display an alert
+  // Function to display an alert
     function showAlert(message) {
         const alertBox = document.getElementById('alert-box');
         const alertMessage = document.getElementById('alert-message-box');
-        alertMessage.textContent = message;
+        const closeButton = document.querySelector('.close-button'); // Change this line
+
+        console.log(closeButton); // Debugging line
+
+        alertMessage.innerHTML = message;
         alertBox.style.display = 'block';
+
+    // Event listener for closing the alert
+        if (closeButton) {
+        closeButton.addEventListener('click', closeCustomAlert);
+        }
     }
+
 
     // Function to close the alert
     function closeCustomAlert() {
-        document.getElementById('alert-box').style.display = 'none';
+        const alertBox = document.getElementById('alert-box');
+        alertBox.style.display = 'none';
     }
 
     // Fetch current weather data
@@ -36,24 +47,40 @@ document.addEventListener('DOMContentLoaded', () => {
             const weatherIconElement = document.getElementById('weather-icon');
             weatherIconElement.setAttribute('src', iconUrl);
             weatherIconElement.setAttribute('alt', 'Weather Icon');
+
+            // Fetch weather alerts
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=20.4229&lon=-86.9228&exclude=current,minutely,hourly,daily&appid=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    const alerts = data.alerts;
+                    if (alerts && alerts.length > 0) {
+                        // Display high temperature alert for the current day
+                        const maxTempAlert = `High temperature alert: ${alerts[0].temp}`;
+                        showAlert(maxTempAlert);
+
+                        // Add event listener for closing the alert after it's shown
+                        const closeButton = document.getElementById('close-button');
+                        closeButton.addEventListener('click', closeCustomAlert);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching weather alerts:', error);
+                });
         })
         .catch(error => {
             console.error('Error fetching current weather data:', error);
         });
 
-    // Fetch weather alerts
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=20.4229&lon=-86.9228&exclude=current,minutely,hourly,daily&appid=${apiKey}`)
+    // Fetch current temperature data for the day
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-            const alerts = data.alerts;
-            if (alerts && alerts.length > 0) {
-                // Display high temperature alert for the current day
-                const maxTempAlert = `High temperature alert: ${alerts[0].temp}`;
-                showAlert(maxTempAlert);
-            }
+            const tempMax = data.main.temp_max;
+            const tempMessage = `Today in Cozumel, it is forecasted to reach a high of ${Math.round(tempMax)}°F`;
+            showAlert(tempMessage);
         })
         .catch(error => {
-            console.error('Error fetching weather alerts:', error);
+            console.error('Error fetching current temperature data:', error);
         });
 
     // Display and label tomorrow's forecast
