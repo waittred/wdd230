@@ -113,13 +113,11 @@ nav a {
     text-align: center;
     font-size: 1.3rem;
     padding-left: 0; 
-    display: none; 
-       
+    display: none;       
 }
         
 .main-nav li {            
-    display: inline-block;
-            
+    display: inline-block;           
 }
     
 .main-nav a:hover {            
@@ -258,7 +256,6 @@ padding: 1rem;
 
 #alert-box {
     display: none;
-    position: fixed;
     top: .2rem;
     left: 0;
     width: 98.5%;
