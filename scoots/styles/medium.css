@@ -1,11 +1,16 @@
 @media screen and (min-width: 640px)  {
-       
+    .dark-mode {
+         
+        background-image: none;
+        background-color: black;
+    }
+    
+
     .main-nav{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         margin: 0;
-        padding-bottom: .6%;
         background-color: var(--secondary-color8);
 }
 
@@ -87,7 +92,7 @@
         background-color: var(--secondary-color1);
     }
     
-}
+
 body {
     background-image: url("../images/sunny-beach-background.webp");
     background-repeat: no-repeat;
@@ -102,8 +107,18 @@ body {
 
 /*************** Contact Page*****************/
 
-#contact-info {
-    display: flex;
-    justify-content: space-around;
-}
 
+#locations {
+    display: grid;
+    width: 100%;
+}
+.ferry {
+    grid-column: 1/2;
+
+    }
+
+.terminal {
+    grid-column: 2/3;
+
+}
+}

@@ -15,11 +15,27 @@
     --paragraph-font: 'Times New Roman', Times, serif;
 }
 
+.dark-mode {
+    --primary-color: black;
+    --secondary-color1: white;
+    --secondary-color2: black;
+    --secondary-color3: white;
+    --secondary-color4: #3333; 
+    --secondary-color5: white;
+    --secondary-color6: black;
+    --secondary-color7: black;
+    --secondary-color8: #007B70;
+    --secondary-color9: black  ;
+    --secondary-color10: black;   
+    background-image: none;
+    background-color: black;
+}
 /*************** Index Page *****************/
 
-body, h1, h2, p, ul, li {
+body, h1, h2,h3, p, ul, li {
     margin: 0;
-    padding: 0;   
+    padding: 0;
+    color: var(--secondary-color3);   
 }
 
 /* Page container styling */
@@ -80,13 +96,13 @@ nav a {
 }
 
 #menu {
-    background-color: var(--primary-color);       
+    background-color: var(--secondary-color1);       
 }
     
 #menu::before { 
     content: "☰";
-    background-color: var(--primary-color);
-    color: var(--secondary-color3);        
+    background-color: var(--secondary-color1);
+    color: var(--secondary-color5);        
 }
     
 #menu.show::before {     
@@ -350,21 +366,31 @@ form label.top, form div{
 
 /*************** Contact Page*****************/
 
+
 #contact-info {
-    display: block;
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-evenly;
 }
 
+
+#contact-form {
+    display: inline-block;
+    max-width: 800px;
+
+}
+#comment {
+    width: 70%;
+}
 
 
 /*---------- Footer ----------*/
 
 footer {
-    display: inline-block;
+
     padding: 1rem;
     background-color: var(--primary-color);
     padding-bottom: .5em .25em;
-    border-radius: 3rem;
+
 }
 
 ul.contact {
