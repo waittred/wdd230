@@ -77,20 +77,20 @@ nav a {
     font-weight: bold;
 }
 
-#mode button {
+#darkModeButton {
     color: var(--secondary-color3);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: var(--secondary-color9);
     border-radius: 8px;
 }
     
-#mode button:hover {
+#darkModeButton:hover {
     cursor: pointer;
 }
   
-#mode {
+#darkModeButton {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     padding-right: .5rem;
     padding-top: .5rem;
 }
@@ -263,8 +263,7 @@ padding: 1rem;
     background-color: var(--secondary-color9); 
     color: var(--secondary-color3); 
     text-align: center;
-    border: 3px dotted var(--secondary-color8);
-    
+    border: 3px dotted var(--secondary-color8); 
 }
 
 #alert-message-box {
@@ -368,11 +367,9 @@ form label.top, form div{
     justify-content: space-evenly;
 }
 
-
 #contact-form {
     display: inline-block;
     max-width: 800px;
-
 }
 #comment {
     width: 70%;
