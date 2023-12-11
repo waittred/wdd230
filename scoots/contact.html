@@ -24,10 +24,10 @@
 </head>
 
 <body>
-    <div id="alert-container"></div>
     <div id="mode">
-        <button type="button" onclick="myFunction()">Dark Mode</button>
+        <button id="darkModeButton" type="button" onclick="myFunction()">Dark Mode</button>
     </div>
+
     <header>
         <div class="header-container">
             <img src="images/scoots-logo2.webp" alt="Scoots Logo" id="logo">
@@ -50,81 +50,86 @@
 
     
 
-<section id="contact">
-    <h2>Contact Us at One of Our Two Locations</h2>
-    <br>
-    <div id="contact-info">
-        <div id="locations">
-        <!-- Essential contact information -->
-        <div class="ferry">
-           <h3><strong>Scoots Motor Rentals (Ferry Location)</strong></h3>
-           <p>Calle 1A Sur #123,</p> <p>Colonia Centro
-            Cozumel, Quintana Roo, Mexico</p>
-            <p>+52 999 888 777 6666</p>
-            <div class="google-map1">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d233.3873341057006!2d-87.0752380471585!3d20.620811383590432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d20.620838386772835!2d-87.07543937244635!5e0!3m2!1sen!2sus!4v1701673435253!5m2!1sen!2sus" loading="lazy"></iframe>
+    <section id="contact">
+        <h2>Contact Us at One of Our Two Locations</h2>
+        <br>
+        <div id="contact-info">
+            <div id="locations">
+            <!-- Essential contact information -->
+            <div class="ferry">
+            <h3><strong>1. Scoots Motor Rentals (Ferry Location)</strong></h3>
+            <p>Calle 1A Sur #123,</p> <p>Colonia Centro
+                Cozumel, Quintana Roo, Mexico</p>
+                <p>+52 999 888 777 6666</p>
+                <br>
+                <div class="google-map1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d233.3873341057006!2d-87.0752380471585!3d20.620811383590432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d20.620838386772835!2d-87.07543937244635!5e0!3m2!1sen!2sus!4v1701673435253!5m2!1sen!2sus" loading="lazy"></iframe>
+                </div>
+            </div> 
+            <br> 
+            <div class="terminal">
+                <h3><strong>2. Scoots Motor Rentals (Terminal Location)</strong></h3>
+                <p>Avenida Costera #456, Colonia Puerto Maya</p><p>
+                Cozumel, Quintana Roo, Mexico</p>
+                <p>+52 999 555 444 3333</p>
+                <div class="google-map2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d961.7944944084231!2d-86.97244362995073!3d20.47930453486692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1701673956073!5m2!1sen!2sus"  loading="lazy"></iframe>
+                </div>
             </div>
-        </div>  
-        <div class="terminal">
-            <h3><strong>Scoots Motor Rentals (Terminal Location)</strong></h3>
-            <p>Avenida Costera #456, Colonia Puerto Maya</p><p>
-            Cozumel, Quintana Roo, Mexico</p>
-            <p>+52 999 555 444 3333</p>
-            <div class="google-map2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d961.7944944084231!2d-86.97244362995073!3d20.47930453486692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1701673956073!5m2!1sen!2sus"  loading="lazy"></iframe>
             </div>
-        </div>
+            <br>
         </div>
         <br>
-    </div>
-    <br>
-    <form id="contact-form">
-        <form method="get" action="thanks.html">    
-            <fieldset>
-                <!-- Basic contact form with name, email, and comment -->
-                <label class="top">Name* <input type="text" name="name"  required=""></label>
-                <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required=""></label>
-                
-                <br>
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" required rows="4"> </textarea>
-                <br>
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-    </form>
-</section>
-<br>
-
-<footer>
-    <ul class="contact">
-        <li>
-            <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
-        </li>
-
-        <li>
-            <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
-
-        </li>
-
-        <li>
-            <img class="material-symbols-outlined" src="images/instagram.png" alt="Pinterest icon" width="20" height="20">
-        </li>
-    </ul>        
-    <p>&copy; <span id="year"></span> Scoots Motor Scooter Rentals</p>
-        <p>Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
-        <div class= "updated"> 
-            <p id="date"></p>
-            
-        </div>
+        <form id="contact-form" method="get" action="thanks.html" onsubmit="redirectAfterSubmit()">
     
-</footer>
+                <fieldset>
+                    <!-- Basic contact form with name, email, and comment -->
+                    <label class="top">Name* <input type="text" name="name"  required=""></label>
+                    <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required=""></label>
+                    <br>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required rows="4"> </textarea>
+                    <br>
+                    <input type="submit" value="Submit Comment" class="submitBtn-contact">
+                </fieldset>
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+        </form>
+    </section>
+    <br>
+
+    <footer>
+        <ul class="contact">
+            <li>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/instagram.png" alt="Instagram icon" width="20" height="20">
+                </a>
+            </li>
+        </ul>        
+        <p>&copy; <span id="year"></span> Scoots Motor Scooter Rentals</p>
+            <p>Tiana Boyd  |  BYU-Idaho |  WDD 230  | <a href="https://waittred.github.io/wdd230/scoots/references.html">References</a></p>
+            <div class= "updated"> 
+                <p id="date"></p>     
+            </div>
+        
+    </footer>
 
 <!--Scripts-->
 <script src="scripts/darkmode.js"></script>
 <script src="scripts/lastUpdated.js"></script>   
 <script src="scripts/hamburger.js"></script>
-
+<script src="scripts/thanks.js"></script>
  
 
 </body>

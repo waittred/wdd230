@@ -24,10 +24,10 @@
 </head>
 
 <body>
-    <div id="alert-container"></div>
     <div id="mode">
-        <button type="button" onclick="myFunction()">Dark Mode</button>
+        <button id="darkModeButton" type="button" onclick="myFunction()">Dark Mode</button>
     </div>
+
     <header>
         <div class="header-container">
             <img src="images/scoots-logo2.webp" alt="Scoots Logo" id="logo">
@@ -72,23 +72,27 @@
     <footer>
         <ul class="contact">
             <li>
-                <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
+                <a href="https://www.twitter.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/twitter.png" alt="Twitter icon" width="20" height="20">
+                </a>
             </li>
     
             <li>
-                <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
-    
+                <a href="https://www.facebook.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/facebook.png" alt="Facebook icon" width="20" height="20">
+                </a>
             </li>
     
             <li>
-                <img class="material-symbols-outlined" src="images/instagram.png" alt="Pinterest icon" width="20" height="20">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="material-symbols-outlined" src="images/instagram.png" alt="Instagram icon" width="20" height="20">
+                </a>
             </li>
         </ul>        
         <p>&copy; <span id="year"></span> Scoots Motor Scooter Rentals</p>
-            <p>Tiana Boyd  |  BYU-Idaho |  WDD 230</p>
+            <p>Tiana Boyd  |  BYU-Idaho |  WDD 230  | <a href="https://waittred.github.io/wdd230/scoots/references.html">References</a></p>
             <div class= "updated"> 
-                <p id="date"></p>
-                
+                <p id="date"></p>     
             </div>
         
     </footer>
