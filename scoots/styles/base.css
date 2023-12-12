@@ -395,10 +395,6 @@ fieldset {
     text-align: left;
 }
 
-.comments-reservation1 {
-    max-width: 95%;
-}
-
 form label.top, form div{
     display: block;
     justify-content: left;
@@ -426,15 +422,13 @@ form label.sbs {
     font-size: 1.3rem;
     
 }
+
 textarea.comment1 {
     display: block;
     margin: 1rem auto;
     margin-bottom: 2rem;
     width: 100%;
     height: 10rem;
-    
-    
-   
 }
 
 /*************** Contact Page*****************/
