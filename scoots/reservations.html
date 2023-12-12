@@ -71,7 +71,7 @@
               
             </div>
 
-            <form id="contact-form" method="get" action="thanks.html" onsubmit="redirectAfterSubmit()">
+            <form id="contact-form" method="get" action="confirmation.html" onsubmit="redirectAfterSubmit()">
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label class="top">First Name* <input type="text" name="name" required=""></label>
@@ -85,14 +85,26 @@
                 
                 <fieldset>
                     <legend>Rental Details</legend>
-                    
+                    <div class="location">Location:
+                        <label class="sbs"><input type="radio" name="location" value="ferry" required="">Ferry</label>
+                        <label class="sbs"><input type="radio" name="location" value="terminal" required="">Terminal</label><br>
+                    </div>
                     <label class="top">Pick-up Date* <input type="date" name="pickup-date" required=""></label>
                     <label class="top">Drop-off Date* <input type="date" name="dropoff-date" required=""></label>
-                    <label class="top">Pick-Up Location* <input type="text" name="duration" placeholder="Ferry or Terminal" required=""></label>
-                    <label class="top">Rental Type <input type="text" name="rentaltype" placeholder="Honda Dio" required=""></label>
+                    
+                    
+                    <label class="top">Rental Type*
+                        <select name="rental-type">
+                            <option value="">Please Select</option>
+                            <option value="metro">Honda Metropolitan Scooter</option>
+                            <option value="dio">Honda Dio Scooter</option>
+                            <option value="pioneer">Honda Pioneer ATV</option>
+                            <option value="four-door">Jeep Wrangler: 4 door with A/C</option>
+                            <option value="two-door">Jeep Wrangler: 2 door</option>
+                        </select>
                     <label class="top">Quanity* <input type="text" name="quanity" placeholder="1" required=""></label>
                     
-                    <label class="top">Cruise Line*
+                    <label class="top">Cruise Line (if applicable)
                         <select name="cruiseline">
                             <option value="">Please Select</option>
                             <option value="Carnival">Carnival</option>
@@ -104,7 +116,7 @@
                             <option value="Costa">Costa Cruises</option>
                         </select>
                     <label id="comments-reservation" for="comment1">Special Accommodations/Comments:</label>
-                    <textarea id="comment1" cols="50" rows="5" name="description" wrap="hard"></textarea>
+                    <textarea id="comment1" cols="50" rows="5" name="description" wrap="hard" placeholder=" i.e., Needs/location of a drop-off request"></textarea>
                     <input type="submit" value="Confirm Reservation" class="submitBtn-contact">
                     </label>
                 </fieldset>

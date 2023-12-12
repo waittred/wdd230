@@ -365,6 +365,7 @@ fieldset {
     line-height: 2.5;
     background-color: var(--primary-color);
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 form label.top, form div{
@@ -373,6 +374,19 @@ form label.top, form div{
     padding-top: 1rem;
     color: var(--secondary-color3);
     font-size: 1.3rem;
+}
+form label.sbs {
+    display: inline;
+    padding-left: 2rem;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+}
+
+.location {
+    display: inline;
+    font-size: 1.3rem;
+    
 }
 
 #comments-reservation {
@@ -386,7 +400,7 @@ form label.top, form div{
     margin: 1rem auto;
     margin-bottom: 2rem;
     width: 100%;
-    height: 20rem;
+    height: 10rem;
     
     
    
