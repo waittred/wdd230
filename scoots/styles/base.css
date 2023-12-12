@@ -1,7 +1,6 @@
 :root {
     --primary-color: #F8F0D8;
     --secondary-color1: #08597D;
-    --secondary-color2: #3f6929;
     --secondary-color3: black;
     --secondary-color4: #3333; 
     --secondary-color5: white;
@@ -21,7 +20,7 @@
     --secondary-color2: black;
     --secondary-color3: white;
     --secondary-color4: #3333; 
-    --secondary-color5: white;
+    --secondary-color5: black;
     --secondary-color6: black;
     --secondary-color7: rgb(19, 17, 14);
     --secondary-color8: rgb(12, 12, 35);
@@ -107,8 +106,9 @@ nav a {
     
 #menu::before { 
     content: "☰";
-    background-color: var(--secondary-color1);
-    color: var(--secondary-color5);        
+    background-color: var(--secondary-color);
+    color: var(--secondary-color5);    
+    font-size: 1.5rem;    
 }
     
 #menu.show::before {     
@@ -265,7 +265,7 @@ box-shadow: 0 0 10px #777777;
     display: none;
     top: .2rem;
     left: 0;
-    width: 98.5%;
+    width: auto;
     padding: .5rem;
     background-color: var(--secondary-color9); 
     color: var(--secondary-color3); 
@@ -368,6 +368,10 @@ fieldset {
     text-align: left;
 }
 
+.comments-reservation1 {
+    max-width: 95%;
+}
+
 form label.top, form div{
     display: block;
     justify-content: left;
@@ -416,7 +420,7 @@ form label.sbs {
 
 #contact-form {
     display: inline-block;
-    max-width: 800px;
+    max-width: 95%;
 }
 #comment {
     width: 70%;

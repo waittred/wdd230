@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showAlert(message) {
         const alertBox = document.getElementById('alert-box');
         const alertMessage = document.getElementById('alert-message-box');
-        const closeButton = document.querySelector('.close-button'); // Change this line
+        const closeButton = document.querySelector('.close-button'); 
 
-        console.log(closeButton); // Debugging line
+        console.log(closeButton); 
 
         alertMessage.innerHTML = message;
         alertBox.style.display = 'block';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alertBox.style.display = 'none';
     }
 
-    // Fetch current weather data
+// Fetch current weather data
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const humidity = data.main.humidity;
             const capitalizedDesc = capitalizeWords(data.weather[0].description);
 
-            // Display current weather information including humidity
+// Display current weather information including humidity
             document.getElementById('temperature').textContent = ` ${temperatureFahrenheit}°F`;
             document.getElementById('condition').textContent = `Weather: ${capitalizedDesc}`;
             document.getElementById('humidity').textContent = `Humidity: ${humidity}%`;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weatherIconElement.setAttribute('src', iconUrl);
             weatherIconElement.setAttribute('alt', 'Weather Icon');
 
-            // Fetch weather alerts
+// Fetch weather alerts
             fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=20.4229&lon=-86.9228&exclude=current,minutely,hourly,daily&appid=${apiKey}`)
                 .then(response => response.json())
                 .then(data => {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching current weather data:', error);
         });
 
-    // Fetch current temperature data for the day
+// Fetch current temperature data for the day
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching current temperature data:', error);
         });
 
-    // Display and label tomorrow's forecast
+// Display and label tomorrow's forecast
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
