@@ -179,6 +179,14 @@ ul.main-nav.show {
     display: flex;
 }
 
+.swiper-3d .swiper-slide-shadow, 
+.swiper-3d .swiper-slide-shadow-bottom, 
+.swiper-3d .swiper-slide-shadow-left, 
+.swiper-3d .swiper-slide-shadow-right, 
+.swiper-3d .swiper-slide-shadow-top {
+    pointer-events: auto;
+}
+
 /*--------- Summary ---------*/
 .types-of-rentals {
 padding: 1rem;
