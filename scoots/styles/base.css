@@ -164,7 +164,7 @@ ul.main-nav.show {
     display: inline-block;
     padding: 1rem 2rem;
     background-color:var(--secondary-color8);
-    color: var(--secondary-color5);
+    color: var(--secondary-color11);
     text-decoration: none;
     border-radius: 30px;  
     margin-top: 2rem;
@@ -301,7 +301,7 @@ box-shadow: 0 0 10px #777777;
     margin-top: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px #777777;
-}
+} 
 /*************** Rentals Page ***************/
 
 /* Style for the table */
@@ -315,9 +315,9 @@ box-shadow: 0 0 10px #777777;
 
 /* Style for the table header */
 #rentals-table th {
-    background-color: var(--secondary-color8);
-    color: var(--secondary-color11);
-    border: 2px solid var(--secondary-color8);
+    background-color: var(--secondary-color7);
+    color: var(--secondary-color3);
+    border: 1px solid var(--secondary-color3);
     padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
