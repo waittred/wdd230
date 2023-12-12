@@ -4,37 +4,44 @@
         "type": "Honda Metropolitan Scooter",
         "maxPersons": 1,
         "halfDayPrice": 20,
-        "fullDayPrice": 30
+        "fullDayPrice": 30,
+        "imageUrl": "images/honda-metro.webp"
+
       },
       {
         "type": "Honda Dio Scooter",
         "maxPersons": 2,
         "halfDayPrice": 30,
-        "fullDayPrice": 40
+        "fullDayPrice": 40,
+        "imageUrl": "images/honda-dio.webp"
       },
       {
         "type": "Honda PCX150 Scooter",
         "maxPersons": 2,
         "halfDayPrice": 40,
-        "fullDayPrice": 50
+        "fullDayPrice": 50,
+        "imageUrl": "images/honda-pcx125.webp"
       },
       {
         "type": "Honda Pioneer ATV",
         "maxPersons": 4,
         "halfDayPrice": 50,
-        "fullDayPrice": 70
+        "fullDayPrice": 70,
+        "imageUrl": "images/honda-pioneer.webp"
       },
       {
         "type": "Jeep Wrangler - 4 door with A/C",
         "maxPersons": 5,
         "halfDayPrice": 70,
-        "fullDayPrice": 100
+        "fullDayPrice": 100,
+        "imageUrl": "images/jeep-wrangler-5-person.webp"
       },
       {
         "type": "Jeep Wrangler - 2 door",
         "maxPersons": 4,
         "halfDayPrice": 60,
-        "fullDayPrice": 85
+        "fullDayPrice": 85,
+        "imageUrl": "images/jeep-open.webp"
       }
     ]
   }

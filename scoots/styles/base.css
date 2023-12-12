@@ -9,6 +9,7 @@
     --secondary-color8: #007B70;
     --secondary-color9: #FBE1B0;
     --secondary-color10: #B8DFC4;
+    --secondary-color11: white;
     /*Typography*/
     --heading-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     --paragraph-font: 'Times New Roman', Times, serif;
@@ -25,7 +26,8 @@
     --secondary-color7: rgb(19, 17, 14);
     --secondary-color8: rgb(12, 12, 35);
     --secondary-color9: rgb(19, 17, 17);
-    --secondary-color10: black;   
+    --secondary-color10: black;
+    --secondary-color11: white;   
     background-image: none;
     background-color: black;
 }
@@ -106,7 +108,6 @@ nav a {
     
 #menu::before { 
     content: "☰";
-    background-color: var(--secondary-color);
     color: var(--secondary-color5);    
     font-size: 1.5rem;    
 }
@@ -315,7 +316,7 @@ box-shadow: 0 0 10px #777777;
 /* Style for the table header */
 #rentals-table th {
     background-color: var(--secondary-color8);
-    color: var(--secondary-color5);
+    color: var(--secondary-color11);
     border: 2px solid var(--secondary-color8);
     padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -334,6 +335,23 @@ box-shadow: 0 0 10px #777777;
 #rentals-table tbody tr:hover {
     background-color: var(--secondary-color6); 
 }
+
+/* Style the images in the rentals table */
+#rentals-table img {   
+    margin: 1rem;
+    max-width: 100px; 
+    height: auto; 
+    border: 3px solid var(--secondary-color8); 
+    border-radius: 10px; 
+    margin-left: 50px; 
+    vertical-align: middle; 
+}
+
+/* Center text and images vertically within a table cell */
+#rentals-table td {
+    vertical-align: middle; 
+}
+
 /*************** Reservation Page*****************/
 form legend {
     font-size: 1.1rem;
@@ -354,6 +372,7 @@ form legend {
 
 #rental-agreement ul li {
     margin-bottom: 8px;
+    font-size: 1.2rem;
 }
 
 #reservation-form {
@@ -399,7 +418,7 @@ form label.sbs {
     font-size: 1.3rem;
     
 }
-.comment1 {
+textarea.comment1 {
     display: block;
     margin: 1rem auto;
     margin-bottom: 2rem;
